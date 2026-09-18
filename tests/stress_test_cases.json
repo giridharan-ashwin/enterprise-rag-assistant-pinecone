@@ -1,0 +1,1637 @@
+[
+  {
+    "id": "known-hr_remote_work.md-0",
+    "type": "known",
+    "question": "How many days per week can employees work remotely?",
+    "expected": [
+      {
+        "source": "hr_remote_work.md",
+        "section": "Remote Work Schedule"
+      }
+    ]
+  },
+  {
+    "id": "known-hr_remote_work.md-1",
+    "type": "known",
+    "question": "Who approves a regular remote work arrangement?",
+    "expected": [
+      {
+        "source": "hr_remote_work.md",
+        "section": "Remote Work Approval"
+      }
+    ]
+  },
+  {
+    "id": "known-hr_remote_work.md-2",
+    "type": "known",
+    "question": "What equipment does the company provide to remote workers?",
+    "expected": [
+      {
+        "source": "hr_remote_work.md",
+        "section": "Remote Equipment"
+      }
+    ]
+  },
+  {
+    "id": "known-hr_remote_work.md-3",
+    "type": "known",
+    "question": "Which platform should remote teams use for collaboration?",
+    "expected": [
+      {
+        "source": "hr_remote_work.md",
+        "section": "Remote Collaboration"
+      }
+    ]
+  },
+  {
+    "id": "known-hr_remote_work.md-4",
+    "type": "known",
+    "question": "What security controls are required for remote access?",
+    "expected": [
+      {
+        "source": "hr_remote_work.md",
+        "section": "Remote Work Security"
+      }
+    ]
+  },
+  {
+    "id": "known-hr_leave.md-0",
+    "type": "known",
+    "question": "How much notice should employees give for planned time off?",
+    "expected": [
+      {
+        "source": "hr_leave.md",
+        "section": "Planned Leave Notice"
+      }
+    ]
+  },
+  {
+    "id": "known-hr_leave.md-1",
+    "type": "known",
+    "question": "Where should employees submit planned leave requests?",
+    "expected": [
+      {
+        "source": "hr_leave.md",
+        "section": "Leave Scheduling"
+      }
+    ]
+  },
+  {
+    "id": "known-hr_leave.md-2",
+    "type": "known",
+    "question": "What should an employee do before taking planned leave?",
+    "expected": [
+      {
+        "source": "hr_leave.md",
+        "section": "Leave Coverage"
+      }
+    ]
+  },
+  {
+    "id": "known-hr_leave.md-3",
+    "type": "known",
+    "question": "How should unexpected leave be reported?",
+    "expected": [
+      {
+        "source": "hr_leave.md",
+        "section": "Emergency Leave"
+      }
+    ]
+  },
+  {
+    "id": "known-hr_leave.md-4",
+    "type": "known",
+    "question": "What factors are considered when approving planned leave?",
+    "expected": [
+      {
+        "source": "hr_leave.md",
+        "section": "Leave Approval"
+      }
+    ]
+  },
+  {
+    "id": "known-hr_benefits.md-0",
+    "type": "known",
+    "question": "When can eligible employees enroll in the health plan?",
+    "expected": [
+      {
+        "source": "hr_benefits.md",
+        "section": "Health Plan Enrollment"
+      }
+    ]
+  },
+  {
+    "id": "known-hr_benefits.md-1",
+    "type": "known",
+    "question": "When can health plan elections be changed outside open enrollment?",
+    "expected": [
+      {
+        "source": "hr_benefits.md",
+        "section": "Health Plan Changes"
+      }
+    ]
+  },
+  {
+    "id": "known-hr_benefits.md-2",
+    "type": "known",
+    "question": "When are flexible spending contribution elections made?",
+    "expected": [
+      {
+        "source": "hr_benefits.md",
+        "section": "Flexible Spending"
+      }
+    ]
+  },
+  {
+    "id": "known-hr_benefits.md-3",
+    "type": "known",
+    "question": "What is required for a wellness reimbursement request?",
+    "expected": [
+      {
+        "source": "hr_benefits.md",
+        "section": "Wellness Benefit"
+      }
+    ]
+  },
+  {
+    "id": "known-hr_benefits.md-4",
+    "type": "known",
+    "question": "Where should employees ask benefits questions?",
+    "expected": [
+      {
+        "source": "hr_benefits.md",
+        "section": "Benefits Support"
+      }
+    ]
+  },
+  {
+    "id": "known-security_access.md-0",
+    "type": "known",
+    "question": "Is multi-factor authentication required for protected company systems?",
+    "expected": [
+      {
+        "source": "security_access.md",
+        "section": "Multi-Factor Authentication"
+      }
+    ]
+  },
+  {
+    "id": "known-security_access.md-1",
+    "type": "known",
+    "question": "Can employees share passwords during urgent support situations?",
+    "expected": [
+      {
+        "source": "security_access.md",
+        "section": "Credential Sharing"
+      }
+    ]
+  },
+  {
+    "id": "known-security_access.md-2",
+    "type": "known",
+    "question": "How often is privileged access reviewed?",
+    "expected": [
+      {
+        "source": "security_access.md",
+        "section": "Privileged Access"
+      }
+    ]
+  },
+  {
+    "id": "known-security_access.md-3",
+    "type": "known",
+    "question": "What information must an access request include?",
+    "expected": [
+      {
+        "source": "security_access.md",
+        "section": "Access Requests"
+      }
+    ]
+  },
+  {
+    "id": "known-security_access.md-4",
+    "type": "known",
+    "question": "When should protected-system access be removed?",
+    "expected": [
+      {
+        "source": "security_access.md",
+        "section": "Access Removal"
+      }
+    ]
+  },
+  {
+    "id": "known-security_incident.md-0",
+    "type": "known",
+    "question": "How should employees report a suspected security incident?",
+    "expected": [
+      {
+        "source": "security_incident.md",
+        "section": "Incident Reporting"
+      }
+    ]
+  },
+  {
+    "id": "known-security_incident.md-1",
+    "type": "known",
+    "question": "How is security incident severity determined?",
+    "expected": [
+      {
+        "source": "security_incident.md",
+        "section": "Incident Severity"
+      }
+    ]
+  },
+  {
+    "id": "known-security_incident.md-2",
+    "type": "known",
+    "question": "What should employees do with potentially relevant investigation evidence?",
+    "expected": [
+      {
+        "source": "security_incident.md",
+        "section": "Evidence Preservation"
+      }
+    ]
+  },
+  {
+    "id": "known-security_incident.md-3",
+    "type": "known",
+    "question": "Which incidents are escalated to security leadership?",
+    "expected": [
+      {
+        "source": "security_incident.md",
+        "section": "Incident Escalation"
+      }
+    ]
+  },
+  {
+    "id": "known-security_incident.md-4",
+    "type": "known",
+    "question": "What does a significant incident review include?",
+    "expected": [
+      {
+        "source": "security_incident.md",
+        "section": "Post-Incident Review"
+      }
+    ]
+  },
+  {
+    "id": "known-finance_expenses.md-0",
+    "type": "known",
+    "question": "When should business expenses be submitted?",
+    "expected": [
+      {
+        "source": "finance_expenses.md",
+        "section": "Expense Submission"
+      }
+    ]
+  },
+  {
+    "id": "known-finance_expenses.md-1",
+    "type": "known",
+    "question": "When are receipts required for expenses?",
+    "expected": [
+      {
+        "source": "finance_expenses.md",
+        "section": "Expense Receipts"
+      }
+    ]
+  },
+  {
+    "id": "known-finance_expenses.md-2",
+    "type": "known",
+    "question": "Who approves an employee expense report?",
+    "expected": [
+      {
+        "source": "finance_expenses.md",
+        "section": "Expense Approval"
+      }
+    ]
+  },
+  {
+    "id": "known-finance_expenses.md-3",
+    "type": "known",
+    "question": "How should business travel expenses be associated?",
+    "expected": [
+      {
+        "source": "finance_expenses.md",
+        "section": "Travel Expenses"
+      }
+    ]
+  },
+  {
+    "id": "known-finance_expenses.md-4",
+    "type": "known",
+    "question": "How should a rejected expense report be corrected?",
+    "expected": [
+      {
+        "source": "finance_expenses.md",
+        "section": "Expense Corrections"
+      }
+    ]
+  },
+  {
+    "id": "known-finance_procurement.md-0",
+    "type": "known",
+    "question": "What information is required in a purchase request?",
+    "expected": [
+      {
+        "source": "finance_procurement.md",
+        "section": "Purchase Requests"
+      }
+    ]
+  },
+  {
+    "id": "known-finance_procurement.md-1",
+    "type": "known",
+    "question": "When is procurement review required for a purchase?",
+    "expected": [
+      {
+        "source": "finance_procurement.md",
+        "section": "Purchase Approval"
+      }
+    ]
+  },
+  {
+    "id": "known-finance_procurement.md-2",
+    "type": "known",
+    "question": "When can an employee use a non-preferred vendor?",
+    "expected": [
+      {
+        "source": "finance_procurement.md",
+        "section": "Preferred Vendors"
+      }
+    ]
+  },
+  {
+    "id": "known-finance_procurement.md-3",
+    "type": "known",
+    "question": "When should a purchase order be issued?",
+    "expected": [
+      {
+        "source": "finance_procurement.md",
+        "section": "Purchase Orders"
+      }
+    ]
+  },
+  {
+    "id": "known-finance_procurement.md-4",
+    "type": "known",
+    "question": "Which vendor agreements require legal and procurement review?",
+    "expected": [
+      {
+        "source": "finance_procurement.md",
+        "section": "Contract Review"
+      }
+    ]
+  },
+  {
+    "id": "known-engineering_api.md-0",
+    "type": "known",
+    "question": "How should public APIs handle breaking changes?",
+    "expected": [
+      {
+        "source": "engineering_api.md",
+        "section": "API Versioning"
+      }
+    ]
+  },
+  {
+    "id": "known-engineering_api.md-1",
+    "type": "known",
+    "question": "What authentication approach should service-to-service APIs use?",
+    "expected": [
+      {
+        "source": "engineering_api.md",
+        "section": "API Authentication"
+      }
+    ]
+  },
+  {
+    "id": "known-engineering_api.md-2",
+    "type": "known",
+    "question": "What should a standard API error response contain?",
+    "expected": [
+      {
+        "source": "engineering_api.md",
+        "section": "API Error Responses"
+      }
+    ]
+  },
+  {
+    "id": "known-engineering_api.md-3",
+    "type": "known",
+    "question": "How should API clients handle request timeouts?",
+    "expected": [
+      {
+        "source": "engineering_api.md",
+        "section": "API Timeouts"
+      }
+    ]
+  },
+  {
+    "id": "known-engineering_api.md-4",
+    "type": "known",
+    "question": "What documentation should production APIs publish?",
+    "expected": [
+      {
+        "source": "engineering_api.md",
+        "section": "API Documentation"
+      }
+    ]
+  },
+  {
+    "id": "known-engineering_deployment.md-0",
+    "type": "known",
+    "question": "What is required before a production deployment?",
+    "expected": [
+      {
+        "source": "engineering_deployment.md",
+        "section": "Deployment Approval"
+      }
+    ]
+  },
+  {
+    "id": "known-engineering_deployment.md-1",
+    "type": "known",
+    "question": "Which deployment strategies are recommended for highly available services?",
+    "expected": [
+      {
+        "source": "engineering_deployment.md",
+        "section": "Deployment Strategy"
+      }
+    ]
+  },
+  {
+    "id": "known-engineering_deployment.md-2",
+    "type": "known",
+    "question": "What should every production release include for rollback?",
+    "expected": [
+      {
+        "source": "engineering_deployment.md",
+        "section": "Rollback"
+      }
+    ]
+  },
+  {
+    "id": "known-engineering_deployment.md-3",
+    "type": "known",
+    "question": "What should be verified after a production release?",
+    "expected": [
+      {
+        "source": "engineering_deployment.md",
+        "section": "Release Verification"
+      }
+    ]
+  },
+  {
+    "id": "known-engineering_deployment.md-4",
+    "type": "known",
+    "question": "What information belongs in a production change record?",
+    "expected": [
+      {
+        "source": "engineering_deployment.md",
+        "section": "Change Records"
+      }
+    ]
+  },
+  {
+    "id": "known-engineering_incident.md-0",
+    "type": "known",
+    "question": "Who coordinates a major production incident?",
+    "expected": [
+      {
+        "source": "engineering_incident.md",
+        "section": "Incident Ownership"
+      }
+    ]
+  },
+  {
+    "id": "known-engineering_incident.md-1",
+    "type": "known",
+    "question": "How are stakeholders updated during a major incident?",
+    "expected": [
+      {
+        "source": "engineering_incident.md",
+        "section": "Incident Communication"
+      }
+    ]
+  },
+  {
+    "id": "known-engineering_incident.md-2",
+    "type": "known",
+    "question": "How is engineering incident severity determined?",
+    "expected": [
+      {
+        "source": "engineering_incident.md",
+        "section": "Incident Severity"
+      }
+    ]
+  },
+  {
+    "id": "known-engineering_incident.md-3",
+    "type": "known",
+    "question": "What should responders record during an incident?",
+    "expected": [
+      {
+        "source": "engineering_incident.md",
+        "section": "Incident Timeline"
+      }
+    ]
+  },
+  {
+    "id": "known-engineering_incident.md-4",
+    "type": "known",
+    "question": "What should a major incident postmortem cover?",
+    "expected": [
+      {
+        "source": "engineering_incident.md",
+        "section": "Postmortem"
+      }
+    ]
+  },
+  {
+    "id": "known-cloud_aws.md-0",
+    "type": "known",
+    "question": "What factors should determine AWS region selection?",
+    "expected": [
+      {
+        "source": "cloud_aws.md",
+        "section": "AWS Region Selection"
+      }
+    ]
+  },
+  {
+    "id": "known-cloud_aws.md-1",
+    "type": "known",
+    "question": "What should workloads use instead of long-lived AWS access keys?",
+    "expected": [
+      {
+        "source": "cloud_aws.md",
+        "section": "AWS IAM Roles"
+      }
+    ]
+  },
+  {
+    "id": "known-cloud_aws.md-2",
+    "type": "known",
+    "question": "Which logging capabilities should be enabled for production AWS accounts?",
+    "expected": [
+      {
+        "source": "cloud_aws.md",
+        "section": "AWS Logging"
+      }
+    ]
+  },
+  {
+    "id": "known-cloud_aws.md-3",
+    "type": "known",
+    "question": "What tags are required on production AWS resources?",
+    "expected": [
+      {
+        "source": "cloud_aws.md",
+        "section": "AWS Cost Tags"
+      }
+    ]
+  },
+  {
+    "id": "known-cloud_aws.md-4",
+    "type": "known",
+    "question": "What is required for critical AWS data stores?",
+    "expected": [
+      {
+        "source": "cloud_aws.md",
+        "section": "AWS Backup"
+      }
+    ]
+  },
+  {
+    "id": "known-cloud_kubernetes.md-0",
+    "type": "known",
+    "question": "How should production Kubernetes workloads be isolated?",
+    "expected": [
+      {
+        "source": "cloud_kubernetes.md",
+        "section": "Kubernetes Namespaces"
+      }
+    ]
+  },
+  {
+    "id": "known-cloud_kubernetes.md-1",
+    "type": "known",
+    "question": "What resource settings should production Kubernetes deployments define?",
+    "expected": [
+      {
+        "source": "cloud_kubernetes.md",
+        "section": "Kubernetes Resources"
+      }
+    ]
+  },
+  {
+    "id": "known-cloud_kubernetes.md-2",
+    "type": "known",
+    "question": "What health checks should production Kubernetes workloads define?",
+    "expected": [
+      {
+        "source": "cloud_kubernetes.md",
+        "section": "Kubernetes Health Checks"
+      }
+    ]
+  },
+  {
+    "id": "known-cloud_kubernetes.md-3",
+    "type": "known",
+    "question": "How should application secrets be managed in Kubernetes?",
+    "expected": [
+      {
+        "source": "cloud_kubernetes.md",
+        "section": "Kubernetes Secrets"
+      }
+    ]
+  },
+  {
+    "id": "known-cloud_kubernetes.md-4",
+    "type": "known",
+    "question": "When should Kubernetes horizontal autoscaling be used?",
+    "expected": [
+      {
+        "source": "cloud_kubernetes.md",
+        "section": "Kubernetes Autoscaling"
+      }
+    ]
+  },
+  {
+    "id": "known-data_governance.md-0",
+    "type": "known",
+    "question": "How should enterprise data be classified?",
+    "expected": [
+      {
+        "source": "data_governance.md",
+        "section": "Data Classification"
+      }
+    ]
+  },
+  {
+    "id": "known-data_governance.md-1",
+    "type": "known",
+    "question": "Who should be assigned to a critical dataset?",
+    "expected": [
+      {
+        "source": "data_governance.md",
+        "section": "Data Ownership"
+      }
+    ]
+  },
+  {
+    "id": "known-data_governance.md-2",
+    "type": "known",
+    "question": "What quality dimensions should critical datasets measure?",
+    "expected": [
+      {
+        "source": "data_governance.md",
+        "section": "Data Quality"
+      }
+    ]
+  },
+  {
+    "id": "known-data_governance.md-3",
+    "type": "known",
+    "question": "What principle should govern access to sensitive data?",
+    "expected": [
+      {
+        "source": "data_governance.md",
+        "section": "Data Access"
+      }
+    ]
+  },
+  {
+    "id": "known-data_governance.md-4",
+    "type": "known",
+    "question": "What should critical analytical datasets maintain for lineage?",
+    "expected": [
+      {
+        "source": "data_governance.md",
+        "section": "Data Lineage"
+      }
+    ]
+  },
+  {
+    "id": "known-data_retention.md-0",
+    "type": "known",
+    "question": "How should record retention periods be determined?",
+    "expected": [
+      {
+        "source": "data_retention.md",
+        "section": "Retention Schedule"
+      }
+    ]
+  },
+  {
+    "id": "known-data_retention.md-1",
+    "type": "known",
+    "question": "How should approved deletion requests be handled?",
+    "expected": [
+      {
+        "source": "data_retention.md",
+        "section": "Deletion Requests"
+      }
+    ]
+  },
+  {
+    "id": "known-data_retention.md-2",
+    "type": "known",
+    "question": "What should backup retention align with?",
+    "expected": [
+      {
+        "source": "data_retention.md",
+        "section": "Backup Retention"
+      }
+    ]
+  },
+  {
+    "id": "known-data_retention.md-3",
+    "type": "known",
+    "question": "What controls apply to archived data?",
+    "expected": [
+      {
+        "source": "data_retention.md",
+        "section": "Archive Access"
+      }
+    ]
+  },
+  {
+    "id": "known-data_retention.md-4",
+    "type": "known",
+    "question": "When should retention schedules be reviewed?",
+    "expected": [
+      {
+        "source": "data_retention.md",
+        "section": "Retention Review"
+      }
+    ]
+  },
+  {
+    "id": "known-vendor_management.md-0",
+    "type": "known",
+    "question": "What must happen before a new vendor gets protected-system access?",
+    "expected": [
+      {
+        "source": "vendor_management.md",
+        "section": "Vendor Onboarding"
+      }
+    ]
+  },
+  {
+    "id": "known-vendor_management.md-1",
+    "type": "known",
+    "question": "What factors are considered in vendor risk evaluation?",
+    "expected": [
+      {
+        "source": "vendor_management.md",
+        "section": "Vendor Risk"
+      }
+    ]
+  },
+  {
+    "id": "known-vendor_management.md-2",
+    "type": "known",
+    "question": "How are critical vendors reviewed?",
+    "expected": [
+      {
+        "source": "vendor_management.md",
+        "section": "Vendor Reviews"
+      }
+    ]
+  },
+  {
+    "id": "known-vendor_management.md-3",
+    "type": "known",
+    "question": "When should vendor access be removed?",
+    "expected": [
+      {
+        "source": "vendor_management.md",
+        "section": "Vendor Offboarding"
+      }
+    ]
+  },
+  {
+    "id": "known-vendor_management.md-4",
+    "type": "known",
+    "question": "What evidence may high-risk vendors need to provide?",
+    "expected": [
+      {
+        "source": "vendor_management.md",
+        "section": "Vendor Evidence"
+      }
+    ]
+  },
+  {
+    "id": "known-compliance_audit.md-0",
+    "type": "known",
+    "question": "What should an audit scope define?",
+    "expected": [
+      {
+        "source": "compliance_audit.md",
+        "section": "Audit Scope"
+      }
+    ]
+  },
+  {
+    "id": "known-compliance_audit.md-1",
+    "type": "known",
+    "question": "What qualities should audit evidence have?",
+    "expected": [
+      {
+        "source": "compliance_audit.md",
+        "section": "Audit Evidence"
+      }
+    ]
+  },
+  {
+    "id": "known-compliance_audit.md-2",
+    "type": "known",
+    "question": "Who is responsible for a key control?",
+    "expected": [
+      {
+        "source": "compliance_audit.md",
+        "section": "Control Owners"
+      }
+    ]
+  },
+  {
+    "id": "known-compliance_audit.md-3",
+    "type": "known",
+    "question": "What should a control remediation plan include?",
+    "expected": [
+      {
+        "source": "compliance_audit.md",
+        "section": "Remediation Plans"
+      }
+    ]
+  },
+  {
+    "id": "known-compliance_audit.md-4",
+    "type": "known",
+    "question": "How are open audit findings tracked?",
+    "expected": [
+      {
+        "source": "compliance_audit.md",
+        "section": "Audit Follow-up"
+      }
+    ]
+  },
+  {
+    "id": "known-support_escalation.md-0",
+    "type": "known",
+    "question": "How is support severity determined?",
+    "expected": [
+      {
+        "source": "support_escalation.md",
+        "section": "Severity Levels"
+      }
+    ]
+  },
+  {
+    "id": "known-support_escalation.md-1",
+    "type": "known",
+    "question": "When should a high-priority support case be escalated?",
+    "expected": [
+      {
+        "source": "support_escalation.md",
+        "section": "Priority Escalation"
+      }
+    ]
+  },
+  {
+    "id": "known-support_escalation.md-2",
+    "type": "known",
+    "question": "How often should customers receive updates?",
+    "expected": [
+      {
+        "source": "support_escalation.md",
+        "section": "Customer Updates"
+      }
+    ]
+  },
+  {
+    "id": "known-support_escalation.md-3",
+    "type": "known",
+    "question": "Who owns the next troubleshooting step after escalation?",
+    "expected": [
+      {
+        "source": "support_escalation.md",
+        "section": "Escalation Ownership"
+      }
+    ]
+  },
+  {
+    "id": "known-support_escalation.md-4",
+    "type": "known",
+    "question": "What should be recorded before closing a support case?",
+    "expected": [
+      {
+        "source": "support_escalation.md",
+        "section": "Case Closure"
+      }
+    ]
+  },
+  {
+    "id": "known-product_release.md-0",
+    "type": "known",
+    "question": "What quality gates apply before a product release?",
+    "expected": [
+      {
+        "source": "product_release.md",
+        "section": "Release Criteria"
+      }
+    ]
+  },
+  {
+    "id": "known-product_release.md-1",
+    "type": "known",
+    "question": "When should feature flags be used for a release?",
+    "expected": [
+      {
+        "source": "product_release.md",
+        "section": "Feature Flags"
+      }
+    ]
+  },
+  {
+    "id": "known-product_release.md-2",
+    "type": "known",
+    "question": "What should release notes contain?",
+    "expected": [
+      {
+        "source": "product_release.md",
+        "section": "Release Notes"
+      }
+    ]
+  },
+  {
+    "id": "known-product_release.md-3",
+    "type": "known",
+    "question": "What should a high-risk release plan identify?",
+    "expected": [
+      {
+        "source": "product_release.md",
+        "section": "Release Rollback"
+      }
+    ]
+  },
+  {
+    "id": "known-product_release.md-4",
+    "type": "known",
+    "question": "What should teams monitor after a release?",
+    "expected": [
+      {
+        "source": "product_release.md",
+        "section": "Release Monitoring"
+      }
+    ]
+  },
+  {
+    "id": "known-architecture_standards.md-0",
+    "type": "known",
+    "question": "When should a material architecture change be reviewed?",
+    "expected": [
+      {
+        "source": "architecture_standards.md",
+        "section": "Architecture Review"
+      }
+    ]
+  },
+  {
+    "id": "known-architecture_standards.md-1",
+    "type": "known",
+    "question": "What should guide service boundaries?",
+    "expected": [
+      {
+        "source": "architecture_standards.md",
+        "section": "Service Boundaries"
+      }
+    ]
+  },
+  {
+    "id": "known-architecture_standards.md-2",
+    "type": "known",
+    "question": "What should an event-driven design define?",
+    "expected": [
+      {
+        "source": "architecture_standards.md",
+        "section": "Event-Driven Design"
+      }
+    ]
+  },
+  {
+    "id": "known-architecture_standards.md-3",
+    "type": "known",
+    "question": "What should be defined for an application cache?",
+    "expected": [
+      {
+        "source": "architecture_standards.md",
+        "section": "Caching"
+      }
+    ]
+  },
+  {
+    "id": "known-architecture_standards.md-4",
+    "type": "known",
+    "question": "What resilience controls should critical services define?",
+    "expected": [
+      {
+        "source": "architecture_standards.md",
+        "section": "Resilience"
+      }
+    ]
+  },
+  {
+    "id": "known-business_continuity.md-0",
+    "type": "known",
+    "question": "What recovery objectives should critical systems define?",
+    "expected": [
+      {
+        "source": "business_continuity.md",
+        "section": "Recovery Objectives"
+      }
+    ]
+  },
+  {
+    "id": "known-business_continuity.md-1",
+    "type": "known",
+    "question": "What should a business continuity plan identify?",
+    "expected": [
+      {
+        "source": "business_continuity.md",
+        "section": "Continuity Plans"
+      }
+    ]
+  },
+  {
+    "id": "known-business_continuity.md-2",
+    "type": "known",
+    "question": "How often should critical recovery procedures be exercised?",
+    "expected": [
+      {
+        "source": "business_continuity.md",
+        "section": "Disaster Recovery Tests"
+      }
+    ]
+  },
+  {
+    "id": "known-business_continuity.md-3",
+    "type": "known",
+    "question": "What contacts should continuity plans maintain?",
+    "expected": [
+      {
+        "source": "business_continuity.md",
+        "section": "Emergency Contacts"
+      }
+    ]
+  },
+  {
+    "id": "known-business_continuity.md-4",
+    "type": "known",
+    "question": "What should teams validate after a recovery exercise?",
+    "expected": [
+      {
+        "source": "business_continuity.md",
+        "section": "Recovery Validation"
+      }
+    ]
+  },
+  {
+    "id": "para-0-0",
+    "type": "paraphrase",
+    "question": "How many days per week can employees work remotely?",
+    "expected": [
+      {
+        "source": "hr_remote_work.md",
+        "section": "Remote Work Schedule"
+      }
+    ]
+  },
+  {
+    "id": "para-0-1",
+    "type": "paraphrase",
+    "question": "Who approves a regular remote work arrangement?",
+    "expected": [
+      {
+        "source": "hr_remote_work.md",
+        "section": "Remote Work Approval"
+      }
+    ]
+  },
+  {
+    "id": "para-0-2",
+    "type": "paraphrase",
+    "question": "How equipment does the company provide to remote workers?",
+    "expected": [
+      {
+        "source": "hr_remote_work.md",
+        "section": "Remote Equipment"
+      }
+    ]
+  },
+  {
+    "id": "para-0-3",
+    "type": "paraphrase",
+    "question": "Which platform should remote teams use for collaboration?",
+    "expected": [
+      {
+        "source": "hr_remote_work.md",
+        "section": "Remote Collaboration"
+      }
+    ]
+  },
+  {
+    "id": "para-0-4",
+    "type": "paraphrase",
+    "question": "How security controls are required for remote access?",
+    "expected": [
+      {
+        "source": "hr_remote_work.md",
+        "section": "Remote Work Security"
+      }
+    ]
+  },
+  {
+    "id": "para-1-0",
+    "type": "paraphrase",
+    "question": "How much notice should employees give for planned time off?",
+    "expected": [
+      {
+        "source": "hr_leave.md",
+        "section": "Planned Leave Notice"
+      }
+    ]
+  },
+  {
+    "id": "para-1-1",
+    "type": "paraphrase",
+    "question": "Where should employees submit planned leave requests?",
+    "expected": [
+      {
+        "source": "hr_leave.md",
+        "section": "Leave Scheduling"
+      }
+    ]
+  },
+  {
+    "id": "para-1-2",
+    "type": "paraphrase",
+    "question": "How should an employee do before taking planned leave?",
+    "expected": [
+      {
+        "source": "hr_leave.md",
+        "section": "Leave Coverage"
+      }
+    ]
+  },
+  {
+    "id": "para-1-3",
+    "type": "paraphrase",
+    "question": "How should unexpected leave be reported?",
+    "expected": [
+      {
+        "source": "hr_leave.md",
+        "section": "Emergency Leave"
+      }
+    ]
+  },
+  {
+    "id": "para-1-4",
+    "type": "paraphrase",
+    "question": "How factors are considered when approving planned leave?",
+    "expected": [
+      {
+        "source": "hr_leave.md",
+        "section": "Leave Approval"
+      }
+    ]
+  },
+  {
+    "id": "para-2-0",
+    "type": "paraphrase",
+    "question": "How can eligible employees enroll in the health plan?",
+    "expected": [
+      {
+        "source": "hr_benefits.md",
+        "section": "Health Plan Enrollment"
+      }
+    ]
+  },
+  {
+    "id": "para-2-1",
+    "type": "paraphrase",
+    "question": "How can health plan elections be changed outside open enrollment?",
+    "expected": [
+      {
+        "source": "hr_benefits.md",
+        "section": "Health Plan Changes"
+      }
+    ]
+  },
+  {
+    "id": "para-2-2",
+    "type": "paraphrase",
+    "question": "How are flexible spending contribution elections made?",
+    "expected": [
+      {
+        "source": "hr_benefits.md",
+        "section": "Flexible Spending"
+      }
+    ]
+  },
+  {
+    "id": "para-2-3",
+    "type": "paraphrase",
+    "question": "How is required for a wellness reimbursement request?",
+    "expected": [
+      {
+        "source": "hr_benefits.md",
+        "section": "Wellness Benefit"
+      }
+    ]
+  },
+  {
+    "id": "para-2-4",
+    "type": "paraphrase",
+    "question": "Where should employees ask benefits questions?",
+    "expected": [
+      {
+        "source": "hr_benefits.md",
+        "section": "Benefits Support"
+      }
+    ]
+  },
+  {
+    "id": "para-3-0",
+    "type": "paraphrase",
+    "question": "Is multi-factor authentication required for protected company systems?",
+    "expected": [
+      {
+        "source": "security_access.md",
+        "section": "Multi-Factor Authentication"
+      }
+    ]
+  },
+  {
+    "id": "para-3-1",
+    "type": "paraphrase",
+    "question": "Can employees share passwords during urgent support situations?",
+    "expected": [
+      {
+        "source": "security_access.md",
+        "section": "Credential Sharing"
+      }
+    ]
+  },
+  {
+    "id": "para-3-2",
+    "type": "paraphrase",
+    "question": "How often is privileged access reviewed?",
+    "expected": [
+      {
+        "source": "security_access.md",
+        "section": "Privileged Access"
+      }
+    ]
+  },
+  {
+    "id": "para-3-3",
+    "type": "paraphrase",
+    "question": "How information must an access request include?",
+    "expected": [
+      {
+        "source": "security_access.md",
+        "section": "Access Requests"
+      }
+    ]
+  },
+  {
+    "id": "para-3-4",
+    "type": "paraphrase",
+    "question": "How should protected-system access be removed?",
+    "expected": [
+      {
+        "source": "security_access.md",
+        "section": "Access Removal"
+      }
+    ]
+  },
+  {
+    "id": "multi-0",
+    "type": "multi",
+    "question": "What approval and security controls apply to remote work?",
+    "expected": [
+      {
+        "source": "hr_remote_work.md",
+        "section": "Remote Work Schedule"
+      },
+      {
+        "source": "hr_remote_work.md",
+        "section": "Remote Work Security"
+      }
+    ]
+  },
+  {
+    "id": "multi-1",
+    "type": "multi",
+    "question": "What notice and approval rules apply to planned leave?",
+    "expected": [
+      {
+        "source": "hr_leave.md",
+        "section": "Planned Leave Notice"
+      },
+      {
+        "source": "hr_leave.md",
+        "section": "Leave Approval"
+      }
+    ]
+  },
+  {
+    "id": "multi-2",
+    "type": "multi",
+    "question": "What authentication and credential-sharing rules apply?",
+    "expected": [
+      {
+        "source": "security_access.md",
+        "section": "Multi-Factor Authentication"
+      },
+      {
+        "source": "security_access.md",
+        "section": "Credential Sharing"
+      }
+    ]
+  },
+  {
+    "id": "multi-3",
+    "type": "multi",
+    "question": "How are security incidents reported and escalated?",
+    "expected": [
+      {
+        "source": "security_incident.md",
+        "section": "Incident Reporting"
+      },
+      {
+        "source": "security_incident.md",
+        "section": "Incident Escalation"
+      }
+    ]
+  },
+  {
+    "id": "multi-4",
+    "type": "multi",
+    "question": "How are business expenses submitted and approved?",
+    "expected": [
+      {
+        "source": "finance_expenses.md",
+        "section": "Expense Submission"
+      },
+      {
+        "source": "finance_expenses.md",
+        "section": "Expense Approval"
+      }
+    ]
+  },
+  {
+    "id": "multi-5",
+    "type": "multi",
+    "question": "What information is needed for a purchase and when is review required?",
+    "expected": [
+      {
+        "source": "finance_procurement.md",
+        "section": "Purchase Requests"
+      },
+      {
+        "source": "finance_procurement.md",
+        "section": "Purchase Approval"
+      }
+    ]
+  },
+  {
+    "id": "multi-6",
+    "type": "multi",
+    "question": "What approval and rollback requirements apply to production releases?",
+    "expected": [
+      {
+        "source": "engineering_deployment.md",
+        "section": "Deployment Approval"
+      },
+      {
+        "source": "engineering_deployment.md",
+        "section": "Rollback"
+      }
+    ]
+  },
+  {
+    "id": "multi-7",
+    "type": "multi",
+    "question": "Who leads a major incident and what should happen afterward?",
+    "expected": [
+      {
+        "source": "engineering_incident.md",
+        "section": "Incident Ownership"
+      },
+      {
+        "source": "engineering_incident.md",
+        "section": "Postmortem"
+      }
+    ]
+  },
+  {
+    "id": "multi-8",
+    "type": "multi",
+    "question": "What identity and logging controls apply to AWS workloads?",
+    "expected": [
+      {
+        "source": "cloud_aws.md",
+        "section": "AWS IAM Roles"
+      },
+      {
+        "source": "cloud_aws.md",
+        "section": "AWS Logging"
+      }
+    ]
+  },
+  {
+    "id": "multi-9",
+    "type": "multi",
+    "question": "How should Kubernetes secrets and workload health be managed?",
+    "expected": [
+      {
+        "source": "cloud_kubernetes.md",
+        "section": "Kubernetes Secrets"
+      },
+      {
+        "source": "cloud_kubernetes.md",
+        "section": "Kubernetes Health Checks"
+      }
+    ]
+  },
+  {
+    "id": "multi-10",
+    "type": "multi",
+    "question": "How should sensitive data be classified and accessed?",
+    "expected": [
+      {
+        "source": "data_governance.md",
+        "section": "Data Classification"
+      },
+      {
+        "source": "data_governance.md",
+        "section": "Data Access"
+      }
+    ]
+  },
+  {
+    "id": "multi-11",
+    "type": "multi",
+    "question": "How are retention and approved deletion requests handled?",
+    "expected": [
+      {
+        "source": "data_retention.md",
+        "section": "Retention Schedule"
+      },
+      {
+        "source": "data_retention.md",
+        "section": "Deletion Requests"
+      }
+    ]
+  },
+  {
+    "id": "multi-12",
+    "type": "multi",
+    "question": "What happens when a vendor is onboarded and later offboarded?",
+    "expected": [
+      {
+        "source": "vendor_management.md",
+        "section": "Vendor Onboarding"
+      },
+      {
+        "source": "vendor_management.md",
+        "section": "Vendor Offboarding"
+      }
+    ]
+  },
+  {
+    "id": "multi-13",
+    "type": "multi",
+    "question": "What evidence and remediation information are needed for an audit?",
+    "expected": [
+      {
+        "source": "compliance_audit.md",
+        "section": "Audit Evidence"
+      },
+      {
+        "source": "compliance_audit.md",
+        "section": "Remediation Plans"
+      }
+    ]
+  },
+  {
+    "id": "multi-14",
+    "type": "multi",
+    "question": "How should high-priority support cases be escalated and communicated?",
+    "expected": [
+      {
+        "source": "support_escalation.md",
+        "section": "Priority Escalation"
+      },
+      {
+        "source": "support_escalation.md",
+        "section": "Customer Updates"
+      }
+    ]
+  },
+  {
+    "id": "unknown-0",
+    "type": "unknown",
+    "question": "What is the company travel reimbursement limit for international flights?",
+    "expected": []
+  },
+  {
+    "id": "unknown-1",
+    "type": "unknown",
+    "question": "How many parental leave days are provided?",
+    "expected": []
+  },
+  {
+    "id": "unknown-2",
+    "type": "unknown",
+    "question": "What is the employee stock vesting schedule?",
+    "expected": []
+  },
+  {
+    "id": "unknown-3",
+    "type": "unknown",
+    "question": "Does the company reimburse home internet costs?",
+    "expected": []
+  },
+  {
+    "id": "unknown-4",
+    "type": "unknown",
+    "question": "What is the office parking policy?",
+    "expected": []
+  },
+  {
+    "id": "unknown-5",
+    "type": "unknown",
+    "question": "What is the relocation package?",
+    "expected": []
+  },
+  {
+    "id": "unknown-6",
+    "type": "unknown",
+    "question": "What dental insurance plan is offered?",
+    "expected": []
+  },
+  {
+    "id": "unknown-7",
+    "type": "unknown",
+    "question": "What is the annual bonus target?",
+    "expected": []
+  },
+  {
+    "id": "unknown-8",
+    "type": "unknown",
+    "question": "What is the company car policy?",
+    "expected": []
+  },
+  {
+    "id": "unknown-9",
+    "type": "unknown",
+    "question": "What is the tuition reimbursement limit?",
+    "expected": []
+  },
+  {
+    "id": "unknown-10",
+    "type": "unknown",
+    "question": "What is the conference attendance budget per employee?",
+    "expected": []
+  },
+  {
+    "id": "unknown-11",
+    "type": "unknown",
+    "question": "How does the company handle pet insurance?",
+    "expected": []
+  },
+  {
+    "id": "unknown-12",
+    "type": "unknown",
+    "question": "What is the employee referral bonus?",
+    "expected": []
+  },
+  {
+    "id": "unknown-13",
+    "type": "unknown",
+    "question": "What is the sabbatical policy?",
+    "expected": []
+  },
+  {
+    "id": "unknown-14",
+    "type": "unknown",
+    "question": "What is the international assignment policy?",
+    "expected": []
+  }
+]
