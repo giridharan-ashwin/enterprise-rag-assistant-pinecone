@@ -143,26 +143,41 @@ def build_hybrid_results(dense_results, sparse_results):
     return results
 
 
-def apply_dense_threshold(results):
+def apply_evidence_selection(results):
     """
-    Threshold is applied to the original dense similarity score.
+    Apply the same evidence-selection policy used by the
+    production retrieval pipeline.
 
-    This matches the research experiment where the threshold
-    represents semantic similarity rather than the RRF score.
+    A result is retained when:
+
+    1. Its dense similarity meets the configured threshold, OR
+    2. It is independently supported by both dense and BM25 retrieval.
+
+    This allows hybrid retrieval to recover legitimate evidence
+    that has lower dense similarity but strong lexical support.
     """
 
-    filtered = []
+    selected = []
 
     for item in results:
         dense_score = item.get("dense_score")
 
-        if dense_score is None:
-            continue
+        strong_dense = (
+            dense_score is not None
+            and float(dense_score) >= THRESHOLD
+        )
 
-        if float(dense_score) >= THRESHOLD:
-            filtered.append(item)
+        # In the cached research results, an item has a BM25 score
+        # when it was independently retrieved by BM25.
+        hybrid_supported = (
+            dense_score is not None
+            and item.get("bm25_score") is not None
+        )
 
-    return filtered
+        if strong_dense or hybrid_supported:
+            selected.append(item)
+
+    return selected
 
 
 def prepare_contexts(hybrid_results):
@@ -313,7 +328,7 @@ def main():
             sparse_results,
         )
 
-        threshold_results = apply_dense_threshold(
+        threshold_results = apply_evidence_selection(
             hybrid_results
         )
 

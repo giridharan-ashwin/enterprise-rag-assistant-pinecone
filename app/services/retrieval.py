@@ -5,6 +5,10 @@ from typing import Any
 from app.clients import pinecone_index
 from app.config import settings
 from app.services.embeddings import embed_query
+from app.services.hybrid import (
+    bm25_retriever,
+    reciprocal_rank_fusion,
+)
 
 
 def dense_retrieve(
@@ -14,7 +18,7 @@ def dense_retrieve(
     """
     Retrieve documents from Pinecone using dense vector similarity.
 
-    No Pinecone reranking is performed.
+    No reranking is performed.
     """
 
     vector = embed_query(question)
@@ -55,19 +59,27 @@ def retrieve(
     top_k: int | None = None,
 ) -> list[dict[str, Any]]:
     """
-    Production retrieval pipeline:
+    Production hybrid retrieval.
+
+    Pipeline:
 
         Dense retrieval
              +
-        BM25 sparse retrieval
+        BM25 retrieval
              ↓
         Reciprocal Rank Fusion
              ↓
-        Dense similarity threshold
+        Evidence selection
              ↓
         Final contexts
 
-    Pinecone reranking is intentionally disabled.
+    The Pinecone reranker is intentionally not used.
+
+    Important:
+    Dense similarity thresholding is NOT performed before RRF.
+    This allows BM25 to recover lexically strong evidence that may
+    have a lower dense similarity score, which is especially useful
+    for multi-section questions.
     """
 
     final_top_k = top_k or settings.top_k
@@ -84,26 +96,8 @@ def retrieve(
     )
 
     # ---------------------------------------------------------
-    # 2. Dense similarity threshold
+    # 2. Sparse BM25 retrieval
     # ---------------------------------------------------------
-
-    dense_results = [
-        result
-        for result in dense_results
-        if result["dense_score"] >= settings.similarity_threshold
-    ]
-
-    if not dense_results:
-        return []
-
-    # ---------------------------------------------------------
-    # 3. Sparse BM25 retrieval
-    # ---------------------------------------------------------
-
-    from app.services.hybrid import (
-        bm25_retriever,
-        reciprocal_rank_fusion,
-    )
 
     sparse_results = bm25_retriever.retrieve(
         question,
@@ -111,13 +105,54 @@ def retrieve(
     )
 
     # ---------------------------------------------------------
-    # 4. Reciprocal Rank Fusion
+    # 3. Reciprocal Rank Fusion
     # ---------------------------------------------------------
 
     fused_results = reciprocal_rank_fusion(
         dense_results=dense_results,
         sparse_results=sparse_results,
-        top_k=final_top_k,
+        top_k=candidate_k,
     )
 
-    return fused_results
+    if not fused_results:
+        return []
+
+    # ---------------------------------------------------------
+    # 4. Evidence selection
+    # ---------------------------------------------------------
+    #
+    # Keep strong dense matches OR documents that receive
+    # meaningful support from both retrieval systems.
+    #
+    # This prevents the global 0.50 dense threshold from
+    # destroying legitimate multi-section evidence.
+    # ---------------------------------------------------------
+
+    selected: list[dict[str, Any]] = []
+
+    for result in fused_results:
+
+        dense_score = result.get("dense_score")
+
+        dense_rank = result.get("dense_rank")
+
+        bm25_rank = result.get("bm25_rank")
+
+        strong_dense = (
+            dense_score is not None
+            and dense_score >= settings.similarity_threshold
+        )
+
+        hybrid_supported = (
+            dense_rank is not None
+            and bm25_rank is not None
+        )
+
+        if strong_dense or hybrid_supported:
+            selected.append(result)
+
+    # ---------------------------------------------------------
+    # 5. Return final contexts
+    # ---------------------------------------------------------
+
+    return selected[:final_top_k]

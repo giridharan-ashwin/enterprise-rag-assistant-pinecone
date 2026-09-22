@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Enterprise RAG Assistant</title>
+
+    <meta
+        name="description"
+        content="Enterprise knowledge assistant powered by hybrid retrieval and grounded generation."
+    >
+
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+
+<div class="app-shell">
+
+    <header class="header">
+        <div class="brand">
+            <div class="brand-mark">R</div>
+
+            <div>
+                <h1>Enterprise RAG Assistant</h1>
+                <p>Grounded enterprise knowledge retrieval</p>
+            </div>
+        </div>
+
+        <div class="status">
+            <span class="status-dot"></span>
+            System Online
+        </div>
+    </header>
+
+
+    <main class="main-content">
+
+        <section class="hero">
+            <div class="eyebrow">
+                HYBRID RETRIEVAL · GROUNDED GENERATION
+            </div>
+
+            <h2>
+                Ask your enterprise<br>
+                knowledge base.
+            </h2>
+
+            <p>
+                Get answers grounded in your organization's knowledge,
+                with transparent source citations and explicit abstention
+                when information is unavailable.
+            </p>
+        </section>
+
+
+        <section class="query-card">
+
+            <label for="question">
+                Your question
+            </label>
+
+            <textarea
+                id="question"
+                placeholder="e.g. How many days per week can employees work remotely?"
+                rows="4"
+            ></textarea>
+
+            <div class="query-footer">
+
+                <span class="hint">
+                    Answers are generated only from retrieved knowledge.
+                </span>
+
+                <button id="askButton" type="button">
+                    <span id="buttonText">Ask question</span>
+                    <span id="buttonLoader" class="button-loader"></span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section
+            id="errorCard"
+            class="error-card hidden"
+        >
+            <div class="error-title">
+                Request failed
+            </div>
+
+            <div id="errorMessage"></div>
+        </section>
+
+
+        <section
+            id="answerSection"
+            class="answer-section hidden"
+        >
+
+            <div class="section-label">
+                ANSWER
+            </div>
+
+            <div
+                id="answer"
+                class="answer"
+            ></div>
+
+
+            <div
+                id="abstentionNotice"
+                class="abstention-notice hidden"
+            >
+                <strong>Knowledge boundary</strong>
+
+                <span>
+                    The knowledge base did not contain sufficient
+                    information to answer this question.
+                </span>
+            </div>
+
+
+            <div
+                id="sourcesSection"
+                class="sources-section hidden"
+            >
+
+                <div class="section-label">
+                    SOURCES
+                </div>
+
+                <div
+                    id="sources"
+                    class="sources"
+                ></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+        <span>Enterprise RAG Assistant</span>
+
+        <span>
+            Hybrid Retrieval · RRF · Grounded Generation
+        </span>
+    </footer>
+
+</div>
+
+
+<script src="/static/app.js"></script>
+
+</body>
+</html>
