@@ -1,7 +1,8 @@
 from __future__ import annotations
 
-import time
+import sys
 import json
+import time
 from pathlib import Path
 from typing import Any
 
@@ -10,14 +11,22 @@ from app.config import settings
 from app.services.embeddings import embed_query
 
 
-STRESS_NAMESPACE = "stress-test"
 CASES_FILE = Path(__file__).with_name("stress_test_cases.json")
+NAMESPACE = "stress-test"
+SKIP_RERANK = "--skip-rerank" in sys.argv
 RERANK_MIN_INTERVAL = 1.1
 _last_rerank_time = 0.0
 
 
+# -------------------------------------------------------------------
+# Helpers
+# -------------------------------------------------------------------
+
+def normalize(value: Any) -> str:
+    return str(value).strip().lower()
+
+
 def load_cases() -> list[dict[str, Any]]:
-    """Load evaluation cases from tests/stress_test_cases.json."""
     with CASES_FILE.open("r", encoding="utf-8") as file:
         data = json.load(file)
 
@@ -25,31 +34,40 @@ def load_cases() -> list[dict[str, Any]]:
         return data
 
     if isinstance(data, dict):
-        for key in ("cases", "questions", "test_cases", "queries"):
+        for key in (
+            "cases",
+            "questions",
+            "test_cases",
+            "queries",
+        ):
             if isinstance(data.get(key), list):
                 return data[key]
 
     raise ValueError(
-        f"Unsupported test case format in {CASES_FILE}. "
-        "Expected a list or a dictionary containing a list."
+        "Unsupported stress_test_cases.json format"
     )
 
-def rate_limit_rerank():
-    global _last_rerank_time
 
-    now = time.monotonic()
-    elapsed = now - _last_rerank_time
+def get_question(case: dict[str, Any]) -> str:
+    for key in (
+        "question",
+        "query",
+        "prompt",
+    ):
+        value = case.get(key)
 
-    if elapsed < RERANK_MIN_INTERVAL:
-        time.sleep(RERANK_MIN_INTERVAL - elapsed)
+        if value:
+            return str(value).strip()
 
-    _last_rerank_time = time.monotonic()
+    raise ValueError(
+        f"No question found in case: {case}"
+    )
 
-def normalize(value: Any) -> str:
-    return str(value).strip().lower()
 
-
-def case_id(case: dict[str, Any], index: int) -> str:
+def case_id(
+    case: dict[str, Any],
+    index: int,
+) -> str:
     return str(
         case.get("id")
         or case.get("question_id")
@@ -57,361 +75,598 @@ def case_id(case: dict[str, Any], index: int) -> str:
     )
 
 
-def get_question(case: dict[str, Any]) -> str:
-    for key in ("question", "query", "prompt"):
-        value = case.get(key)
-        if value:
-            return str(value).strip()
+def is_unknown_case(
+    case: dict[str, Any],
+) -> bool:
 
-    raise ValueError(f"No question field found in case: {case}")
-
-
-def is_unknown_case(case: dict[str, Any]) -> bool:
-    """
-    Supports several common labels:
-      known=false
-      type=unknown
-      category=unknown
-      expected_retrieval=unknown
-    """
     if case.get("known") is False:
         return True
 
-    for key in ("type", "category", "expected_retrieval"):
-        value = normalize(case.get(key, ""))
-        if value in {"unknown", "unanswerable", "negative", "out_of_scope"}:
+    for key in (
+        "type",
+        "category",
+        "expected_retrieval",
+        "classification",
+    ):
+        value = normalize(
+            case.get(key, "")
+        )
+
+        if value in {
+            "unknown",
+            "unanswerable",
+            "negative",
+            "out_of_scope",
+        }:
             return True
 
-    return False
-
-
-def expected_sections(case: dict[str, Any]) -> set[str]:
-    """
-    Supports:
-      expected_sections: ["Remote Work", "Security"]
-      expected_section: "Remote Work"
-      section: "Remote Work"
-    """
-    value = (
-        case.get("expected_sections")
-        or case.get("expected_section")
-        or case.get("section")
-        or []
+    identifier = normalize(
+        case.get("id")
+        or case.get("question_id")
+        or ""
     )
 
-    if isinstance(value, str):
-        return {normalize(value)}
-
-    if isinstance(value, list):
-        return {normalize(item) for item in value if item}
-
-    return set()
+    return identifier.startswith("unknown-")
 
 
-def expected_sources(case: dict[str, Any]) -> set[str]:
-    """
-    Supports:
-      expected_sources: ["hr_remote_work.md"]
-      expected_source: "hr_remote_work.md"
-      source: "hr_remote_work.md"
-    """
-    value = (
-        case.get("expected_sources")
-        or case.get("expected_source")
+def expected_targets(
+    case: dict[str, Any],
+) -> list[tuple[str, str]]:
+
+    expected = case.get("expected")
+
+    if isinstance(expected, list):
+
+        targets = []
+
+        for item in expected:
+
+            if not isinstance(item, dict):
+                continue
+
+            source = normalize(
+                item.get("source", "")
+            )
+
+            section = normalize(
+                item.get("section", "")
+            )
+
+            if source or section:
+                targets.append(
+                    (source, section)
+                )
+
+        return targets
+
+    source = normalize(
+        case.get("expected_source")
         or case.get("source")
-        or []
+        or ""
     )
 
-    if isinstance(value, str):
-        return {normalize(value)}
+    section = normalize(
+        case.get("expected_section")
+        or case.get("section")
+        or ""
+    )
 
-    if isinstance(value, list):
-        return {normalize(item) for item in value if item}
+    if source or section:
+        return [(source, section)]
 
-    return set()
+    return []
 
 
-def query_dense(question: str, top_k: int = 3) -> list[dict[str, Any]]:
-    """Pure dense retrieval. No threshold and no reranking."""
+def expected_sources(
+    case: dict[str, Any],
+) -> set[str]:
+
+    return {
+        source
+        for source, _ in expected_targets(case)
+        if source
+    }
+
+
+def expected_sections(
+    case: dict[str, Any],
+) -> set[str]:
+
+    return {
+        section
+        for _, section in expected_targets(case)
+        if section
+    }
+
+
+def is_multi_section_case(
+    case: dict[str, Any],
+) -> bool:
+
+    targets = expected_targets(case)
+
+    if len(targets) > 1:
+        return True
+
+    if normalize(
+        case.get("type", "")
+    ) == "multi":
+        return True
+
+    identifier = normalize(
+        case.get("id")
+        or case.get("question_id")
+        or ""
+    )
+
+    return identifier.startswith("multi-")
+
+
+# -------------------------------------------------------------------
+# Dense retrieval
+# -------------------------------------------------------------------
+
+def dense_retrieve(
+    question: str,
+    top_k: int = 5,
+) -> list[dict[str, Any]]:
+
     vector = embed_query(question)
 
     response = pinecone_index.query(
         vector=vector,
         top_k=top_k,
         include_metadata=True,
-        namespace=STRESS_NAMESPACE,
+        namespace=NAMESPACE,
     )
 
-    results: list[dict[str, Any]] = []
+    results = []
 
-    for match in response.get("matches", []):
-        metadata = match.get("metadata", {}) or {}
+    for match in response.get(
+        "matches",
+        [],
+    ):
+
+        metadata = (
+            match.get("metadata")
+            or {}
+        )
 
         results.append(
             {
-                "source": metadata.get("source", "unknown"),
-                "section": metadata.get("section", "unknown"),
-                "chunk_index": metadata.get("chunk_index", -1),
-                "score": float(match.get("score", 0.0)),
-                "text": metadata.get("text", ""),
+                "id": str(match["id"]),
+                "source": metadata.get(
+                    "source",
+                    "unknown",
+                ),
+                "section": metadata.get(
+                    "section",
+                    "unknown",
+                ),
+                "chunk_index": metadata.get(
+                    "chunk_index",
+                    -1,
+                ),
+                "score": float(
+                    match.get(
+                        "score",
+                        0.0,
+                    )
+                ),
+                "text": metadata.get(
+                    "text",
+                    "",
+                ),
             }
         )
 
     return results
 
 
-def apply_threshold(
-    results: list[dict[str, Any]],
-    threshold: float,
-) -> list[dict[str, Any]]:
-    """Filter dense results using the configured similarity threshold."""
-    return [
-        result
-        for result in results
-        if float(result["score"]) >= threshold
-    ]
-
+# -------------------------------------------------------------------
+# Reranking
+# -------------------------------------------------------------------
 
 def rerank(
     question: str,
     candidates: list[dict[str, Any]],
 ) -> list[dict[str, Any]]:
-    """Rerank candidates using Pinecone's hosted reranker."""
+
+    global _last_rerank_time
+
     if not candidates:
         return []
+
+    elapsed = (
+        time.monotonic()
+        - _last_rerank_time
+    )
+
+    if elapsed < RERANK_MIN_INTERVAL:
+        time.sleep(
+            RERANK_MIN_INTERVAL
+            - elapsed
+        )
 
     documents = [
         {
             "id": str(index),
             "text": candidate["text"],
         }
-        for index, candidate in enumerate(candidates)
+        for index, candidate
+        in enumerate(candidates)
     ]
-
-    rate_limit_rerank()
 
     response = pinecone_client.inference.rerank(
         model=settings.rerank_model,
         query=question,
         documents=documents,
-        top_n=min(settings.rerank_top_n, len(documents)),
+        top_n=min(
+            settings.rerank_top_n,
+            len(documents),
+        ),
         return_documents=False,
     )
 
-    results: list[dict[str, Any]] = []
+    _last_rerank_time = time.monotonic()
+
+    results = []
 
     for item in response.data:
-        candidate = candidates[item.index]
+
+        candidate = candidates[
+            item.index
+        ]
 
         results.append(
             {
                 **candidate,
-                "rerank_score": float(item.score),
+                "rerank_score": float(
+                    item.score
+                ),
             }
         )
 
     return results
 
 
+# -------------------------------------------------------------------
+# Evaluation
+# -------------------------------------------------------------------
+
+def matches_target(
+    result: dict[str, Any],
+    targets: list[tuple[str, str]],
+) -> bool:
+
+    source = normalize(
+        result.get("source", "")
+    )
+
+    section = normalize(
+        result.get("section", "")
+    )
+
+    for target_source, target_section in targets:
+
+        source_match = (
+            not target_source
+            or source == target_source
+        )
+
+        section_match = (
+            not target_section
+            or section == target_section
+        )
+
+        if source_match and section_match:
+            return True
+
+    return False
+
+
 def evaluate_case(
     case: dict[str, Any],
     mode: str,
+    index: int,
 ) -> dict[str, Any]:
+
     question = get_question(case)
 
-    # Retrieve more candidates for the baseline so thresholding
-    # and reranking have enough material to work with.
-    dense_results = query_dense(question, top_k=5)
+    dense_results = dense_retrieve(
+        question,
+        top_k=5,
+    )
 
     if mode == "dense":
+
         final_results = dense_results[:3]
 
     elif mode == "threshold":
-        filtered = apply_threshold(
-            dense_results,
-            settings.similarity_threshold,
-        )
-        final_results = filtered[:3]
+
+        final_results = [
+            result
+            for result in dense_results
+            if result["score"]
+            >= settings.similarity_threshold
+        ][:3]
 
     elif mode == "rerank":
-        filtered = apply_threshold(
-            dense_results,
-            settings.similarity_threshold,
-        )
-        final_results = rerank(question, filtered)
-        final_results = final_results[:3]
+
+        filtered = [
+            result
+            for result in dense_results
+            if result["score"]
+            >= settings.similarity_threshold
+        ]
+
+        final_results = rerank(
+            question,
+            filtered,
+        )[:3]
 
     else:
-        raise ValueError(f"Unknown evaluation mode: {mode}")
+        raise ValueError(
+            f"Unknown mode: {mode}"
+        )
 
-    expected_section_set = expected_sections(case)
-    expected_source_set = expected_sources(case)
     unknown = is_unknown_case(case)
+    multi = is_multi_section_case(case)
+    targets = expected_targets(case)
 
-    returned_sections = {
-        normalize(result["section"])
-        for result in final_results
-    }
+    # ---------------------------------------------------------------
+    # Unknown questions
+    # ---------------------------------------------------------------
 
-    returned_sources = {
-        normalize(result["source"])
-        for result in final_results
-    }
-
-    # Top-1:
-    # For known queries, top result must match the expected source or section.
-    # For unknown queries, top-1 is considered rejected when no result survives.
     if unknown:
-        top1_correct = len(final_results) == 0
-    else:
-        if not final_results:
-            top1_correct = False
-        else:
-            top = final_results[0]
 
-            top_section = normalize(top["section"])
-            top_source = normalize(top["source"])
-
-            section_match = (
-                not expected_section_set
-                or top_section in expected_section_set
-            )
-
-            source_match = (
-                not expected_source_set
-                or top_source in expected_source_set
-            )
-
-            top1_correct = section_match and source_match
-
-    # Recall@3:
-    # Known query is successful when one of the returned results matches
-    # the expected section/source. Unknown query is successful when rejected.
-    if unknown:
-        recall_at_3 = len(final_results) == 0
-    else:
-        section_match = (
-            not expected_section_set
-            or bool(returned_sections & expected_section_set)
+        rejected = (
+            len(final_results) == 0
         )
 
-        source_match = (
-            not expected_source_set
-            or bool(returned_sources & expected_source_set)
-        )
-
-        recall_at_3 = section_match and source_match
-
-    # Multi-section recall:
-    # Only applies when the evaluation case expects >1 section.
-    if len(expected_section_set) > 1:
-        multi_section_hits = len(
-            returned_sections & expected_section_set
-        )
-        multi_section_recall = (
-            multi_section_hits / len(expected_section_set)
-        )
-    else:
-        multi_section_recall = None
-
-    return {
-        "id": case_id(case, 0),
-        "question": question,
-        "unknown": unknown,
-        "results": final_results,
-        "top1_correct": top1_correct,
-        "recall_at_3": recall_at_3,
-        "multi_section_recall": multi_section_recall,
-    }
-
-
-def calculate_metrics(results: list[dict[str, Any]]) -> dict[str, float]:
-    if not results:
         return {
-            "top1_accuracy": 0.0,
-            "recall_at_3": 0.0,
-            "unknown_rejection": 0.0,
-            "multi_section_recall": 0.0,
+            "id": case_id(case, index),
+            "question": question,
+            "unknown": True,
+            "multi_section": False,
+            "top1_correct": rejected,
+            "recall_at_3": rejected,
+            "multi_section_recall": None,
+            "results": final_results,
         }
 
-    top1_accuracy = sum(
-        result["top1_correct"] for result in results
-    ) / len(results)
+    # ---------------------------------------------------------------
+    # Known questions
+    # ---------------------------------------------------------------
 
-    recall_at_3 = sum(
-        result["recall_at_3"] for result in results
-    ) / len(results)
+    if not final_results:
 
-    unknown_results = [
-        result for result in results
+        return {
+            "id": case_id(case, index),
+            "question": question,
+            "unknown": False,
+            "multi_section": multi,
+            "top1_correct": False,
+            "recall_at_3": False,
+            "multi_section_recall": (
+                0.0
+                if multi
+                else None
+            ),
+            "results": [],
+        }
+
+    # Top-1
+    top1_correct = matches_target(
+        final_results[0],
+        targets,
+    )
+
+    # Recall@3
+    top3_results = final_results[:3]
+
+    if multi and targets:
+
+        retrieved_pairs = {
+            (
+                normalize(
+                    result.get(
+                        "source",
+                        "",
+                    )
+                ),
+                normalize(
+                    result.get(
+                        "section",
+                        "",
+                    )
+                ),
+            )
+            for result in top3_results
+        }
+
+        recall_at_3 = all(
+            target in retrieved_pairs
+            for target in targets
+        )
+
+    else:
+
+        recall_at_3 = any(
+            matches_target(
+                result,
+                targets,
+            )
+            for result in top3_results
+        )
+
+    # Multi-section recall
+    if multi and targets:
+
+        retrieved_pairs = {
+            (
+                normalize(
+                    result.get(
+                        "source",
+                        "",
+                    )
+                ),
+                normalize(
+                    result.get(
+                        "section",
+                        "",
+                    )
+                ),
+            )
+            for result in final_results[:5]
+        }
+
+        matched_targets = sum(
+            target in retrieved_pairs
+            for target in targets
+        )
+
+        multi_recall = (
+            matched_targets
+            / len(targets)
+        )
+
+    else:
+
+        multi_recall = None
+
+    return {
+        "id": case_id(
+            case,
+            index,
+        ),
+        "question": question,
+        "unknown": False,
+        "multi_section": multi,
+        "top1_correct": top1_correct,
+        "recall_at_3": recall_at_3,
+        "multi_section_recall": multi_recall,
+        "results": final_results,
+    }
+
+
+# -------------------------------------------------------------------
+# Metrics
+# -------------------------------------------------------------------
+
+def calculate_metrics(
+    results: list[dict[str, Any]],
+) -> dict[str, float]:
+
+    known = [
+        result
+        for result in results
+        if not result["unknown"]
+    ]
+
+    unknown = [
+        result
+        for result in results
         if result["unknown"]
     ]
 
-    if unknown_results:
-        unknown_rejection = sum(
-            result["recall_at_3"]
-            for result in unknown_results
-        ) / len(unknown_results)
-    else:
-        unknown_rejection = 0.0
-
-    multi_section_results = [
-        result["multi_section_recall"]
+    multi = [
+        result
         for result in results
-        if result["multi_section_recall"] is not None
+        if result["multi_section"]
+        and result["multi_section_recall"]
+        is not None
     ]
 
-    if multi_section_results:
-        multi_section_recall = (
-            sum(multi_section_results)
-            / len(multi_section_results)
+    known_top1 = (
+        sum(
+            result["top1_correct"]
+            for result in known
         )
-    else:
-        multi_section_recall = 0.0
+        / len(known)
+        if known
+        else 0.0
+    )
+
+    known_recall = (
+        sum(
+            result["recall_at_3"]
+            for result in known
+        )
+        / len(known)
+        if known
+        else 0.0
+    )
+
+    unknown_rejection = (
+        sum(
+            result["recall_at_3"]
+            for result in unknown
+        )
+        / len(unknown)
+        if unknown
+        else 0.0
+    )
+
+    known_rejection = (
+        sum(
+            not result["results"]
+            for result in known
+        )
+        / len(known)
+        if known
+        else 0.0
+    )
+
+    overall = (
+        (
+            sum(
+                result["top1_correct"]
+                for result in known
+            )
+            +
+            sum(
+                result["recall_at_3"]
+                for result in unknown
+            )
+        )
+        / len(results)
+        if results
+        else 0.0
+    )
+
+    multi_recall = (
+        sum(
+            result["multi_section_recall"]
+            for result in multi
+        )
+        / len(multi)
+        if multi
+        else 0.0
+    )
 
     return {
-        "top1_accuracy": top1_accuracy,
-        "recall_at_3": recall_at_3,
+        "known_top1": known_top1,
+        "known_recall_at_3": known_recall,
         "unknown_rejection": unknown_rejection,
-        "multi_section_recall": multi_section_recall,
+        "known_rejection": known_rejection,
+        "overall_accuracy": overall,
+        "multi_section_recall": multi_recall,
     }
 
 
-def print_metrics(
-    mode: str,
-    metrics: dict[str, float],
-) -> None:
-    print()
-    print("=" * 70)
-    print(mode.upper())
-    print("=" * 70)
-
-    print(
-        f"Top-1 Accuracy:       "
-        f"{metrics['top1_accuracy'] * 100:.2f}%"
-    )
-    print(
-        f"Recall@3:             "
-        f"{metrics['recall_at_3'] * 100:.2f}%"
-    )
-    print(
-        f"Unknown Rejection:    "
-        f"{metrics['unknown_rejection'] * 100:.2f}%"
-    )
-    print(
-        f"Multi-Section Recall: "
-        f"{metrics['multi_section_recall'] * 100:.2f}%"
-    )
-
+# -------------------------------------------------------------------
+# Runner
+# -------------------------------------------------------------------
 
 def print_failures(
-    cases: list[dict[str, Any]],
     results: list[dict[str, Any]],
     mode: str,
 ) -> None:
+
     failures = [
-        (case, result)
-        for case, result in zip(cases, results)
+        result
+        for result in results
         if not result["top1_correct"]
     ]
 
@@ -419,145 +674,226 @@ def print_failures(
         return
 
     print()
-    print(f"--- {mode.upper()} FAILURES ---")
+    print(
+        f"--- {mode.upper()} FAILURES ---"
+    )
 
-    for case, result in failures:
+    for result in failures:
+
         print()
-        print(f"[{result['id']}] {result['question']}")
-        print(f"Expected unknown: {result['unknown']}")
-
-        expected_sections_value = (
-            case.get("expected_sections")
-            or case.get("expected_section")
-            or case.get("section")
+        print(
+            f"[{result['id']}] "
+            f"{result['question']}"
         )
 
-        expected_sources_value = (
-            case.get("expected_sources")
-            or case.get("expected_source")
-            or case.get("source")
+        print(
+            f"Expected unknown: "
+            f"{result['unknown']}"
         )
 
-        if expected_sections_value:
-            print(f"Expected section(s): {expected_sections_value}")
-
-        if expected_sources_value:
-            print(f"Expected source(s):  {expected_sources_value}")
+        print(
+            f"Multi-section: "
+            f"{result['multi_section']}"
+        )
 
         if not result["results"]:
+
             print("Retrieved: NONE")
             continue
 
-        for rank, retrieved in enumerate(result["results"], start=1):
-            score = retrieved["score"]
+        for rank, retrieved in enumerate(
+            result["results"],
+            start=1,
+        ):
+
+            details = [
+                f"dense={retrieved['score']:.4f}"
+            ]
 
             if "rerank_score" in retrieved:
-                print(
-                    f"  {rank}. "
-                    f"{retrieved['source']} | "
-                    f"{retrieved['section']} | "
-                    f"dense={score:.4f} | "
-                    f"rerank={retrieved['rerank_score']:.4f}"
-                )
-            else:
-                print(
-                    f"  {rank}. "
-                    f"{retrieved['source']} | "
-                    f"{retrieved['section']} | "
-                    f"score={score:.4f}"
+                details.append(
+                    f"rerank="
+                    f"{retrieved['rerank_score']:.4f}"
                 )
 
-
-def print_summary_table(
-    all_metrics: dict[str, dict[str, float]],
-) -> None:
-    print()
-    print("=" * 92)
-    print("STRESS TEST SUMMARY")
-    print("=" * 92)
-
-    header = (
-        f"{'Configuration':<32}"
-        f"{'Top-1':>12}"
-        f"{'Recall@3':>12}"
-        f"{'Unknown':>12}"
-        f"{'Multi-Sec':>12}"
-    )
-
-    print(header)
-    print("-" * 92)
-
-    for name, metrics in all_metrics.items():
-        print(
-            f"{name:<32}"
-            f"{metrics['top1_accuracy'] * 100:>11.2f}%"
-            f"{metrics['recall_at_3'] * 100:>11.2f}%"
-            f"{metrics['unknown_rejection'] * 100:>11.2f}%"
-            f"{metrics['multi_section_recall'] * 100:>11.2f}%"
-        )
-
-    print("=" * 92)
+            print(
+                f"  {rank}. "
+                f"{retrieved['source']} | "
+                f"{retrieved['section']} | "
+                f"{' | '.join(details)}"
+            )
 
 
 def main() -> None:
+
     cases = load_cases()
 
-    print()
-    print("=" * 70)
-    print("ENTERPRISE RAG BIG-BANG STRESS TEST")
-    print("=" * 70)
-    print(f"Cases:                {len(cases)}")
-    print(f"Namespace:             {STRESS_NAMESPACE}")
-    print(f"Similarity threshold:  {settings.similarity_threshold}")
-    print(f"Reranker:              {settings.rerank_model}")
-    print(f"Rerank top N:          {settings.rerank_top_n}")
-
     known_count = sum(
-        1 for case in cases
-        if not is_unknown_case(case)
+        not is_unknown_case(case)
+        for case in cases
     )
 
-    unknown_count = len(cases) - known_count
-
-    multi_section_count = sum(
-        1 for case in cases
-        if len(expected_sections(case)) > 1
+    unknown_count = sum(
+        is_unknown_case(case)
+        for case in cases
     )
 
-    print(f"Known cases:           {known_count}")
-    print(f"Unknown cases:         {unknown_count}")
-    print(f"Multi-section cases:   {multi_section_count}")
+    multi_count = sum(
+        is_multi_section_case(case)
+        for case in cases
+    )
+
+    print()
+    print("=" * 80)
+    print(
+        "ENTERPRISE RAG STRESS TEST"
+    )
+    print("=" * 80)
+
+    print(
+        f"Cases:               {len(cases)}"
+    )
+
+    print(
+        f"Namespace:           {NAMESPACE}"
+    )
+
+    print(
+        f"Known cases:         {known_count}"
+    )
+
+    print(
+        f"Unknown cases:       {unknown_count}"
+    )
+
+    print(
+        f"Multi-section cases: {multi_count}"
+    )
+
+    print(
+        f"Threshold:           "
+        f"{settings.similarity_threshold}"
+    )
+
+    print(
+        f"Reranker:            "
+        f"{settings.rerank_model}"
+    )
 
     modes = [
-        ("dense", "Dense Retrieval"),
-        ("threshold", "Dense + Threshold"),
-        ("rerank", "Dense + Threshold + Reranking"),
-    ]
+    (
+        "dense",
+        "Dense Retrieval",
+    ),
+    (
+        "threshold",
+        "Dense + Threshold",
+    ),
+]
 
-    all_metrics: dict[str, dict[str, float]] = {}
+    if not SKIP_RERANK:
+        modes.append(
+        (
+            "rerank",
+            "Dense + Threshold + Reranking",
+        )
+    )
+
+    metrics_table = {}
 
     for mode, display_name in modes:
-        print()
-        print(f"Running: {display_name}")
 
-        results: list[dict[str, Any]] = []
+        print()
+        print("=" * 80)
+        print(display_name)
+        print("=" * 80)
+
+        results = []
 
         for index, case in enumerate(cases):
-            result = evaluate_case(case, mode)
 
-            # Fix ID for datasets without explicit IDs.
-            if not case.get("id") and not case.get("question_id"):
-                result["id"] = f"Q{index + 1}"
+            result = evaluate_case(
+                case,
+                mode,
+                index,
+            )
 
             results.append(result)
 
-        metrics = calculate_metrics(results)
-        all_metrics[display_name] = metrics
+        metric = calculate_metrics(
+            results
+        )
 
-        print_metrics(display_name, metrics)
-        print_failures(cases, results, display_name)
+        metrics_table[
+            display_name
+        ] = metric
 
-    print_summary_table(all_metrics)
+        print()
+        print(
+            f"Known Top-1:          "
+            f"{metric['known_top1'] * 100:.2f}%"
+        )
+
+        print(
+            f"Known Recall@3:       "
+            f"{metric['known_recall_at_3'] * 100:.2f}%"
+        )
+
+        print(
+            f"Unknown Rejection:    "
+            f"{metric['unknown_rejection'] * 100:.2f}%"
+        )
+
+        print(
+            f"Known Rejection:      "
+            f"{metric['known_rejection'] * 100:.2f}%"
+        )
+
+        print(
+            f"Overall Accuracy:     "
+            f"{metric['overall_accuracy'] * 100:.2f}%"
+        )
+
+        print(
+            f"Multi-Section Recall: "
+            f"{metric['multi_section_recall'] * 100:.2f}%"
+        )
+
+        print_failures(
+            results,
+            display_name,
+        )
+
+    print()
+    print("=" * 105)
+    print("STRESS TEST SUMMARY")
+    print("=" * 105)
+
+    print(
+        f"{'Configuration':<38}"
+        f"{'Top-1':>12}"
+        f"{'Recall@3':>14}"
+        f"{'Unknown':>14}"
+        f"{'Known Reject':>16}"
+        f"{'Overall':>14}"
+        f"{'Multi-Sec':>14}"
+    )
+
+    print("-" * 105)
+
+    for name, metric in metrics_table.items():
+
+        print(
+            f"{name:<38}"
+            f"{metric['known_top1'] * 100:>11.2f}%"
+            f"{metric['known_recall_at_3'] * 100:>13.2f}%"
+            f"{metric['unknown_rejection'] * 100:>13.2f}%"
+            f"{metric['known_rejection'] * 100:>15.2f}%"
+            f"{metric['overall_accuracy'] * 100:>13.2f}%"
+            f"{metric['multi_section_recall'] * 100:>13.2f}%"
+        )
+
+    print("=" * 105)
 
 
 if __name__ == "__main__":
