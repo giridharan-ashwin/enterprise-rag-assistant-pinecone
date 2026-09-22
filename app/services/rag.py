@@ -12,24 +12,30 @@ def answer_question(
     question: str,
     top_k: int | None = None,
 ) -> dict:
-
     contexts = retrieve(
         question,
-        top_k,
+        top_k=top_k,
     )
 
     if not contexts:
         return {
             "answer": NO_CONTEXT_MESSAGE,
-            "sources": [],
+            "citations": [],
+            "abstained": True,
+            "contexts": [],
         }
 
-    answer = generate_answer(
+    result = generate_answer(
         question,
         contexts,
     )
 
     return {
-        "answer": answer,
-        "sources": contexts,
+        "answer": result.get("answer", ""),
+        "citations": result.get("citations", []),
+        "abstained": result.get(
+            "abstained",
+            False,
+        ),
+        "contexts": contexts,
     }
