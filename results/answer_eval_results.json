@@ -1,0 +1,3977 @@
+[
+  {
+    "id": "known-hr_remote_work.md-0",
+    "type": "known",
+    "question": "How many days per week can employees work remotely?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 14,
+      "threshold_context_count": 2
+    },
+    "retrieved_contexts": [
+      {
+        "id": "hr_remote_work.md-0",
+        "source": "hr_remote_work.md",
+        "section": "Remote Work Schedule",
+        "chunk_index": 0.0,
+        "score": 0.775393784,
+        "rrf_score": 0.03278688524590164,
+        "text": "Employees may work remotely up to three days per week. Teams may designate collaboration days when in-person coordination is needed."
+      },
+      {
+        "id": "hr_leave.md-0",
+        "source": "hr_leave.md",
+        "section": "Planned Leave Notice",
+        "chunk_index": 0.0,
+        "score": 0.502460361,
+        "rrf_score": 0.0315136476426799,
+        "text": "Employees should request planned time off at least five business days in advance when practical. Managers may approve exceptions for urgent circumstances."
+      }
+    ],
+    "answer": {
+      "answer": "Employees may work remotely up to three days per week.",
+      "citations": [
+        {
+          "source": "hr_remote_work.md",
+          "section": "Remote Work Schedule",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "hr_remote_work.md",
+          "section": "remote work schedule"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 2315.56
+  },
+  {
+    "id": "known-hr_remote_work.md-1",
+    "type": "known",
+    "question": "Who approves a regular remote work arrangement?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 15,
+      "threshold_context_count": 4
+    },
+    "retrieved_contexts": [
+      {
+        "id": "hr_remote_work.md-1",
+        "source": "hr_remote_work.md",
+        "section": "Remote Work Approval",
+        "chunk_index": 1.0,
+        "score": 0.735247672,
+        "rrf_score": 0.03278688524590164,
+        "text": "Remote work arrangements require manager approval. Long-term changes to a regular work pattern should be reviewed by the department lead."
+      },
+      {
+        "id": "hr_remote_work.md-0",
+        "source": "hr_remote_work.md",
+        "section": "Remote Work Schedule",
+        "chunk_index": 0.0,
+        "score": 0.607575893,
+        "rrf_score": 0.031754032258064516,
+        "text": "Employees may work remotely up to three days per week. Teams may designate collaboration days when in-person coordination is needed."
+      },
+      {
+        "id": "hr_leave.md-4",
+        "source": "hr_leave.md",
+        "section": "Leave Approval",
+        "chunk_index": 4.0,
+        "score": 0.545375943,
+        "rrf_score": 0.015873015873015872,
+        "text": "Managers approve planned leave after considering business coverage and previously approved absences."
+      },
+      {
+        "id": "finance_procurement.md-2",
+        "source": "finance_procurement.md",
+        "section": "Preferred Vendors",
+        "chunk_index": 2.0,
+        "score": 0.517870367,
+        "rrf_score": 0.015625,
+        "text": "Employees should use approved vendors when a suitable option exists. Exceptions require documented business justification."
+      }
+    ],
+    "answer": {
+      "answer": "A regular remote work arrangement requires manager approval.",
+      "citations": [
+        {
+          "source": "hr_remote_work.md",
+          "section": "Remote Work Approval",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "hr_remote_work.md",
+          "section": "remote work approval"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 1138.98
+  },
+  {
+    "id": "known-hr_remote_work.md-2",
+    "type": "known",
+    "question": "What equipment does the company provide to remote workers?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 14,
+      "threshold_context_count": 2
+    },
+    "retrieved_contexts": [
+      {
+        "id": "hr_remote_work.md-2",
+        "source": "hr_remote_work.md",
+        "section": "Remote Equipment",
+        "chunk_index": 2.0,
+        "score": 0.685514927,
+        "rrf_score": 0.03252247488101534,
+        "text": "The company provides a standard laptop and security software for approved remote workers. Employees are responsible for maintaining a secure home network."
+      },
+      {
+        "id": "hr_remote_work.md-4",
+        "source": "hr_remote_work.md",
+        "section": "Remote Work Security",
+        "chunk_index": 4.0,
+        "score": 0.522509515,
+        "rrf_score": 0.03252247488101534,
+        "text": "Remote workers must use multi-factor authentication and the company virtual private network when accessing protected internal systems."
+      }
+    ],
+    "answer": {
+      "answer": "The company provides a standard laptop and security software for approved remote workers.",
+      "citations": [
+        {
+          "source": "hr_remote_work.md",
+          "section": "Remote Equipment",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "hr_remote_work.md",
+          "section": "remote equipment"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 1383.92
+  },
+  {
+    "id": "known-hr_remote_work.md-3",
+    "type": "known",
+    "question": "Which platform should remote teams use for collaboration?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 15,
+      "threshold_context_count": 2
+    },
+    "retrieved_contexts": [
+      {
+        "id": "hr_remote_work.md-3",
+        "source": "hr_remote_work.md",
+        "section": "Remote Collaboration",
+        "chunk_index": 3.0,
+        "score": 0.759098291,
+        "rrf_score": 0.03278688524590164,
+        "text": "Remote teams should use the approved collaboration platform for team meetings and project communication. Critical meetings may require video participation."
+      },
+      {
+        "id": "hr_remote_work.md-0",
+        "source": "hr_remote_work.md",
+        "section": "Remote Work Schedule",
+        "chunk_index": 0.0,
+        "score": 0.552337706,
+        "rrf_score": 0.03225806451612903,
+        "text": "Employees may work remotely up to three days per week. Teams may designate collaboration days when in-person coordination is needed."
+      }
+    ],
+    "answer": {
+      "answer": "Remote teams should use the approved collaboration platform for team meetings and project communication.",
+      "citations": [
+        {
+          "source": "hr_remote_work.md",
+          "section": "Remote Collaboration",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "hr_remote_work.md",
+          "section": "remote collaboration"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 1585.68
+  },
+  {
+    "id": "known-hr_remote_work.md-4",
+    "type": "known",
+    "question": "What security controls are required for remote access?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 14,
+      "threshold_context_count": 5
+    },
+    "retrieved_contexts": [
+      {
+        "id": "security_access.md-0",
+        "source": "security_access.md",
+        "section": "Multi-Factor Authentication",
+        "chunk_index": 0.0,
+        "score": 0.523509324,
+        "rrf_score": 0.032266458495966696,
+        "text": "Multi-factor authentication is required for company systems that contain protected information. Approved authentication methods are documented in the security portal."
+      },
+      {
+        "id": "hr_remote_work.md-2",
+        "source": "hr_remote_work.md",
+        "section": "Remote Equipment",
+        "chunk_index": 2.0,
+        "score": 0.585412085,
+        "rrf_score": 0.03225806451612903,
+        "text": "The company provides a standard laptop and security software for approved remote workers. Employees are responsible for maintaining a secure home network."
+      },
+      {
+        "id": "hr_remote_work.md-4",
+        "source": "hr_remote_work.md",
+        "section": "Remote Work Security",
+        "chunk_index": 4.0,
+        "score": 0.632453263,
+        "rrf_score": 0.032018442622950824,
+        "text": "Remote workers must use multi-factor authentication and the company virtual private network when accessing protected internal systems."
+      },
+      {
+        "id": "vendor_management.md-0",
+        "source": "vendor_management.md",
+        "section": "Vendor Onboarding",
+        "chunk_index": 0.0,
+        "score": 0.509739339,
+        "rrf_score": 0.015625,
+        "text": "New vendors should complete security and risk assessment steps before access to protected company systems is granted."
+      },
+      {
+        "id": "data_governance.md-3",
+        "source": "data_governance.md",
+        "section": "Data Access",
+        "chunk_index": 3.0,
+        "score": 0.508543491,
+        "rrf_score": 0.015384615384615385,
+        "text": "Access to sensitive data should follow least privilege and be reviewed periodically."
+      }
+    ],
+    "answer": {
+      "answer": "Remote workers must use multi-factor authentication and the company virtual private network when accessing protected internal systems.",
+      "citations": [
+        {
+          "source": "hr_remote_work.md",
+          "section": "Remote Work Security",
+          "chunk_index": 4
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "hr_remote_work.md",
+          "section": "remote work security"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 2042.71
+  },
+  {
+    "id": "known-hr_leave.md-0",
+    "type": "known",
+    "question": "How much notice should employees give for planned time off?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 14,
+      "threshold_context_count": 5
+    },
+    "retrieved_contexts": [
+      {
+        "id": "hr_leave.md-0",
+        "source": "hr_leave.md",
+        "section": "Planned Leave Notice",
+        "chunk_index": 0.0,
+        "score": 0.798436,
+        "rrf_score": 0.03278688524590164,
+        "text": "Employees should request planned time off at least five business days in advance when practical. Managers may approve exceptions for urgent circumstances."
+      },
+      {
+        "id": "hr_leave.md-2",
+        "source": "hr_leave.md",
+        "section": "Leave Coverage",
+        "chunk_index": 2.0,
+        "score": 0.609737813,
+        "rrf_score": 0.031746031746031744,
+        "text": "Employees taking planned leave should document active work and identify a backup contact before their absence."
+      },
+      {
+        "id": "hr_leave.md-4",
+        "source": "hr_leave.md",
+        "section": "Leave Approval",
+        "chunk_index": 4.0,
+        "score": 0.632739,
+        "rrf_score": 0.031054405392392875,
+        "text": "Managers approve planned leave after considering business coverage and previously approved absences."
+      },
+      {
+        "id": "hr_leave.md-1",
+        "source": "hr_leave.md",
+        "section": "Leave Scheduling",
+        "chunk_index": 1.0,
+        "score": 0.582829595,
+        "rrf_score": 0.029910714285714284,
+        "text": "Planned leave requests must be submitted through the company scheduling system. Managers review requests based on team coverage."
+      },
+      {
+        "id": "hr_leave.md-3",
+        "source": "hr_leave.md",
+        "section": "Emergency Leave",
+        "chunk_index": 3.0,
+        "score": 0.560286403,
+        "rrf_score": 0.015384615384615385,
+        "text": "Unexpected absences should be reported to the manager as soon as reasonably possible. The scheduling system should be updated when the employee returns."
+      }
+    ],
+    "answer": {
+      "answer": "Employees should request planned time off at least five business days in advance when practical.",
+      "citations": [
+        {
+          "source": "hr_leave.md",
+          "section": "Planned Leave Notice",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "hr_leave.md",
+          "section": "planned leave notice"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 1334.47
+  },
+  {
+    "id": "known-hr_leave.md-1",
+    "type": "known",
+    "question": "Where should employees submit planned leave requests?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 15,
+      "threshold_context_count": 6
+    },
+    "retrieved_contexts": [
+      {
+        "id": "hr_leave.md-1",
+        "source": "hr_leave.md",
+        "section": "Leave Scheduling",
+        "chunk_index": 1.0,
+        "score": 0.76921916,
+        "rrf_score": 0.03278688524590164,
+        "text": "Planned leave requests must be submitted through the company scheduling system. Managers review requests based on team coverage."
+      },
+      {
+        "id": "hr_leave.md-4",
+        "source": "hr_leave.md",
+        "section": "Leave Approval",
+        "chunk_index": 4.0,
+        "score": 0.684302866,
+        "rrf_score": 0.031754032258064516,
+        "text": "Managers approve planned leave after considering business coverage and previously approved absences."
+      },
+      {
+        "id": "hr_leave.md-2",
+        "source": "hr_leave.md",
+        "section": "Leave Coverage",
+        "chunk_index": 2.0,
+        "score": 0.61063242,
+        "rrf_score": 0.031754032258064516,
+        "text": "Employees taking planned leave should document active work and identify a backup contact before their absence."
+      },
+      {
+        "id": "hr_leave.md-0",
+        "source": "hr_leave.md",
+        "section": "Planned Leave Notice",
+        "chunk_index": 0.0,
+        "score": 0.666128516,
+        "rrf_score": 0.031746031746031744,
+        "text": "Employees should request planned time off at least five business days in advance when practical. Managers may approve exceptions for urgent circumstances."
+      },
+      {
+        "id": "hr_leave.md-3",
+        "source": "hr_leave.md",
+        "section": "Emergency Leave",
+        "chunk_index": 3.0,
+        "score": 0.547552586,
+        "rrf_score": 0.030309988518943745,
+        "text": "Unexpected absences should be reported to the manager as soon as reasonably possible. The scheduling system should be updated when the employee returns."
+      },
+      {
+        "id": "hr_remote_work.md-1",
+        "source": "hr_remote_work.md",
+        "section": "Remote Work Approval",
+        "chunk_index": 1.0,
+        "score": 0.523549139,
+        "rrf_score": 0.015151515151515152,
+        "text": "Remote work arrangements require manager approval. Long-term changes to a regular work pattern should be reviewed by the department lead."
+      }
+    ],
+    "answer": {
+      "answer": "Employees should submit planned leave requests through the company scheduling system.",
+      "citations": [
+        {
+          "source": "hr_leave.md",
+          "section": "Leave Scheduling",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "hr_leave.md",
+          "section": "leave scheduling"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 1125.04
+  },
+  {
+    "id": "known-hr_leave.md-2",
+    "type": "known",
+    "question": "What should an employee do before taking planned leave?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 14,
+      "threshold_context_count": 6
+    },
+    "retrieved_contexts": [
+      {
+        "id": "hr_leave.md-2",
+        "source": "hr_leave.md",
+        "section": "Leave Coverage",
+        "chunk_index": 2.0,
+        "score": 0.741774738,
+        "rrf_score": 0.03278688524590164,
+        "text": "Employees taking planned leave should document active work and identify a backup contact before their absence."
+      },
+      {
+        "id": "hr_leave.md-4",
+        "source": "hr_leave.md",
+        "section": "Leave Approval",
+        "chunk_index": 4.0,
+        "score": 0.694399953,
+        "rrf_score": 0.03200204813108039,
+        "text": "Managers approve planned leave after considering business coverage and previously approved absences."
+      },
+      {
+        "id": "hr_leave.md-0",
+        "source": "hr_leave.md",
+        "section": "Planned Leave Notice",
+        "chunk_index": 0.0,
+        "score": 0.655477107,
+        "rrf_score": 0.03200204813108039,
+        "text": "Employees should request planned time off at least five business days in advance when practical. Managers may approve exceptions for urgent circumstances."
+      },
+      {
+        "id": "hr_leave.md-1",
+        "source": "hr_leave.md",
+        "section": "Leave Scheduling",
+        "chunk_index": 1.0,
+        "score": 0.651807547,
+        "rrf_score": 0.03125,
+        "text": "Planned leave requests must be submitted through the company scheduling system. Managers review requests based on team coverage."
+      },
+      {
+        "id": "hr_leave.md-3",
+        "source": "hr_leave.md",
+        "section": "Emergency Leave",
+        "chunk_index": 3.0,
+        "score": 0.572194576,
+        "rrf_score": 0.03076923076923077,
+        "text": "Unexpected absences should be reported to the manager as soon as reasonably possible. The scheduling system should be updated when the employee returns."
+      },
+      {
+        "id": "hr_remote_work.md-1",
+        "source": "hr_remote_work.md",
+        "section": "Remote Work Approval",
+        "chunk_index": 1.0,
+        "score": 0.511985183,
+        "rrf_score": 0.015151515151515152,
+        "text": "Remote work arrangements require manager approval. Long-term changes to a regular work pattern should be reviewed by the department lead."
+      }
+    ],
+    "answer": {
+      "answer": "Before taking planned leave, an employee should document active work and identify a backup contact. Additionally, they should request planned time off at least five business days in advance when practical, and submit their leave request through the company scheduling system.",
+      "citations": [
+        {
+          "source": "hr_leave.md",
+          "section": "Leave Coverage",
+          "chunk_index": 0
+        },
+        {
+          "source": "hr_leave.md",
+          "section": "Planned Leave Notice",
+          "chunk_index": 0
+        },
+        {
+          "source": "hr_leave.md",
+          "section": "Leave Scheduling",
+          "chunk_index": 1
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "hr_leave.md",
+          "section": "leave coverage"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 1739.84
+  },
+  {
+    "id": "known-hr_leave.md-3",
+    "type": "known",
+    "question": "How should unexpected leave be reported?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 14,
+      "threshold_context_count": 4
+    },
+    "retrieved_contexts": [
+      {
+        "id": "hr_leave.md-3",
+        "source": "hr_leave.md",
+        "section": "Emergency Leave",
+        "chunk_index": 3.0,
+        "score": 0.624488413,
+        "rrf_score": 0.03278688524590164,
+        "text": "Unexpected absences should be reported to the manager as soon as reasonably possible. The scheduling system should be updated when the employee returns."
+      },
+      {
+        "id": "hr_leave.md-2",
+        "source": "hr_leave.md",
+        "section": "Leave Coverage",
+        "chunk_index": 2.0,
+        "score": 0.597936273,
+        "rrf_score": 0.03200204813108039,
+        "text": "Employees taking planned leave should document active work and identify a backup contact before their absence."
+      },
+      {
+        "id": "hr_leave.md-1",
+        "source": "hr_leave.md",
+        "section": "Leave Scheduling",
+        "chunk_index": 1.0,
+        "score": 0.563600183,
+        "rrf_score": 0.03149801587301587,
+        "text": "Planned leave requests must be submitted through the company scheduling system. Managers review requests based on team coverage."
+      },
+      {
+        "id": "hr_leave.md-4",
+        "source": "hr_leave.md",
+        "section": "Leave Approval",
+        "chunk_index": 4.0,
+        "score": 0.562938809,
+        "rrf_score": 0.031009615384615385,
+        "text": "Managers approve planned leave after considering business coverage and previously approved absences."
+      }
+    ],
+    "answer": {
+      "answer": "Unexpected absences should be reported to the manager as soon as reasonably possible.",
+      "citations": [
+        {
+          "source": "hr_leave.md",
+          "section": "Emergency Leave",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "hr_leave.md",
+          "section": "emergency leave"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 1126.42
+  },
+  {
+    "id": "known-hr_leave.md-4",
+    "type": "known",
+    "question": "What factors are considered when approving planned leave?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 15,
+      "threshold_context_count": 5
+    },
+    "retrieved_contexts": [
+      {
+        "id": "hr_leave.md-4",
+        "source": "hr_leave.md",
+        "section": "Leave Approval",
+        "chunk_index": 4.0,
+        "score": 0.768072546,
+        "rrf_score": 0.03252247488101534,
+        "text": "Managers approve planned leave after considering business coverage and previously approved absences."
+      },
+      {
+        "id": "hr_leave.md-0",
+        "source": "hr_leave.md",
+        "section": "Planned Leave Notice",
+        "chunk_index": 0.0,
+        "score": 0.578863442,
+        "rrf_score": 0.032266458495966696,
+        "text": "Employees should request planned time off at least five business days in advance when practical. Managers may approve exceptions for urgent circumstances."
+      },
+      {
+        "id": "hr_leave.md-1",
+        "source": "hr_leave.md",
+        "section": "Leave Scheduling",
+        "chunk_index": 1.0,
+        "score": 0.707181454,
+        "rrf_score": 0.031754032258064516,
+        "text": "Planned leave requests must be submitted through the company scheduling system. Managers review requests based on team coverage."
+      },
+      {
+        "id": "hr_leave.md-2",
+        "source": "hr_leave.md",
+        "section": "Leave Coverage",
+        "chunk_index": 2.0,
+        "score": 0.557079375,
+        "rrf_score": 0.03149801587301587,
+        "text": "Employees taking planned leave should document active work and identify a backup contact before their absence."
+      },
+      {
+        "id": "hr_remote_work.md-1",
+        "source": "hr_remote_work.md",
+        "section": "Remote Work Approval",
+        "chunk_index": 1.0,
+        "score": 0.545348,
+        "rrf_score": 0.015384615384615385,
+        "text": "Remote work arrangements require manager approval. Long-term changes to a regular work pattern should be reviewed by the department lead."
+      }
+    ],
+    "answer": {
+      "answer": "Managers consider business coverage and previously approved absences when approving planned leave.",
+      "citations": [
+        {
+          "source": "hr_leave.md",
+          "section": "Leave Approval",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "hr_leave.md",
+          "section": "leave approval"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 933.03
+  },
+  {
+    "id": "known-hr_benefits.md-0",
+    "type": "known",
+    "question": "When can eligible employees enroll in the health plan?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 15,
+      "threshold_context_count": 3
+    },
+    "retrieved_contexts": [
+      {
+        "id": "hr_benefits.md-0",
+        "source": "hr_benefits.md",
+        "section": "Health Plan Enrollment",
+        "chunk_index": 0.0,
+        "score": 0.791513145,
+        "rrf_score": 0.03278688524590164,
+        "text": "Eligible employees can enroll in the company health plan during the annual enrollment window. New hires receive a separate initial enrollment period."
+      },
+      {
+        "id": "hr_benefits.md-1",
+        "source": "hr_benefits.md",
+        "section": "Health Plan Changes",
+        "chunk_index": 1.0,
+        "score": 0.618048489,
+        "rrf_score": 0.03225806451612903,
+        "text": "Outside the annual window, health plan elections may be changed only after an eligible life event."
+      },
+      {
+        "id": "hr_benefits.md-2",
+        "source": "hr_benefits.md",
+        "section": "Flexible Spending",
+        "chunk_index": 2.0,
+        "score": 0.56281,
+        "rrf_score": 0.030798389007344232,
+        "text": "The company offers a flexible spending account for eligible employees. Contribution elections are made during annual enrollment."
+      }
+    ],
+    "answer": {
+      "answer": "Eligible employees can enroll in the company health plan during the annual enrollment window. New hires receive a separate initial enrollment period.",
+      "citations": [
+        {
+          "source": "hr_benefits.md",
+          "section": "Health Plan Enrollment",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "hr_benefits.md",
+          "section": "health plan enrollment"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 1180.81
+  },
+  {
+    "id": "known-hr_benefits.md-1",
+    "type": "known",
+    "question": "When can health plan elections be changed outside open enrollment?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 16,
+      "threshold_context_count": 2
+    },
+    "retrieved_contexts": [
+      {
+        "id": "hr_benefits.md-1",
+        "source": "hr_benefits.md",
+        "section": "Health Plan Changes",
+        "chunk_index": 1.0,
+        "score": 0.792092383,
+        "rrf_score": 0.03278688524590164,
+        "text": "Outside the annual window, health plan elections may be changed only after an eligible life event."
+      },
+      {
+        "id": "hr_benefits.md-0",
+        "source": "hr_benefits.md",
+        "section": "Health Plan Enrollment",
+        "chunk_index": 0.0,
+        "score": 0.547706604,
+        "rrf_score": 0.03225806451612903,
+        "text": "Eligible employees can enroll in the company health plan during the annual enrollment window. New hires receive a separate initial enrollment period."
+      }
+    ],
+    "answer": {
+      "answer": "Health plan elections can be changed outside the annual enrollment window only after an eligible life event.",
+      "citations": [
+        {
+          "source": "hr_benefits.md",
+          "section": "Health Plan Changes",
+          "chunk_index": 1
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "hr_benefits.md",
+          "section": "health plan changes"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 1469.26
+  },
+  {
+    "id": "known-hr_benefits.md-2",
+    "type": "known",
+    "question": "When are flexible spending contribution elections made?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 18,
+      "threshold_context_count": 2
+    },
+    "retrieved_contexts": [
+      {
+        "id": "hr_benefits.md-2",
+        "source": "hr_benefits.md",
+        "section": "Flexible Spending",
+        "chunk_index": 2.0,
+        "score": 0.739761114,
+        "rrf_score": 0.03278688524590164,
+        "text": "The company offers a flexible spending account for eligible employees. Contribution elections are made during annual enrollment."
+      },
+      {
+        "id": "hr_benefits.md-1",
+        "source": "hr_benefits.md",
+        "section": "Health Plan Changes",
+        "chunk_index": 1.0,
+        "score": 0.528313339,
+        "rrf_score": 0.03225806451612903,
+        "text": "Outside the annual window, health plan elections may be changed only after an eligible life event."
+      }
+    ],
+    "answer": {
+      "answer": "Flexible spending contribution elections are made during annual enrollment.",
+      "citations": [
+        {
+          "source": "hr_benefits.md",
+          "section": "Flexible Spending",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "hr_benefits.md",
+          "section": "flexible spending"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 922.25
+  },
+  {
+    "id": "known-hr_benefits.md-3",
+    "type": "known",
+    "question": "What is required for a wellness reimbursement request?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 17,
+      "threshold_context_count": 1
+    },
+    "retrieved_contexts": [
+      {
+        "id": "hr_benefits.md-3",
+        "source": "hr_benefits.md",
+        "section": "Wellness Benefit",
+        "chunk_index": 3.0,
+        "score": 0.758893907,
+        "rrf_score": 0.03278688524590164,
+        "text": "Employees can claim an annual wellness reimbursement for qualifying activities. Receipts must be retained for reimbursement requests."
+      }
+    ],
+    "answer": {
+      "answer": "Receipts must be retained for reimbursement requests.",
+      "citations": [
+        {
+          "source": "hr_benefits.md",
+          "section": "Wellness Benefit",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "hr_benefits.md",
+          "section": "wellness benefit"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 1424.0
+  },
+  {
+    "id": "known-hr_benefits.md-4",
+    "type": "known",
+    "question": "Where should employees ask benefits questions?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 16,
+      "threshold_context_count": 1
+    },
+    "retrieved_contexts": [
+      {
+        "id": "hr_benefits.md-4",
+        "source": "hr_benefits.md",
+        "section": "Benefits Support",
+        "chunk_index": 4.0,
+        "score": 0.708818614,
+        "rrf_score": 0.03278688524590164,
+        "text": "Benefits questions should be directed to the employee services team through the internal benefits portal."
+      }
+    ],
+    "answer": {
+      "answer": "Employees should direct benefits questions to the employee services team through the internal benefits portal.",
+      "citations": [
+        {
+          "source": "hr_benefits.md",
+          "section": "Benefits Support",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "hr_benefits.md",
+          "section": "benefits support"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 932.82
+  },
+  {
+    "id": "known-security_access.md-0",
+    "type": "known",
+    "question": "Is multi-factor authentication required for protected company systems?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 14,
+      "threshold_context_count": 5
+    },
+    "retrieved_contexts": [
+      {
+        "id": "security_access.md-0",
+        "source": "security_access.md",
+        "section": "Multi-Factor Authentication",
+        "chunk_index": 0.0,
+        "score": 0.827393353,
+        "rrf_score": 0.03278688524590164,
+        "text": "Multi-factor authentication is required for company systems that contain protected information. Approved authentication methods are documented in the security portal."
+      },
+      {
+        "id": "hr_remote_work.md-4",
+        "source": "hr_remote_work.md",
+        "section": "Remote Work Security",
+        "chunk_index": 4.0,
+        "score": 0.725621939,
+        "rrf_score": 0.03225806451612903,
+        "text": "Remote workers must use multi-factor authentication and the company virtual private network when accessing protected internal systems."
+      },
+      {
+        "id": "vendor_management.md-0",
+        "source": "vendor_management.md",
+        "section": "Vendor Onboarding",
+        "chunk_index": 0.0,
+        "score": 0.522030652,
+        "rrf_score": 0.03149801587301587,
+        "text": "New vendors should complete security and risk assessment steps before access to protected company systems is granted."
+      },
+      {
+        "id": "security_access.md-4",
+        "source": "security_access.md",
+        "section": "Access Removal",
+        "chunk_index": 4.0,
+        "score": 0.527362704,
+        "rrf_score": 0.03125763125763126,
+        "text": "Access to protected systems should be removed promptly when an employee changes roles or leaves the company."
+      },
+      {
+        "id": "security_access.md-3",
+        "source": "security_access.md",
+        "section": "Access Requests",
+        "chunk_index": 3.0,
+        "score": 0.51113832,
+        "rrf_score": 0.015384615384615385,
+        "text": "Access requests must identify the requested system and business justification. Approvers must verify the employee role before granting access."
+      }
+    ],
+    "answer": {
+      "answer": "Yes, multi-factor authentication is required for company systems that contain protected information.",
+      "citations": [
+        {
+          "source": "security_access.md",
+          "section": "Multi-Factor Authentication",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "security_access.md",
+          "section": "multi-factor authentication"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 902.9
+  },
+  {
+    "id": "known-security_access.md-1",
+    "type": "known",
+    "question": "Can employees share passwords during urgent support situations?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 16,
+      "threshold_context_count": 4
+    },
+    "retrieved_contexts": [
+      {
+        "id": "security_access.md-1",
+        "source": "security_access.md",
+        "section": "Credential Sharing",
+        "chunk_index": 1.0,
+        "score": 0.737723589,
+        "rrf_score": 0.03278688524590164,
+        "text": "Employees must not share passwords, tokens, or authentication codes with other people. Shared credentials are prohibited even during urgent support situations."
+      },
+      {
+        "id": "security_incident.md-0",
+        "source": "security_incident.md",
+        "section": "Incident Reporting",
+        "chunk_index": 0.0,
+        "score": 0.504071355,
+        "rrf_score": 0.03125763125763126,
+        "text": "Employees should report suspected security incidents through the security incident portal. Urgent incidents should also be called in to the security response team."
+      },
+      {
+        "id": "hr_remote_work.md-4",
+        "source": "hr_remote_work.md",
+        "section": "Remote Work Security",
+        "chunk_index": 4.0,
+        "score": 0.505614102,
+        "rrf_score": 0.016129032258064516,
+        "text": "Remote workers must use multi-factor authentication and the company virtual private network when accessing protected internal systems."
+      },
+      {
+        "id": "security_access.md-4",
+        "source": "security_access.md",
+        "section": "Access Removal",
+        "chunk_index": 4.0,
+        "score": 0.500466704,
+        "rrf_score": 0.015625,
+        "text": "Access to protected systems should be removed promptly when an employee changes roles or leaves the company."
+      }
+    ],
+    "answer": {
+      "answer": "No, employees must not share passwords, tokens, or authentication codes with other people, even during urgent support situations.",
+      "citations": [
+        {
+          "source": "security_access.md",
+          "section": "Credential Sharing",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "security_access.md",
+          "section": "credential sharing"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 1452.57
+  },
+  {
+    "id": "known-security_access.md-2",
+    "type": "known",
+    "question": "How often is privileged access reviewed?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 14,
+      "threshold_context_count": 3
+    },
+    "retrieved_contexts": [
+      {
+        "id": "security_access.md-2",
+        "source": "security_access.md",
+        "section": "Privileged Access",
+        "chunk_index": 2.0,
+        "score": 0.738552928,
+        "rrf_score": 0.03278688524590164,
+        "text": "Administrative access is granted only when business justification is documented. Privileged access is reviewed quarterly."
+      },
+      {
+        "id": "data_governance.md-3",
+        "source": "data_governance.md",
+        "section": "Data Access",
+        "chunk_index": 3.0,
+        "score": 0.704087198,
+        "rrf_score": 0.03225806451612903,
+        "text": "Access to sensitive data should follow least privilege and be reviewed periodically."
+      },
+      {
+        "id": "vendor_management.md-2",
+        "source": "vendor_management.md",
+        "section": "Vendor Reviews",
+        "chunk_index": 2.0,
+        "score": 0.595815837,
+        "rrf_score": 0.015873015873015872,
+        "text": "Critical vendors receive periodic performance and risk reviews. Review frequency depends on vendor criticality."
+      }
+    ],
+    "answer": {
+      "answer": "Privileged access is reviewed quarterly.",
+      "citations": [
+        {
+          "source": "security_access.md",
+          "section": "Privileged Access",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "security_access.md",
+          "section": "privileged access"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 918.04
+  },
+  {
+    "id": "known-security_access.md-3",
+    "type": "known",
+    "question": "What information must an access request include?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 17,
+      "threshold_context_count": 1
+    },
+    "retrieved_contexts": [
+      {
+        "id": "security_access.md-3",
+        "source": "security_access.md",
+        "section": "Access Requests",
+        "chunk_index": 3.0,
+        "score": 0.551160336,
+        "rrf_score": 0.03278688524590164,
+        "text": "Access requests must identify the requested system and business justification. Approvers must verify the employee role before granting access."
+      }
+    ],
+    "answer": {
+      "answer": "An access request must include the requested system and a business justification.",
+      "citations": [
+        {
+          "source": "security_access.md",
+          "section": "Access Requests",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "security_access.md",
+          "section": "access requests"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 1063.5
+  },
+  {
+    "id": "known-security_access.md-4",
+    "type": "known",
+    "question": "When should protected-system access be removed?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 15,
+      "threshold_context_count": 3
+    },
+    "retrieved_contexts": [
+      {
+        "id": "security_access.md-4",
+        "source": "security_access.md",
+        "section": "Access Removal",
+        "chunk_index": 4.0,
+        "score": 0.684718728,
+        "rrf_score": 0.03252247488101534,
+        "text": "Access to protected systems should be removed promptly when an employee changes roles or leaves the company."
+      },
+      {
+        "id": "vendor_management.md-3",
+        "source": "vendor_management.md",
+        "section": "Vendor Offboarding",
+        "chunk_index": 3.0,
+        "score": 0.53308928,
+        "rrf_score": 0.03252247488101534,
+        "text": "Vendor access should be removed when the contract ends or when access is no longer required."
+      },
+      {
+        "id": "data_governance.md-3",
+        "source": "data_governance.md",
+        "section": "Data Access",
+        "chunk_index": 3.0,
+        "score": 0.532267451,
+        "rrf_score": 0.03149801587301587,
+        "text": "Access to sensitive data should follow least privilege and be reviewed periodically."
+      }
+    ],
+    "answer": {
+      "answer": "Access to protected systems should be removed promptly when an employee changes roles or leaves the company.",
+      "citations": [
+        {
+          "source": "security_access.md",
+          "section": "Access Removal",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "security_access.md",
+          "section": "access removal"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 1272.4
+  },
+  {
+    "id": "known-security_incident.md-0",
+    "type": "known",
+    "question": "How should employees report a suspected security incident?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 15,
+      "threshold_context_count": 4
+    },
+    "retrieved_contexts": [
+      {
+        "id": "security_incident.md-0",
+        "source": "security_incident.md",
+        "section": "Incident Reporting",
+        "chunk_index": 0.0,
+        "score": 0.849424839,
+        "rrf_score": 0.03278688524590164,
+        "text": "Employees should report suspected security incidents through the security incident portal. Urgent incidents should also be called in to the security response team."
+      },
+      {
+        "id": "security_incident.md-1",
+        "source": "security_incident.md",
+        "section": "Incident Severity",
+        "chunk_index": 1.0,
+        "score": 0.590063632,
+        "rrf_score": 0.031754032258064516,
+        "text": "Security incidents are categorized by business impact and data exposure. High-severity incidents receive immediate response coordination."
+      },
+      {
+        "id": "security_incident.md-2",
+        "source": "security_incident.md",
+        "section": "Evidence Preservation",
+        "chunk_index": 2.0,
+        "score": 0.52629149,
+        "rrf_score": 0.031754032258064516,
+        "text": "Employees should not delete or modify potentially relevant logs or files during an investigation. The security response team coordinates evidence preservation."
+      },
+      {
+        "id": "security_incident.md-3",
+        "source": "security_incident.md",
+        "section": "Incident Escalation",
+        "chunk_index": 3.0,
+        "score": 0.558692038,
+        "rrf_score": 0.031746031746031744,
+        "text": "High-severity incidents are escalated to the security leadership team. Customer-impacting incidents also require communications review."
+      }
+    ],
+    "answer": {
+      "answer": "Employees should report suspected security incidents through the security incident portal. Urgent incidents should also be called in to the security response team.",
+      "citations": [
+        {
+          "source": "security_incident.md",
+          "section": "Incident Reporting",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "security_incident.md",
+          "section": "incident reporting"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 1353.25
+  },
+  {
+    "id": "known-security_incident.md-1",
+    "type": "known",
+    "question": "How is security incident severity determined?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 15,
+      "threshold_context_count": 5
+    },
+    "retrieved_contexts": [
+      {
+        "id": "engineering_incident.md-2",
+        "source": "engineering_incident.md",
+        "section": "Incident Severity",
+        "chunk_index": 2.0,
+        "score": 0.674529374,
+        "rrf_score": 0.03278688524590164,
+        "text": "Engineering incident severity is based on customer impact, duration, and affected functionality."
+      },
+      {
+        "id": "security_incident.md-1",
+        "source": "security_incident.md",
+        "section": "Incident Severity",
+        "chunk_index": 1.0,
+        "score": 0.673579276,
+        "rrf_score": 0.03225806451612903,
+        "text": "Security incidents are categorized by business impact and data exposure. High-severity incidents receive immediate response coordination."
+      },
+      {
+        "id": "support_escalation.md-0",
+        "source": "support_escalation.md",
+        "section": "Severity Levels",
+        "chunk_index": 0.0,
+        "score": 0.653241575,
+        "rrf_score": 0.031746031746031744,
+        "text": "Support severity is based on customer impact, business criticality, and the scope of affected users."
+      },
+      {
+        "id": "security_incident.md-0",
+        "source": "security_incident.md",
+        "section": "Incident Reporting",
+        "chunk_index": 0.0,
+        "score": 0.54584074,
+        "rrf_score": 0.031009615384615385,
+        "text": "Employees should report suspected security incidents through the security incident portal. Urgent incidents should also be called in to the security response team."
+      },
+      {
+        "id": "security_incident.md-3",
+        "source": "security_incident.md",
+        "section": "Incident Escalation",
+        "chunk_index": 3.0,
+        "score": 0.642605841,
+        "rrf_score": 0.030776515151515152,
+        "text": "High-severity incidents are escalated to the security leadership team. Customer-impacting incidents also require communications review."
+      }
+    ],
+    "answer": {
+      "answer": "Security incident severity is determined by business impact and data exposure.",
+      "citations": [
+        {
+          "source": "security_incident.md",
+          "section": "Incident Severity",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "security_incident.md",
+          "section": "incident severity"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 1024.43
+  },
+  {
+    "id": "known-security_incident.md-2",
+    "type": "known",
+    "question": "What should employees do with potentially relevant investigation evidence?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 19,
+      "threshold_context_count": 1
+    },
+    "retrieved_contexts": [
+      {
+        "id": "security_incident.md-2",
+        "source": "security_incident.md",
+        "section": "Evidence Preservation",
+        "chunk_index": 2.0,
+        "score": 0.675558329,
+        "rrf_score": 0.03278688524590164,
+        "text": "Employees should not delete or modify potentially relevant logs or files during an investigation. The security response team coordinates evidence preservation."
+      }
+    ],
+    "answer": {
+      "answer": "Employees should not delete or modify potentially relevant logs or files during an investigation.",
+      "citations": [
+        {
+          "source": "security_incident.md",
+          "section": "Evidence Preservation",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "security_incident.md",
+          "section": "evidence preservation"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 918.49
+  },
+  {
+    "id": "known-security_incident.md-3",
+    "type": "known",
+    "question": "Which incidents are escalated to security leadership?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 15,
+      "threshold_context_count": 5
+    },
+    "retrieved_contexts": [
+      {
+        "id": "security_incident.md-3",
+        "source": "security_incident.md",
+        "section": "Incident Escalation",
+        "chunk_index": 3.0,
+        "score": 0.78815,
+        "rrf_score": 0.03278688524590164,
+        "text": "High-severity incidents are escalated to the security leadership team. Customer-impacting incidents also require communications review."
+      },
+      {
+        "id": "security_incident.md-0",
+        "source": "security_incident.md",
+        "section": "Incident Reporting",
+        "chunk_index": 0.0,
+        "score": 0.648485482,
+        "rrf_score": 0.03200204813108039,
+        "text": "Employees should report suspected security incidents through the security incident portal. Urgent incidents should also be called in to the security response team."
+      },
+      {
+        "id": "security_incident.md-1",
+        "source": "security_incident.md",
+        "section": "Incident Severity",
+        "chunk_index": 1.0,
+        "score": 0.623124897,
+        "rrf_score": 0.03200204813108039,
+        "text": "Security incidents are categorized by business impact and data exposure. High-severity incidents receive immediate response coordination."
+      },
+      {
+        "id": "support_escalation.md-1",
+        "source": "support_escalation.md",
+        "section": "Priority Escalation",
+        "chunk_index": 1.0,
+        "score": 0.536744595,
+        "rrf_score": 0.03125,
+        "text": "High-priority cases should be escalated to the appropriate technical queue when the initial support team cannot resolve them."
+      },
+      {
+        "id": "support_escalation.md-0",
+        "source": "support_escalation.md",
+        "section": "Severity Levels",
+        "chunk_index": 0.0,
+        "score": 0.520145178,
+        "rrf_score": 0.015384615384615385,
+        "text": "Support severity is based on customer impact, business criticality, and the scope of affected users."
+      }
+    ],
+    "answer": {
+      "answer": "High-severity incidents are escalated to the security leadership team.",
+      "citations": [
+        {
+          "source": "security_incident.md",
+          "section": "Incident Escalation",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "security_incident.md",
+          "section": "incident escalation"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 1164.67
+  },
+  {
+    "id": "known-security_incident.md-4",
+    "type": "known",
+    "question": "What does a significant incident review include?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 13,
+      "threshold_context_count": 6
+    },
+    "retrieved_contexts": [
+      {
+        "id": "security_incident.md-4",
+        "source": "security_incident.md",
+        "section": "Post-Incident Review",
+        "chunk_index": 4.0,
+        "score": 0.820231378,
+        "rrf_score": 0.03278688524590164,
+        "text": "Significant incidents receive a documented post-incident review covering root cause, corrective actions, and follow-up owners."
+      },
+      {
+        "id": "engineering_incident.md-3",
+        "source": "engineering_incident.md",
+        "section": "Incident Timeline",
+        "chunk_index": 3.0,
+        "score": 0.539879,
+        "rrf_score": 0.031754032258064516,
+        "text": "Responders should record significant events and decisions in the incident timeline during the response."
+      },
+      {
+        "id": "engineering_incident.md-4",
+        "source": "engineering_incident.md",
+        "section": "Postmortem",
+        "chunk_index": 4.0,
+        "score": 0.593997,
+        "rrf_score": 0.030834914611005692,
+        "text": "Major incidents should have a blameless postmortem covering root cause, contributing factors, and corrective actions."
+      },
+      {
+        "id": "engineering_incident.md-2",
+        "source": "engineering_incident.md",
+        "section": "Incident Severity",
+        "chunk_index": 2.0,
+        "score": 0.503353536,
+        "rrf_score": 0.03007688828584351,
+        "text": "Engineering incident severity is based on customer impact, duration, and affected functionality."
+      },
+      {
+        "id": "security_incident.md-3",
+        "source": "security_incident.md",
+        "section": "Incident Escalation",
+        "chunk_index": 3.0,
+        "score": 0.590026736,
+        "rrf_score": 0.015873015873015872,
+        "text": "High-severity incidents are escalated to the security leadership team. Customer-impacting incidents also require communications review."
+      },
+      {
+        "id": "security_incident.md-1",
+        "source": "security_incident.md",
+        "section": "Incident Severity",
+        "chunk_index": 1.0,
+        "score": 0.513671935,
+        "rrf_score": 0.015384615384615385,
+        "text": "Security incidents are categorized by business impact and data exposure. High-severity incidents receive immediate response coordination."
+      }
+    ],
+    "answer": {
+      "answer": "A significant incident review includes a documented post-incident review covering root cause, corrective actions, and follow-up owners.",
+      "citations": [
+        {
+          "source": "security_incident.md",
+          "section": "Post-Incident Review",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "security_incident.md",
+          "section": "post-incident review"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 916.24
+  },
+  {
+    "id": "known-finance_expenses.md-0",
+    "type": "known",
+    "question": "When should business expenses be submitted?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 14,
+      "threshold_context_count": 6
+    },
+    "retrieved_contexts": [
+      {
+        "id": "finance_expenses.md-0",
+        "source": "finance_expenses.md",
+        "section": "Expense Submission",
+        "chunk_index": 0.0,
+        "score": 0.731460512,
+        "rrf_score": 0.03278688524590164,
+        "text": "Business expenses should be submitted through the expense management system within thirty days of the transaction."
+      },
+      {
+        "id": "finance_expenses.md-3",
+        "source": "finance_expenses.md",
+        "section": "Travel Expenses",
+        "chunk_index": 3.0,
+        "score": 0.605079174,
+        "rrf_score": 0.03225806451612903,
+        "text": "Approved business travel expenses must be associated with the applicable project or cost center."
+      },
+      {
+        "id": "finance_expenses.md-4",
+        "source": "finance_expenses.md",
+        "section": "Expense Corrections",
+        "chunk_index": 4.0,
+        "score": 0.588167131,
+        "rrf_score": 0.03125763125763126,
+        "text": "Rejected expense reports should be corrected and resubmitted through the expense system rather than created as a separate claim."
+      },
+      {
+        "id": "finance_expenses.md-1",
+        "source": "finance_expenses.md",
+        "section": "Expense Receipts",
+        "chunk_index": 1.0,
+        "score": 0.525076926,
+        "rrf_score": 0.030090497737556562,
+        "text": "Receipts are required for reimbursable expenses above the company threshold. Digital receipts are accepted."
+      },
+      {
+        "id": "finance_expenses.md-2",
+        "source": "finance_expenses.md",
+        "section": "Expense Approval",
+        "chunk_index": 2.0,
+        "score": 0.529639602,
+        "rrf_score": 0.029910714285714284,
+        "text": "Expense reports are routed to the employee manager for approval. Higher-value expenses may require an additional finance review."
+      },
+      {
+        "id": "hr_benefits.md-3",
+        "source": "hr_benefits.md",
+        "section": "Wellness Benefit",
+        "chunk_index": 3.0,
+        "score": 0.502764463,
+        "rrf_score": 0.015151515151515152,
+        "text": "Employees can claim an annual wellness reimbursement for qualifying activities. Receipts must be retained for reimbursement requests."
+      }
+    ],
+    "answer": {
+      "answer": "Business expenses should be submitted through the expense management system within thirty days of the transaction.",
+      "citations": [
+        {
+          "source": "finance_expenses.md",
+          "section": "Expense Submission",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "finance_expenses.md",
+          "section": "expense submission"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 848.13
+  },
+  {
+    "id": "known-finance_expenses.md-1",
+    "type": "known",
+    "question": "When are receipts required for expenses?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 14,
+      "threshold_context_count": 6
+    },
+    "retrieved_contexts": [
+      {
+        "id": "finance_expenses.md-1",
+        "source": "finance_expenses.md",
+        "section": "Expense Receipts",
+        "chunk_index": 1.0,
+        "score": 0.71987772,
+        "rrf_score": 0.03278688524590164,
+        "text": "Receipts are required for reimbursable expenses above the company threshold. Digital receipts are accepted."
+      },
+      {
+        "id": "finance_expenses.md-2",
+        "source": "finance_expenses.md",
+        "section": "Expense Approval",
+        "chunk_index": 2.0,
+        "score": 0.564690173,
+        "rrf_score": 0.03200204813108039,
+        "text": "Expense reports are routed to the employee manager for approval. Higher-value expenses may require an additional finance review."
+      },
+      {
+        "id": "finance_expenses.md-0",
+        "source": "finance_expenses.md",
+        "section": "Expense Submission",
+        "chunk_index": 0.0,
+        "score": 0.612138569,
+        "rrf_score": 0.03128054740957967,
+        "text": "Business expenses should be submitted through the expense management system within thirty days of the transaction."
+      },
+      {
+        "id": "finance_expenses.md-3",
+        "source": "finance_expenses.md",
+        "section": "Travel Expenses",
+        "chunk_index": 3.0,
+        "score": 0.558504105,
+        "rrf_score": 0.031009615384615385,
+        "text": "Approved business travel expenses must be associated with the applicable project or cost center."
+      },
+      {
+        "id": "hr_benefits.md-3",
+        "source": "hr_benefits.md",
+        "section": "Wellness Benefit",
+        "chunk_index": 3.0,
+        "score": 0.532528698,
+        "rrf_score": 0.030776515151515152,
+        "text": "Employees can claim an annual wellness reimbursement for qualifying activities. Receipts must be retained for reimbursement requests."
+      },
+      {
+        "id": "finance_expenses.md-4",
+        "source": "finance_expenses.md",
+        "section": "Expense Corrections",
+        "chunk_index": 4.0,
+        "score": 0.546730936,
+        "rrf_score": 0.015384615384615385,
+        "text": "Rejected expense reports should be corrected and resubmitted through the expense system rather than created as a separate claim."
+      }
+    ],
+    "answer": {
+      "answer": "Receipts are required for reimbursable expenses above the company threshold.",
+      "citations": [
+        {
+          "source": "finance_expenses.md",
+          "section": "Expense Receipts",
+          "chunk_index": 1
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "finance_expenses.md",
+          "section": "expense receipts"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 878.82
+  },
+  {
+    "id": "known-finance_expenses.md-2",
+    "type": "known",
+    "question": "Who approves an employee expense report?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 16,
+      "threshold_context_count": 7
+    },
+    "retrieved_contexts": [
+      {
+        "id": "finance_expenses.md-2",
+        "source": "finance_expenses.md",
+        "section": "Expense Approval",
+        "chunk_index": 2.0,
+        "score": 0.780822754,
+        "rrf_score": 0.03278688524590164,
+        "text": "Expense reports are routed to the employee manager for approval. Higher-value expenses may require an additional finance review."
+      },
+      {
+        "id": "finance_expenses.md-0",
+        "source": "finance_expenses.md",
+        "section": "Expense Submission",
+        "chunk_index": 0.0,
+        "score": 0.516656518,
+        "rrf_score": 0.031009615384615385,
+        "text": "Business expenses should be submitted through the expense management system within thirty days of the transaction."
+      },
+      {
+        "id": "security_access.md-3",
+        "source": "security_access.md",
+        "section": "Access Requests",
+        "chunk_index": 3.0,
+        "score": 0.520496964,
+        "rrf_score": 0.03036576949620428,
+        "text": "Access requests must identify the requested system and business justification. Approvers must verify the employee role before granting access."
+      },
+      {
+        "id": "hr_benefits.md-3",
+        "source": "hr_benefits.md",
+        "section": "Wellness Benefit",
+        "chunk_index": 3.0,
+        "score": 0.526508451,
+        "rrf_score": 0.016129032258064516,
+        "text": "Employees can claim an annual wellness reimbursement for qualifying activities. Receipts must be retained for reimbursement requests."
+      },
+      {
+        "id": "hr_leave.md-4",
+        "source": "hr_leave.md",
+        "section": "Leave Approval",
+        "chunk_index": 4.0,
+        "score": 0.51833123,
+        "rrf_score": 0.015625,
+        "text": "Managers approve planned leave after considering business coverage and previously approved absences."
+      },
+      {
+        "id": "finance_procurement.md-2",
+        "source": "finance_procurement.md",
+        "section": "Preferred Vendors",
+        "chunk_index": 2.0,
+        "score": 0.513010681,
+        "rrf_score": 0.015151515151515152,
+        "text": "Employees should use approved vendors when a suitable option exists. Exceptions require documented business justification."
+      },
+      {
+        "id": "hr_remote_work.md-1",
+        "source": "hr_remote_work.md",
+        "section": "Remote Work Approval",
+        "chunk_index": 1.0,
+        "score": 0.509771466,
+        "rrf_score": 0.014925373134328358,
+        "text": "Remote work arrangements require manager approval. Long-term changes to a regular work pattern should be reviewed by the department lead."
+      }
+    ],
+    "answer": {
+      "answer": "An employee expense report is approved by the employee's manager. Higher-value expenses may require an additional finance review.",
+      "citations": [
+        {
+          "source": "finance_expenses.md",
+          "section": "Expense Approval",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "finance_expenses.md",
+          "section": "expense approval"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 1323.49
+  },
+  {
+    "id": "known-finance_expenses.md-3",
+    "type": "known",
+    "question": "How should business travel expenses be associated?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 14,
+      "threshold_context_count": 2
+    },
+    "retrieved_contexts": [
+      {
+        "id": "finance_expenses.md-3",
+        "source": "finance_expenses.md",
+        "section": "Travel Expenses",
+        "chunk_index": 3.0,
+        "score": 0.774055958,
+        "rrf_score": 0.03278688524590164,
+        "text": "Approved business travel expenses must be associated with the applicable project or cost center."
+      },
+      {
+        "id": "finance_expenses.md-0",
+        "source": "finance_expenses.md",
+        "section": "Expense Submission",
+        "chunk_index": 0.0,
+        "score": 0.512842596,
+        "rrf_score": 0.03225806451612903,
+        "text": "Business expenses should be submitted through the expense management system within thirty days of the transaction."
+      }
+    ],
+    "answer": {
+      "answer": "Approved business travel expenses must be associated with the applicable project or cost center.",
+      "citations": [
+        {
+          "source": "finance_expenses.md",
+          "section": "Travel Expenses",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "finance_expenses.md",
+          "section": "travel expenses"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 924.52
+  },
+  {
+    "id": "known-finance_expenses.md-4",
+    "type": "known",
+    "question": "How should a rejected expense report be corrected?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 16,
+      "threshold_context_count": 2
+    },
+    "retrieved_contexts": [
+      {
+        "id": "finance_expenses.md-4",
+        "source": "finance_expenses.md",
+        "section": "Expense Corrections",
+        "chunk_index": 4.0,
+        "score": 0.733056188,
+        "rrf_score": 0.03278688524590164,
+        "text": "Rejected expense reports should be corrected and resubmitted through the expense system rather than created as a separate claim."
+      },
+      {
+        "id": "finance_expenses.md-2",
+        "source": "finance_expenses.md",
+        "section": "Expense Approval",
+        "chunk_index": 2.0,
+        "score": 0.569441378,
+        "rrf_score": 0.0315136476426799,
+        "text": "Expense reports are routed to the employee manager for approval. Higher-value expenses may require an additional finance review."
+      }
+    ],
+    "answer": {
+      "answer": "A rejected expense report should be corrected and resubmitted through the expense system rather than created as a separate claim.",
+      "citations": [
+        {
+          "source": "finance_expenses.md",
+          "section": "Expense Corrections",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "finance_expenses.md",
+          "section": "expense corrections"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 982.48
+  },
+  {
+    "id": "multi-0",
+    "type": "multi",
+    "question": "What approval and security controls apply to remote work?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 15,
+      "threshold_context_count": 7
+    },
+    "retrieved_contexts": [
+      {
+        "id": "hr_remote_work.md-4",
+        "source": "hr_remote_work.md",
+        "section": "Remote Work Security",
+        "chunk_index": 4.0,
+        "score": 0.63467592,
+        "rrf_score": 0.03252247488101534,
+        "text": "Remote workers must use multi-factor authentication and the company virtual private network when accessing protected internal systems."
+      },
+      {
+        "id": "hr_remote_work.md-1",
+        "source": "hr_remote_work.md",
+        "section": "Remote Work Approval",
+        "chunk_index": 1.0,
+        "score": 0.575711846,
+        "rrf_score": 0.032266458495966696,
+        "text": "Remote work arrangements require manager approval. Long-term changes to a regular work pattern should be reviewed by the department lead."
+      },
+      {
+        "id": "hr_remote_work.md-2",
+        "source": "hr_remote_work.md",
+        "section": "Remote Equipment",
+        "chunk_index": 2.0,
+        "score": 0.614268959,
+        "rrf_score": 0.03200204813108039,
+        "text": "The company provides a standard laptop and security software for approved remote workers. Employees are responsible for maintaining a secure home network."
+      },
+      {
+        "id": "hr_remote_work.md-3",
+        "source": "hr_remote_work.md",
+        "section": "Remote Collaboration",
+        "chunk_index": 3.0,
+        "score": 0.507504582,
+        "rrf_score": 0.030536130536130537,
+        "text": "Remote teams should use the approved collaboration platform for team meetings and project communication. Critical meetings may require video participation."
+      },
+      {
+        "id": "security_access.md-3",
+        "source": "security_access.md",
+        "section": "Access Requests",
+        "chunk_index": 3.0,
+        "score": 0.557746053,
+        "rrf_score": 0.015625,
+        "text": "Access requests must identify the requested system and business justification. Approvers must verify the employee role before granting access."
+      },
+      {
+        "id": "security_access.md-0",
+        "source": "security_access.md",
+        "section": "Multi-Factor Authentication",
+        "chunk_index": 0.0,
+        "score": 0.53527981,
+        "rrf_score": 0.015384615384615385,
+        "text": "Multi-factor authentication is required for company systems that contain protected information. Approved authentication methods are documented in the security portal."
+      },
+      {
+        "id": "vendor_management.md-0",
+        "source": "vendor_management.md",
+        "section": "Vendor Onboarding",
+        "chunk_index": 0.0,
+        "score": 0.504089773,
+        "rrf_score": 0.014925373134328358,
+        "text": "New vendors should complete security and risk assessment steps before access to protected company systems is granted."
+      }
+    ],
+    "answer": {
+      "answer": "Remote work arrangements require manager approval, and long-term changes to a regular work pattern should be reviewed by the department lead. Additionally, remote workers must use multi-factor authentication and the company virtual private network when accessing protected internal systems.",
+      "citations": [
+        {
+          "source": "hr_remote_work.md",
+          "section": "Remote Work Approval",
+          "chunk_index": 1
+        },
+        {
+          "source": "hr_remote_work.md",
+          "section": "Remote Work Security",
+          "chunk_index": 4
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 0.5,
+      "retrieved_expected": [
+        {
+          "source": "hr_remote_work.md",
+          "section": "remote work security"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 0.5
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 1245.5
+  },
+  {
+    "id": "multi-1",
+    "type": "multi",
+    "question": "What notice and approval rules apply to planned leave?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 12,
+      "threshold_context_count": 5
+    },
+    "retrieved_contexts": [
+      {
+        "id": "hr_leave.md-4",
+        "source": "hr_leave.md",
+        "section": "Leave Approval",
+        "chunk_index": 4.0,
+        "score": 0.737593293,
+        "rrf_score": 0.03278688524590164,
+        "text": "Managers approve planned leave after considering business coverage and previously approved absences."
+      },
+      {
+        "id": "hr_leave.md-1",
+        "source": "hr_leave.md",
+        "section": "Leave Scheduling",
+        "chunk_index": 1.0,
+        "score": 0.681968033,
+        "rrf_score": 0.031754032258064516,
+        "text": "Planned leave requests must be submitted through the company scheduling system. Managers review requests based on team coverage."
+      },
+      {
+        "id": "hr_leave.md-0",
+        "source": "hr_leave.md",
+        "section": "Planned Leave Notice",
+        "chunk_index": 0.0,
+        "score": 0.580078,
+        "rrf_score": 0.031754032258064516,
+        "text": "Employees should request planned time off at least five business days in advance when practical. Managers may approve exceptions for urgent circumstances."
+      },
+      {
+        "id": "hr_leave.md-2",
+        "source": "hr_leave.md",
+        "section": "Leave Coverage",
+        "chunk_index": 2.0,
+        "score": 0.585225582,
+        "rrf_score": 0.031746031746031744,
+        "text": "Employees taking planned leave should document active work and identify a backup contact before their absence."
+      },
+      {
+        "id": "hr_remote_work.md-1",
+        "source": "hr_remote_work.md",
+        "section": "Remote Work Approval",
+        "chunk_index": 1.0,
+        "score": 0.55056721,
+        "rrf_score": 0.029877369007803793,
+        "text": "Remote work arrangements require manager approval. Long-term changes to a regular work pattern should be reviewed by the department lead."
+      }
+    ],
+    "answer": {
+      "answer": "Employees should request planned time off at least five business days in advance when practical. Managers approve planned leave after considering business coverage and previously approved absences. Planned leave requests must be submitted through the company scheduling system, and managers review these requests based on team coverage.",
+      "citations": [
+        {
+          "source": "hr_leave.md",
+          "section": "Planned Leave Notice",
+          "chunk_index": 0
+        },
+        {
+          "source": "hr_leave.md",
+          "section": "Leave Approval",
+          "chunk_index": 4.0
+        },
+        {
+          "source": "hr_leave.md",
+          "section": "Leave Scheduling",
+          "chunk_index": 1.0
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "hr_leave.md",
+          "section": "leave approval"
+        },
+        {
+          "source": "hr_leave.md",
+          "section": "planned leave notice"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 1646.22
+  },
+  {
+    "id": "multi-2",
+    "type": "multi",
+    "question": "What authentication and credential-sharing rules apply?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 16,
+      "threshold_context_count": 2
+    },
+    "retrieved_contexts": [
+      {
+        "id": "security_access.md-0",
+        "source": "security_access.md",
+        "section": "Multi-Factor Authentication",
+        "chunk_index": 0.0,
+        "score": 0.534518242,
+        "rrf_score": 0.03225806451612903,
+        "text": "Multi-factor authentication is required for company systems that contain protected information. Approved authentication methods are documented in the security portal."
+      },
+      {
+        "id": "security_access.md-1",
+        "source": "security_access.md",
+        "section": "Credential Sharing",
+        "chunk_index": 1.0,
+        "score": 0.607984424,
+        "rrf_score": 0.03177805800756621,
+        "text": "Employees must not share passwords, tokens, or authentication codes with other people. Shared credentials are prohibited even during urgent support situations."
+      }
+    ],
+    "answer": {
+      "answer": "Multi-factor authentication is required for company systems that contain protected information. Employees must not share passwords, tokens, or authentication codes with others, and shared credentials are prohibited even during urgent support situations.",
+      "citations": [
+        {
+          "source": "security_access.md",
+          "section": "Multi-Factor Authentication",
+          "chunk_index": 0
+        },
+        {
+          "source": "security_access.md",
+          "section": "Credential Sharing",
+          "chunk_index": 1
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "security_access.md",
+          "section": "credential sharing"
+        },
+        {
+          "source": "security_access.md",
+          "section": "multi-factor authentication"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 1243.04
+  },
+  {
+    "id": "multi-3",
+    "type": "multi",
+    "question": "How are security incidents reported and escalated?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 16,
+      "threshold_context_count": 5
+    },
+    "retrieved_contexts": [
+      {
+        "id": "security_incident.md-3",
+        "source": "security_incident.md",
+        "section": "Incident Escalation",
+        "chunk_index": 3.0,
+        "score": 0.695324361,
+        "rrf_score": 0.03252247488101534,
+        "text": "High-severity incidents are escalated to the security leadership team. Customer-impacting incidents also require communications review."
+      },
+      {
+        "id": "security_incident.md-0",
+        "source": "security_incident.md",
+        "section": "Incident Reporting",
+        "chunk_index": 0.0,
+        "score": 0.741411626,
+        "rrf_score": 0.032266458495966696,
+        "text": "Employees should report suspected security incidents through the security incident portal. Urgent incidents should also be called in to the security response team."
+      },
+      {
+        "id": "security_incident.md-1",
+        "source": "security_incident.md",
+        "section": "Incident Severity",
+        "chunk_index": 1.0,
+        "score": 0.619660318,
+        "rrf_score": 0.03200204813108039,
+        "text": "Security incidents are categorized by business impact and data exposure. High-severity incidents receive immediate response coordination."
+      },
+      {
+        "id": "support_escalation.md-1",
+        "source": "support_escalation.md",
+        "section": "Priority Escalation",
+        "chunk_index": 1.0,
+        "score": 0.534911573,
+        "rrf_score": 0.015625,
+        "text": "High-priority cases should be escalated to the appropriate technical queue when the initial support team cannot resolve them."
+      },
+      {
+        "id": "engineering_incident.md-2",
+        "source": "engineering_incident.md",
+        "section": "Incident Severity",
+        "chunk_index": 2.0,
+        "score": 0.503964186,
+        "rrf_score": 0.015384615384615385,
+        "text": "Engineering incident severity is based on customer impact, duration, and affected functionality."
+      }
+    ],
+    "answer": {
+      "answer": "Security incidents are reported by employees through the security incident portal. For urgent incidents, employees should also call in to the security response team. High-severity incidents are escalated to the security leadership team, and customer-impacting incidents require a communications review.",
+      "citations": [
+        {
+          "source": "security_incident.md",
+          "section": "Incident Reporting",
+          "chunk_index": 0
+        },
+        {
+          "source": "security_incident.md",
+          "section": "Incident Escalation",
+          "chunk_index": 3.0
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "security_incident.md",
+          "section": "incident escalation"
+        },
+        {
+          "source": "security_incident.md",
+          "section": "incident reporting"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 1418.55
+  },
+  {
+    "id": "multi-4",
+    "type": "multi",
+    "question": "How are business expenses submitted and approved?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 15,
+      "threshold_context_count": 7
+    },
+    "retrieved_contexts": [
+      {
+        "id": "finance_expenses.md-0",
+        "source": "finance_expenses.md",
+        "section": "Expense Submission",
+        "chunk_index": 0.0,
+        "score": 0.63147,
+        "rrf_score": 0.03252247488101534,
+        "text": "Business expenses should be submitted through the expense management system within thirty days of the transaction."
+      },
+      {
+        "id": "finance_expenses.md-2",
+        "source": "finance_expenses.md",
+        "section": "Expense Approval",
+        "chunk_index": 2.0,
+        "score": 0.684464812,
+        "rrf_score": 0.032018442622950824,
+        "text": "Expense reports are routed to the employee manager for approval. Higher-value expenses may require an additional finance review."
+      },
+      {
+        "id": "finance_expenses.md-3",
+        "source": "finance_expenses.md",
+        "section": "Travel Expenses",
+        "chunk_index": 3.0,
+        "score": 0.589696705,
+        "rrf_score": 0.03200204813108039,
+        "text": "Approved business travel expenses must be associated with the applicable project or cost center."
+      },
+      {
+        "id": "finance_expenses.md-1",
+        "source": "finance_expenses.md",
+        "section": "Expense Receipts",
+        "chunk_index": 1.0,
+        "score": 0.548960149,
+        "rrf_score": 0.03125763125763126,
+        "text": "Receipts are required for reimbursable expenses above the company threshold. Digital receipts are accepted."
+      },
+      {
+        "id": "finance_expenses.md-4",
+        "source": "finance_expenses.md",
+        "section": "Expense Corrections",
+        "chunk_index": 4.0,
+        "score": 0.553343058,
+        "rrf_score": 0.029910714285714284,
+        "text": "Rejected expense reports should be corrected and resubmitted through the expense system rather than created as a separate claim."
+      },
+      {
+        "id": "hr_benefits.md-3",
+        "source": "hr_benefits.md",
+        "section": "Wellness Benefit",
+        "chunk_index": 3.0,
+        "score": 0.511061847,
+        "rrf_score": 0.015151515151515152,
+        "text": "Employees can claim an annual wellness reimbursement for qualifying activities. Receipts must be retained for reimbursement requests."
+      },
+      {
+        "id": "finance_procurement.md-2",
+        "source": "finance_procurement.md",
+        "section": "Preferred Vendors",
+        "chunk_index": 2.0,
+        "score": 0.506240129,
+        "rrf_score": 0.014925373134328358,
+        "text": "Employees should use approved vendors when a suitable option exists. Exceptions require documented business justification."
+      }
+    ],
+    "answer": {
+      "answer": "Business expenses should be submitted through the expense management system within thirty days of the transaction. Expense reports are routed to the employee manager for approval, and higher-value expenses may require an additional finance review.",
+      "citations": [
+        {
+          "source": "finance_expenses.md",
+          "section": "Expense Submission",
+          "chunk_index": 0
+        },
+        {
+          "source": "finance_expenses.md",
+          "section": "Expense Approval",
+          "chunk_index": 2
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "finance_expenses.md",
+          "section": "expense approval"
+        },
+        {
+          "source": "finance_expenses.md",
+          "section": "expense submission"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 1229.01
+  },
+  {
+    "id": "multi-5",
+    "type": "multi",
+    "question": "What information is needed for a purchase and when is review required?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 16,
+      "threshold_context_count": 3
+    },
+    "retrieved_contexts": [
+      {
+        "id": "finance_procurement.md-1",
+        "source": "finance_procurement.md",
+        "section": "Purchase Approval",
+        "chunk_index": 1.0,
+        "score": 0.581970632,
+        "rrf_score": 0.03278688524590164,
+        "text": "Purchases above the department approval limit require procurement review before an order is placed."
+      },
+      {
+        "id": "finance_procurement.md-0",
+        "source": "finance_procurement.md",
+        "section": "Purchase Requests",
+        "chunk_index": 0.0,
+        "score": 0.552779198,
+        "rrf_score": 0.03200204813108039,
+        "text": "Purchase requests should identify the business purpose, estimated amount, and required delivery date before approval."
+      },
+      {
+        "id": "finance_procurement.md-4",
+        "source": "finance_procurement.md",
+        "section": "Contract Review",
+        "chunk_index": 4.0,
+        "score": 0.521402478,
+        "rrf_score": 0.015873015873015872,
+        "text": "Vendor agreements containing material financial or data-processing commitments require legal and procurement review."
+      }
+    ],
+    "answer": {
+      "answer": "A purchase request should identify the business purpose, estimated amount, and required delivery date before approval. Additionally, purchases above the department approval limit require procurement review before an order is placed.",
+      "citations": [
+        {
+          "source": "finance_procurement.md",
+          "section": "Purchase Requests",
+          "chunk_index": 0
+        },
+        {
+          "source": "finance_procurement.md",
+          "section": "Purchase Approval",
+          "chunk_index": 1
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "finance_procurement.md",
+          "section": "purchase approval"
+        },
+        {
+          "source": "finance_procurement.md",
+          "section": "purchase requests"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 1331.52
+  },
+  {
+    "id": "multi-6",
+    "type": "multi",
+    "question": "What approval and rollback requirements apply to production releases?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 14,
+      "threshold_context_count": 6
+    },
+    "retrieved_contexts": [
+      {
+        "id": "engineering_deployment.md-2",
+        "source": "engineering_deployment.md",
+        "section": "Rollback",
+        "chunk_index": 2.0,
+        "score": 0.701636732,
+        "rrf_score": 0.03278688524590164,
+        "text": "Every production release should have a documented rollback path. Rollback steps should be validated during release preparation."
+      },
+      {
+        "id": "engineering_deployment.md-0",
+        "source": "engineering_deployment.md",
+        "section": "Deployment Approval",
+        "chunk_index": 0.0,
+        "score": 0.557157695,
+        "rrf_score": 0.03200204813108039,
+        "text": "Production deployments require an approved change record unless an emergency procedure is invoked."
+      },
+      {
+        "id": "engineering_deployment.md-3",
+        "source": "engineering_deployment.md",
+        "section": "Release Verification",
+        "chunk_index": 3.0,
+        "score": 0.514690876,
+        "rrf_score": 0.03128054740957967,
+        "text": "Production releases should include post-deployment verification of health checks, critical metrics, and representative user flows."
+      },
+      {
+        "id": "engineering_deployment.md-4",
+        "source": "engineering_deployment.md",
+        "section": "Change Records",
+        "chunk_index": 4.0,
+        "score": 0.535163105,
+        "rrf_score": 0.031009615384615385,
+        "text": "Change records should capture release scope, risk, implementation window, and rollback plan."
+      },
+      {
+        "id": "product_release.md-3",
+        "source": "product_release.md",
+        "section": "Release Rollback",
+        "chunk_index": 3.0,
+        "score": 0.555508137,
+        "rrf_score": 0.015873015873015872,
+        "text": "Release plans for high-risk changes should identify how the feature or version can be disabled or rolled back."
+      },
+      {
+        "id": "product_release.md-0",
+        "source": "product_release.md",
+        "section": "Release Criteria",
+        "chunk_index": 0.0,
+        "score": 0.55430609,
+        "rrf_score": 0.015625,
+        "text": "A product release should satisfy defined quality gates for testing, security, and operational readiness before production."
+      }
+    ],
+    "answer": {
+      "answer": "Production releases require an approved change record unless an emergency procedure is invoked. Additionally, every production release should have a documented rollback path, and rollback steps should be validated during release preparation.",
+      "citations": [
+        {
+          "source": "engineering_deployment.md",
+          "section": "Deployment Approval",
+          "chunk_index": 0
+        },
+        {
+          "source": "engineering_deployment.md",
+          "section": "Rollback",
+          "chunk_index": 2.0
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "engineering_deployment.md",
+          "section": "deployment approval"
+        },
+        {
+          "source": "engineering_deployment.md",
+          "section": "rollback"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 1229.34
+  },
+  {
+    "id": "multi-7",
+    "type": "multi",
+    "question": "Who leads a major incident and what should happen afterward?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 12,
+      "threshold_context_count": 6
+    },
+    "retrieved_contexts": [
+      {
+        "id": "engineering_incident.md-0",
+        "source": "engineering_incident.md",
+        "section": "Incident Ownership",
+        "chunk_index": 0.0,
+        "score": 0.614430726,
+        "rrf_score": 0.03252247488101534,
+        "text": "The incident commander coordinates response activities during a major production incident. Service owners provide technical direction."
+      },
+      {
+        "id": "engineering_incident.md-1",
+        "source": "engineering_incident.md",
+        "section": "Incident Communication",
+        "chunk_index": 1.0,
+        "score": 0.554078102,
+        "rrf_score": 0.03200204813108039,
+        "text": "Major incidents require status updates through the approved incident communication channel until service is restored."
+      },
+      {
+        "id": "engineering_incident.md-4",
+        "source": "engineering_incident.md",
+        "section": "Postmortem",
+        "chunk_index": 4.0,
+        "score": 0.551196456,
+        "rrf_score": 0.03177805800756621,
+        "text": "Major incidents should have a blameless postmortem covering root cause, contributing factors, and corrective actions."
+      },
+      {
+        "id": "engineering_incident.md-3",
+        "source": "engineering_incident.md",
+        "section": "Incident Timeline",
+        "chunk_index": 3.0,
+        "score": 0.55371505,
+        "rrf_score": 0.03149801587301587,
+        "text": "Responders should record significant events and decisions in the incident timeline during the response."
+      },
+      {
+        "id": "security_incident.md-4",
+        "source": "security_incident.md",
+        "section": "Post-Incident Review",
+        "chunk_index": 4.0,
+        "score": 0.552859902,
+        "rrf_score": 0.030776515151515152,
+        "text": "Significant incidents receive a documented post-incident review covering root cause, corrective actions, and follow-up owners."
+      },
+      {
+        "id": "security_incident.md-3",
+        "source": "security_incident.md",
+        "section": "Incident Escalation",
+        "chunk_index": 3.0,
+        "score": 0.523924232,
+        "rrf_score": 0.015151515151515152,
+        "text": "High-severity incidents are escalated to the security leadership team. Customer-impacting incidents also require communications review."
+      }
+    ],
+    "answer": {
+      "answer": "The incident commander leads a major incident, coordinating response activities. Afterward, a blameless postmortem should be conducted covering root cause, contributing factors, and corrective actions.",
+      "citations": [
+        {
+          "source": "engineering_incident.md",
+          "section": "Incident Ownership",
+          "chunk_index": 0
+        },
+        {
+          "source": "engineering_incident.md",
+          "section": "Postmortem",
+          "chunk_index": 4
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "engineering_incident.md",
+          "section": "incident ownership"
+        },
+        {
+          "source": "engineering_incident.md",
+          "section": "postmortem"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 1271.81
+  },
+  {
+    "id": "multi-8",
+    "type": "multi",
+    "question": "What identity and logging controls apply to AWS workloads?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 13,
+      "threshold_context_count": 3
+    },
+    "retrieved_contexts": [
+      {
+        "id": "cloud_aws.md-2",
+        "source": "cloud_aws.md",
+        "section": "AWS Logging",
+        "chunk_index": 2.0,
+        "score": 0.524053454,
+        "rrf_score": 0.03278688524590164,
+        "text": "CloudTrail and approved service logs should be enabled for production AWS accounts and retained according to data policy."
+      },
+      {
+        "id": "cloud_aws.md-0",
+        "source": "cloud_aws.md",
+        "section": "AWS Region Selection",
+        "chunk_index": 0.0,
+        "score": 0.52247113,
+        "rrf_score": 0.03225806451612903,
+        "text": "Production workloads should use an approved AWS region based on latency, data residency, and service availability requirements."
+      },
+      {
+        "id": "cloud_aws.md-1",
+        "source": "cloud_aws.md",
+        "section": "AWS IAM Roles",
+        "chunk_index": 1.0,
+        "score": 0.5147416,
+        "rrf_score": 0.031746031746031744,
+        "text": "Workloads should use IAM roles instead of long-lived access keys whenever possible."
+      }
+    ],
+    "answer": {
+      "answer": "For AWS workloads, the following identity and logging controls apply: CloudTrail and approved service logs should be enabled for production AWS accounts and retained according to data policy. Additionally, workloads should use IAM roles instead of long-lived access keys whenever possible.",
+      "citations": [
+        {
+          "source": "cloud_aws.md",
+          "section": "AWS Logging",
+          "chunk_index": 0
+        },
+        {
+          "source": "cloud_aws.md",
+          "section": "AWS IAM Roles",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "cloud_aws.md",
+          "section": "aws iam roles"
+        },
+        {
+          "source": "cloud_aws.md",
+          "section": "aws logging"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 1987.23
+  },
+  {
+    "id": "multi-9",
+    "type": "multi",
+    "question": "How should Kubernetes secrets and workload health be managed?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 14,
+      "threshold_context_count": 1
+    },
+    "retrieved_contexts": [
+      {
+        "id": "cloud_kubernetes.md-3",
+        "source": "cloud_kubernetes.md",
+        "section": "Kubernetes Secrets",
+        "chunk_index": 3.0,
+        "score": 0.509625,
+        "rrf_score": 0.03278688524590164,
+        "text": "Application secrets should be supplied through approved secret-management mechanisms rather than committed to container images."
+      }
+    ],
+    "answer": {
+      "answer": "I don't have enough information in the knowledge base to answer that question.",
+      "citations": [],
+      "abstained": true
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 0.5,
+      "retrieved_expected": [
+        {
+          "source": "cloud_kubernetes.md",
+          "section": "kubernetes secrets"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 0.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 656.93
+  },
+  {
+    "id": "multi-10",
+    "type": "multi",
+    "question": "How should sensitive data be classified and accessed?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 16,
+      "threshold_context_count": 4
+    },
+    "retrieved_contexts": [
+      {
+        "id": "data_governance.md-0",
+        "source": "data_governance.md",
+        "section": "Data Classification",
+        "chunk_index": 0.0,
+        "score": 0.75787586,
+        "rrf_score": 0.03252247488101534,
+        "text": "Enterprise data should be classified according to sensitivity and business impact. Classification determines handling requirements."
+      },
+      {
+        "id": "data_governance.md-3",
+        "source": "data_governance.md",
+        "section": "Data Access",
+        "chunk_index": 3.0,
+        "score": 0.695442617,
+        "rrf_score": 0.03252247488101534,
+        "text": "Access to sensitive data should follow least privilege and be reviewed periodically."
+      },
+      {
+        "id": "data_retention.md-3",
+        "source": "data_retention.md",
+        "section": "Archive Access",
+        "chunk_index": 3.0,
+        "score": 0.609635472,
+        "rrf_score": 0.03125763125763126,
+        "text": "Archived data should have controlled access and documented retrieval procedures."
+      },
+      {
+        "id": "security_incident.md-1",
+        "source": "security_incident.md",
+        "section": "Incident Severity",
+        "chunk_index": 1.0,
+        "score": 0.512686372,
+        "rrf_score": 0.015625,
+        "text": "Security incidents are categorized by business impact and data exposure. High-severity incidents receive immediate response coordination."
+      }
+    ],
+    "answer": {
+      "answer": "Sensitive data should be classified according to its sensitivity and business impact, which determines the handling requirements. Access to sensitive data should follow the principle of least privilege and be reviewed periodically.",
+      "citations": [
+        {
+          "source": "data_governance.md",
+          "section": "Data Classification",
+          "chunk_index": 0
+        },
+        {
+          "source": "data_governance.md",
+          "section": "Data Access",
+          "chunk_index": 3.0
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "data_governance.md",
+          "section": "data access"
+        },
+        {
+          "source": "data_governance.md",
+          "section": "data classification"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 1509.39
+  },
+  {
+    "id": "multi-11",
+    "type": "multi",
+    "question": "How are retention and approved deletion requests handled?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 15,
+      "threshold_context_count": 1
+    },
+    "retrieved_contexts": [
+      {
+        "id": "data_retention.md-1",
+        "source": "data_retention.md",
+        "section": "Deletion Requests",
+        "chunk_index": 1.0,
+        "score": 0.616795123,
+        "rrf_score": 0.03278688524590164,
+        "text": "Approved deletion requests should be tracked to completion and include evidence that required systems were processed."
+      }
+    ],
+    "answer": {
+      "answer": "I don't have enough information in the knowledge base to answer that question.",
+      "citations": [],
+      "abstained": true
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 0.5,
+      "retrieved_expected": [
+        {
+          "source": "data_retention.md",
+          "section": "deletion requests"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 0.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 875.62
+  },
+  {
+    "id": "multi-12",
+    "type": "multi",
+    "question": "What happens when a vendor is onboarded and later offboarded?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 14,
+      "threshold_context_count": 0
+    },
+    "retrieved_contexts": [],
+    "answer": {
+      "answer": "I don't have enough information in the knowledge base to answer that question.",
+      "citations": [],
+      "abstained": true
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 0.0,
+      "retrieved_expected": []
+    },
+    "citation_metrics": {
+      "citation_accuracy": 0.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 692.45
+  },
+  {
+    "id": "multi-13",
+    "type": "multi",
+    "question": "What evidence and remediation information are needed for an audit?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 15,
+      "threshold_context_count": 4
+    },
+    "retrieved_contexts": [
+      {
+        "id": "compliance_audit.md-1",
+        "source": "compliance_audit.md",
+        "section": "Audit Evidence",
+        "chunk_index": 1.0,
+        "score": 0.586202383,
+        "rrf_score": 0.03278688524590164,
+        "text": "Evidence provided for an audit should be complete, traceable, and attributable to the relevant control."
+      },
+      {
+        "id": "compliance_audit.md-3",
+        "source": "compliance_audit.md",
+        "section": "Remediation Plans",
+        "chunk_index": 3.0,
+        "score": 0.534104109,
+        "rrf_score": 0.03225806451612903,
+        "text": "Control findings should have documented remediation plans with owners and target dates."
+      },
+      {
+        "id": "security_incident.md-2",
+        "source": "security_incident.md",
+        "section": "Evidence Preservation",
+        "chunk_index": 2.0,
+        "score": 0.506259441,
+        "rrf_score": 0.031009615384615385,
+        "text": "Employees should not delete or modify potentially relevant logs or files during an investigation. The security response team coordinates evidence preservation."
+      },
+      {
+        "id": "vendor_management.md-4",
+        "source": "vendor_management.md",
+        "section": "Vendor Evidence",
+        "chunk_index": 4.0,
+        "score": 0.508481264,
+        "rrf_score": 0.030158730158730156,
+        "text": "High-risk vendors may be required to provide security evidence such as assessments, certifications, or test results."
+      }
+    ],
+    "answer": {
+      "answer": "For an audit, the evidence provided should be complete, traceable, and attributable to the relevant control. Additionally, control findings must have documented remediation plans that include owners and target dates.",
+      "citations": [
+        {
+          "source": "compliance_audit.md",
+          "section": "Audit Evidence",
+          "chunk_index": 0
+        },
+        {
+          "source": "compliance_audit.md",
+          "section": "Remediation Plans",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "compliance_audit.md",
+          "section": "audit evidence"
+        },
+        {
+          "source": "compliance_audit.md",
+          "section": "remediation plans"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 1495.27
+  },
+  {
+    "id": "multi-14",
+    "type": "multi",
+    "question": "How should high-priority support cases be escalated and communicated?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 14,
+      "threshold_context_count": 6
+    },
+    "retrieved_contexts": [
+      {
+        "id": "support_escalation.md-1",
+        "source": "support_escalation.md",
+        "section": "Priority Escalation",
+        "chunk_index": 1.0,
+        "score": 0.803870916,
+        "rrf_score": 0.03278688524590164,
+        "text": "High-priority cases should be escalated to the appropriate technical queue when the initial support team cannot resolve them."
+      },
+      {
+        "id": "support_escalation.md-4",
+        "source": "support_escalation.md",
+        "section": "Case Closure",
+        "chunk_index": 4.0,
+        "score": 0.55748862,
+        "rrf_score": 0.031746031746031744,
+        "text": "A support case should include the resolution summary and customer-impact notes before closure."
+      },
+      {
+        "id": "security_incident.md-3",
+        "source": "security_incident.md",
+        "section": "Incident Escalation",
+        "chunk_index": 3.0,
+        "score": 0.643122,
+        "rrf_score": 0.031054405392392875,
+        "text": "High-severity incidents are escalated to the security leadership team. Customer-impacting incidents also require communications review."
+      },
+      {
+        "id": "support_escalation.md-0",
+        "source": "support_escalation.md",
+        "section": "Severity Levels",
+        "chunk_index": 0.0,
+        "score": 0.557288051,
+        "rrf_score": 0.031009615384615385,
+        "text": "Support severity is based on customer impact, business criticality, and the scope of affected users."
+      },
+      {
+        "id": "support_escalation.md-2",
+        "source": "support_escalation.md",
+        "section": "Customer Updates",
+        "chunk_index": 2.0,
+        "score": 0.509416878,
+        "rrf_score": 0.031009615384615385,
+        "text": "Customers should receive status updates at intervals appropriate to severity and agreed service targets."
+      },
+      {
+        "id": "support_escalation.md-3",
+        "source": "support_escalation.md",
+        "section": "Escalation Ownership",
+        "chunk_index": 3.0,
+        "score": 0.500347435,
+        "rrf_score": 0.029437229437229435,
+        "text": "The receiving technical team becomes responsible for the next troubleshooting step while the support owner coordinates customer communication."
+      }
+    ],
+    "answer": {
+      "answer": "High-priority support cases should be escalated to the appropriate technical queue when the initial support team cannot resolve them. The receiving technical team becomes responsible for the next troubleshooting step, while the support owner coordinates customer communication.",
+      "citations": [
+        {
+          "source": "support_escalation.md",
+          "section": "Priority Escalation",
+          "chunk_index": 0
+        },
+        {
+          "source": "support_escalation.md",
+          "section": "Escalation Ownership",
+          "chunk_index": 3
+        }
+      ],
+      "abstained": false
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": [
+        {
+          "source": "support_escalation.md",
+          "section": "customer updates"
+        },
+        {
+          "source": "support_escalation.md",
+          "section": "priority escalation"
+        }
+      ]
+    },
+    "citation_metrics": {
+      "citation_accuracy": 0.5
+    },
+    "abstention_metrics": {
+      "abstention_correct": null
+    },
+    "generation_latency_ms": 1234.38
+  },
+  {
+    "id": "unknown-0",
+    "type": "unknown",
+    "question": "What is the company travel reimbursement limit for international flights?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 14,
+      "threshold_context_count": 0
+    },
+    "retrieved_contexts": [],
+    "answer": {
+      "answer": "I don't have enough information in the knowledge base to answer that question.",
+      "citations": [],
+      "abstained": true
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": []
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": true
+    },
+    "generation_latency_ms": 821.0
+  },
+  {
+    "id": "unknown-1",
+    "type": "unknown",
+    "question": "How many parental leave days are provided?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 14,
+      "threshold_context_count": 0
+    },
+    "retrieved_contexts": [],
+    "answer": {
+      "answer": "I don't have enough information in the knowledge base to answer that question.",
+      "citations": [],
+      "abstained": true
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": []
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": true
+    },
+    "generation_latency_ms": 721.38
+  },
+  {
+    "id": "unknown-2",
+    "type": "unknown",
+    "question": "What is the employee stock vesting schedule?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 19,
+      "threshold_context_count": 0
+    },
+    "retrieved_contexts": [],
+    "answer": {
+      "answer": "I don't have enough information in the knowledge base to answer that question.",
+      "citations": [],
+      "abstained": true
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": []
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": true
+    },
+    "generation_latency_ms": 697.47
+  },
+  {
+    "id": "unknown-3",
+    "type": "unknown",
+    "question": "Does the company reimburse home internet costs?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 16,
+      "threshold_context_count": 1
+    },
+    "retrieved_contexts": [
+      {
+        "id": "hr_remote_work.md-2",
+        "source": "hr_remote_work.md",
+        "section": "Remote Equipment",
+        "chunk_index": 2.0,
+        "score": 0.511078656,
+        "rrf_score": 0.03278688524590164,
+        "text": "The company provides a standard laptop and security software for approved remote workers. Employees are responsible for maintaining a secure home network."
+      }
+    ],
+    "answer": {
+      "answer": "I don't have enough information in the knowledge base to answer that question.",
+      "citations": [],
+      "abstained": true
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 0.0,
+      "retrieved_expected": []
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": true
+    },
+    "generation_latency_ms": 644.65
+  },
+  {
+    "id": "unknown-4",
+    "type": "unknown",
+    "question": "What is the office parking policy?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 19,
+      "threshold_context_count": 0
+    },
+    "retrieved_contexts": [],
+    "answer": {
+      "answer": "I don't have enough information in the knowledge base to answer that question.",
+      "citations": [],
+      "abstained": true
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": []
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": true
+    },
+    "generation_latency_ms": 908.95
+  },
+  {
+    "id": "unknown-5",
+    "type": "unknown",
+    "question": "What is the relocation package?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 20,
+      "threshold_context_count": 0
+    },
+    "retrieved_contexts": [],
+    "answer": {
+      "answer": "I don't have enough information in the knowledge base to answer that question.",
+      "citations": [],
+      "abstained": true
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": []
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": true
+    },
+    "generation_latency_ms": 706.51
+  },
+  {
+    "id": "unknown-6",
+    "type": "unknown",
+    "question": "What dental insurance plan is offered?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 17,
+      "threshold_context_count": 0
+    },
+    "retrieved_contexts": [],
+    "answer": {
+      "answer": "I don't have enough information in the knowledge base to answer that question.",
+      "citations": [],
+      "abstained": true
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": []
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": true
+    },
+    "generation_latency_ms": 833.32
+  },
+  {
+    "id": "unknown-7",
+    "type": "unknown",
+    "question": "What is the annual bonus target?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 17,
+      "threshold_context_count": 0
+    },
+    "retrieved_contexts": [],
+    "answer": {
+      "answer": "I don't have enough information in the knowledge base to answer that question.",
+      "citations": [],
+      "abstained": true
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": []
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": true
+    },
+    "generation_latency_ms": 708.58
+  },
+  {
+    "id": "unknown-8",
+    "type": "unknown",
+    "question": "What is the company car policy?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 16,
+      "threshold_context_count": 0
+    },
+    "retrieved_contexts": [],
+    "answer": {
+      "answer": "I don't have enough information in the knowledge base to answer that question.",
+      "citations": [],
+      "abstained": true
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": []
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": true
+    },
+    "generation_latency_ms": 669.89
+  },
+  {
+    "id": "unknown-9",
+    "type": "unknown",
+    "question": "What is the tuition reimbursement limit?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 18,
+      "threshold_context_count": 0
+    },
+    "retrieved_contexts": [],
+    "answer": {
+      "answer": "I don't have enough information in the knowledge base to answer that question.",
+      "citations": [],
+      "abstained": true
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": []
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": true
+    },
+    "generation_latency_ms": 900.51
+  },
+  {
+    "id": "unknown-10",
+    "type": "unknown",
+    "question": "What is the conference attendance budget per employee?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 16,
+      "threshold_context_count": 0
+    },
+    "retrieved_contexts": [],
+    "answer": {
+      "answer": "I don't have enough information in the knowledge base to answer that question.",
+      "citations": [],
+      "abstained": true
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": []
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": true
+    },
+    "generation_latency_ms": 784.98
+  },
+  {
+    "id": "unknown-11",
+    "type": "unknown",
+    "question": "How does the company handle pet insurance?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 15,
+      "threshold_context_count": 0
+    },
+    "retrieved_contexts": [],
+    "answer": {
+      "answer": "I don't have enough information in the knowledge base to answer that question.",
+      "citations": [],
+      "abstained": true
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": []
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": true
+    },
+    "generation_latency_ms": 819.15
+  },
+  {
+    "id": "unknown-12",
+    "type": "unknown",
+    "question": "What is the employee referral bonus?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 18,
+      "threshold_context_count": 0
+    },
+    "retrieved_contexts": [],
+    "answer": {
+      "answer": "I don't have enough information in the knowledge base to answer that question.",
+      "citations": [],
+      "abstained": true
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": []
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": true
+    },
+    "generation_latency_ms": 717.01
+  },
+  {
+    "id": "unknown-13",
+    "type": "unknown",
+    "question": "What is the sabbatical policy?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 19,
+      "threshold_context_count": 0
+    },
+    "retrieved_contexts": [],
+    "answer": {
+      "answer": "I don't have enough information in the knowledge base to answer that question.",
+      "citations": [],
+      "abstained": true
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": []
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": true
+    },
+    "generation_latency_ms": 730.81
+  },
+  {
+    "id": "unknown-14",
+    "type": "unknown",
+    "question": "What is the international assignment policy?",
+    "retrieval": {
+      "strategy": "hybrid_rrf",
+      "threshold": 0.5,
+      "dense_candidate_count": 10,
+      "sparse_candidate_count": 10,
+      "hybrid_candidate_count": 20,
+      "threshold_context_count": 0
+    },
+    "retrieved_contexts": [],
+    "answer": {
+      "answer": "I don't have enough information in the knowledge base to answer that question.",
+      "citations": [],
+      "abstained": true
+    },
+    "retrieval_metrics": {
+      "retrieval_support": 1.0,
+      "retrieved_expected": []
+    },
+    "citation_metrics": {
+      "citation_accuracy": 1.0
+    },
+    "abstention_metrics": {
+      "abstention_correct": true
+    },
+    "generation_latency_ms": 683.98
+  }
+]

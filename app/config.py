@@ -11,7 +11,7 @@ class Settings(BaseSettings):
     pinecone_index_name: str = "enterprise-rag"
     pinecone_namespace: str = ""
     top_k: int = 5
-    similarity_threshold: float = 0.45
+    similarity_threshold: float = 0.50
 
     rerank_model: str = "bge-reranker-v2-m3"
     rerank_top_n: int = 3

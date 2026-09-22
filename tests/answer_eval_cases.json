@@ -1,0 +1,1052 @@
+[
+  {
+    "id": "known-hr_remote_work.md-0",
+    "type": "known",
+    "question": "How many days per week can employees work remotely?",
+    "expected": [
+      {
+        "source": "hr_remote_work.md",
+        "section": "remote work schedule"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "hr_remote_work.md",
+        "section": "remote work schedule",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "known-hr_remote_work.md-1",
+    "type": "known",
+    "question": "Who approves a regular remote work arrangement?",
+    "expected": [
+      {
+        "source": "hr_remote_work.md",
+        "section": "remote work approval"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "hr_remote_work.md",
+        "section": "remote work approval",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "known-hr_remote_work.md-2",
+    "type": "known",
+    "question": "What equipment does the company provide to remote workers?",
+    "expected": [
+      {
+        "source": "hr_remote_work.md",
+        "section": "remote equipment"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "hr_remote_work.md",
+        "section": "remote equipment",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "known-hr_remote_work.md-3",
+    "type": "known",
+    "question": "Which platform should remote teams use for collaboration?",
+    "expected": [
+      {
+        "source": "hr_remote_work.md",
+        "section": "remote collaboration"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "hr_remote_work.md",
+        "section": "remote collaboration",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "known-hr_remote_work.md-4",
+    "type": "known",
+    "question": "What security controls are required for remote access?",
+    "expected": [
+      {
+        "source": "hr_remote_work.md",
+        "section": "remote work security"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "hr_remote_work.md",
+        "section": "remote work security",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "known-hr_leave.md-0",
+    "type": "known",
+    "question": "How much notice should employees give for planned time off?",
+    "expected": [
+      {
+        "source": "hr_leave.md",
+        "section": "planned leave notice"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "hr_leave.md",
+        "section": "planned leave notice",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "known-hr_leave.md-1",
+    "type": "known",
+    "question": "Where should employees submit planned leave requests?",
+    "expected": [
+      {
+        "source": "hr_leave.md",
+        "section": "leave scheduling"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "hr_leave.md",
+        "section": "leave scheduling",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "known-hr_leave.md-2",
+    "type": "known",
+    "question": "What should an employee do before taking planned leave?",
+    "expected": [
+      {
+        "source": "hr_leave.md",
+        "section": "leave coverage"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "hr_leave.md",
+        "section": "leave coverage",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "known-hr_leave.md-3",
+    "type": "known",
+    "question": "How should unexpected leave be reported?",
+    "expected": [
+      {
+        "source": "hr_leave.md",
+        "section": "emergency leave"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "hr_leave.md",
+        "section": "emergency leave",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "known-hr_leave.md-4",
+    "type": "known",
+    "question": "What factors are considered when approving planned leave?",
+    "expected": [
+      {
+        "source": "hr_leave.md",
+        "section": "leave approval"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "hr_leave.md",
+        "section": "leave approval",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "known-hr_benefits.md-0",
+    "type": "known",
+    "question": "When can eligible employees enroll in the health plan?",
+    "expected": [
+      {
+        "source": "hr_benefits.md",
+        "section": "health plan enrollment"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "hr_benefits.md",
+        "section": "health plan enrollment",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "known-hr_benefits.md-1",
+    "type": "known",
+    "question": "When can health plan elections be changed outside open enrollment?",
+    "expected": [
+      {
+        "source": "hr_benefits.md",
+        "section": "health plan changes"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "hr_benefits.md",
+        "section": "health plan changes",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "known-hr_benefits.md-2",
+    "type": "known",
+    "question": "When are flexible spending contribution elections made?",
+    "expected": [
+      {
+        "source": "hr_benefits.md",
+        "section": "flexible spending"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "hr_benefits.md",
+        "section": "flexible spending",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "known-hr_benefits.md-3",
+    "type": "known",
+    "question": "What is required for a wellness reimbursement request?",
+    "expected": [
+      {
+        "source": "hr_benefits.md",
+        "section": "wellness benefit"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "hr_benefits.md",
+        "section": "wellness benefit",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "known-hr_benefits.md-4",
+    "type": "known",
+    "question": "Where should employees ask benefits questions?",
+    "expected": [
+      {
+        "source": "hr_benefits.md",
+        "section": "benefits support"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "hr_benefits.md",
+        "section": "benefits support",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "known-security_access.md-0",
+    "type": "known",
+    "question": "Is multi-factor authentication required for protected company systems?",
+    "expected": [
+      {
+        "source": "security_access.md",
+        "section": "multi-factor authentication"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "security_access.md",
+        "section": "multi-factor authentication",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "known-security_access.md-1",
+    "type": "known",
+    "question": "Can employees share passwords during urgent support situations?",
+    "expected": [
+      {
+        "source": "security_access.md",
+        "section": "credential sharing"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "security_access.md",
+        "section": "credential sharing",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "known-security_access.md-2",
+    "type": "known",
+    "question": "How often is privileged access reviewed?",
+    "expected": [
+      {
+        "source": "security_access.md",
+        "section": "privileged access"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "security_access.md",
+        "section": "privileged access",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "known-security_access.md-3",
+    "type": "known",
+    "question": "What information must an access request include?",
+    "expected": [
+      {
+        "source": "security_access.md",
+        "section": "access requests"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "security_access.md",
+        "section": "access requests",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "known-security_access.md-4",
+    "type": "known",
+    "question": "When should protected-system access be removed?",
+    "expected": [
+      {
+        "source": "security_access.md",
+        "section": "access removal"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "security_access.md",
+        "section": "access removal",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "known-security_incident.md-0",
+    "type": "known",
+    "question": "How should employees report a suspected security incident?",
+    "expected": [
+      {
+        "source": "security_incident.md",
+        "section": "incident reporting"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "security_incident.md",
+        "section": "incident reporting",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "known-security_incident.md-1",
+    "type": "known",
+    "question": "How is security incident severity determined?",
+    "expected": [
+      {
+        "source": "security_incident.md",
+        "section": "incident severity"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "security_incident.md",
+        "section": "incident severity",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "known-security_incident.md-2",
+    "type": "known",
+    "question": "What should employees do with potentially relevant investigation evidence?",
+    "expected": [
+      {
+        "source": "security_incident.md",
+        "section": "evidence preservation"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "security_incident.md",
+        "section": "evidence preservation",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "known-security_incident.md-3",
+    "type": "known",
+    "question": "Which incidents are escalated to security leadership?",
+    "expected": [
+      {
+        "source": "security_incident.md",
+        "section": "incident escalation"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "security_incident.md",
+        "section": "incident escalation",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "known-security_incident.md-4",
+    "type": "known",
+    "question": "What does a significant incident review include?",
+    "expected": [
+      {
+        "source": "security_incident.md",
+        "section": "post-incident review"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "security_incident.md",
+        "section": "post-incident review",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "known-finance_expenses.md-0",
+    "type": "known",
+    "question": "When should business expenses be submitted?",
+    "expected": [
+      {
+        "source": "finance_expenses.md",
+        "section": "expense submission"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "finance_expenses.md",
+        "section": "expense submission",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "known-finance_expenses.md-1",
+    "type": "known",
+    "question": "When are receipts required for expenses?",
+    "expected": [
+      {
+        "source": "finance_expenses.md",
+        "section": "expense receipts"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "finance_expenses.md",
+        "section": "expense receipts",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "known-finance_expenses.md-2",
+    "type": "known",
+    "question": "Who approves an employee expense report?",
+    "expected": [
+      {
+        "source": "finance_expenses.md",
+        "section": "expense approval"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "finance_expenses.md",
+        "section": "expense approval",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "known-finance_expenses.md-3",
+    "type": "known",
+    "question": "How should business travel expenses be associated?",
+    "expected": [
+      {
+        "source": "finance_expenses.md",
+        "section": "travel expenses"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "finance_expenses.md",
+        "section": "travel expenses",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "known-finance_expenses.md-4",
+    "type": "known",
+    "question": "How should a rejected expense report be corrected?",
+    "expected": [
+      {
+        "source": "finance_expenses.md",
+        "section": "expense corrections"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "finance_expenses.md",
+        "section": "expense corrections",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "multi-0",
+    "type": "multi",
+    "question": "What approval and security controls apply to remote work?",
+    "expected": [
+      {
+        "source": "hr_remote_work.md",
+        "section": "remote work schedule"
+      },
+      {
+        "source": "hr_remote_work.md",
+        "section": "remote work security"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "hr_remote_work.md",
+        "section": "remote work schedule",
+        "text": ""
+      },
+      {
+        "source": "hr_remote_work.md",
+        "section": "remote work security",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "multi-1",
+    "type": "multi",
+    "question": "What notice and approval rules apply to planned leave?",
+    "expected": [
+      {
+        "source": "hr_leave.md",
+        "section": "planned leave notice"
+      },
+      {
+        "source": "hr_leave.md",
+        "section": "leave approval"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "hr_leave.md",
+        "section": "planned leave notice",
+        "text": ""
+      },
+      {
+        "source": "hr_leave.md",
+        "section": "leave approval",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "multi-2",
+    "type": "multi",
+    "question": "What authentication and credential-sharing rules apply?",
+    "expected": [
+      {
+        "source": "security_access.md",
+        "section": "multi-factor authentication"
+      },
+      {
+        "source": "security_access.md",
+        "section": "credential sharing"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "security_access.md",
+        "section": "multi-factor authentication",
+        "text": ""
+      },
+      {
+        "source": "security_access.md",
+        "section": "credential sharing",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "multi-3",
+    "type": "multi",
+    "question": "How are security incidents reported and escalated?",
+    "expected": [
+      {
+        "source": "security_incident.md",
+        "section": "incident reporting"
+      },
+      {
+        "source": "security_incident.md",
+        "section": "incident escalation"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "security_incident.md",
+        "section": "incident reporting",
+        "text": ""
+      },
+      {
+        "source": "security_incident.md",
+        "section": "incident escalation",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "multi-4",
+    "type": "multi",
+    "question": "How are business expenses submitted and approved?",
+    "expected": [
+      {
+        "source": "finance_expenses.md",
+        "section": "expense submission"
+      },
+      {
+        "source": "finance_expenses.md",
+        "section": "expense approval"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "finance_expenses.md",
+        "section": "expense submission",
+        "text": ""
+      },
+      {
+        "source": "finance_expenses.md",
+        "section": "expense approval",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "multi-5",
+    "type": "multi",
+    "question": "What information is needed for a purchase and when is review required?",
+    "expected": [
+      {
+        "source": "finance_procurement.md",
+        "section": "purchase requests"
+      },
+      {
+        "source": "finance_procurement.md",
+        "section": "purchase approval"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "finance_procurement.md",
+        "section": "purchase requests",
+        "text": ""
+      },
+      {
+        "source": "finance_procurement.md",
+        "section": "purchase approval",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "multi-6",
+    "type": "multi",
+    "question": "What approval and rollback requirements apply to production releases?",
+    "expected": [
+      {
+        "source": "engineering_deployment.md",
+        "section": "deployment approval"
+      },
+      {
+        "source": "engineering_deployment.md",
+        "section": "rollback"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "engineering_deployment.md",
+        "section": "deployment approval",
+        "text": ""
+      },
+      {
+        "source": "engineering_deployment.md",
+        "section": "rollback",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "multi-7",
+    "type": "multi",
+    "question": "Who leads a major incident and what should happen afterward?",
+    "expected": [
+      {
+        "source": "engineering_incident.md",
+        "section": "incident ownership"
+      },
+      {
+        "source": "engineering_incident.md",
+        "section": "postmortem"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "engineering_incident.md",
+        "section": "incident ownership",
+        "text": ""
+      },
+      {
+        "source": "engineering_incident.md",
+        "section": "postmortem",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "multi-8",
+    "type": "multi",
+    "question": "What identity and logging controls apply to AWS workloads?",
+    "expected": [
+      {
+        "source": "cloud_aws.md",
+        "section": "aws iam roles"
+      },
+      {
+        "source": "cloud_aws.md",
+        "section": "aws logging"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "cloud_aws.md",
+        "section": "aws iam roles",
+        "text": ""
+      },
+      {
+        "source": "cloud_aws.md",
+        "section": "aws logging",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "multi-9",
+    "type": "multi",
+    "question": "How should Kubernetes secrets and workload health be managed?",
+    "expected": [
+      {
+        "source": "cloud_kubernetes.md",
+        "section": "kubernetes secrets"
+      },
+      {
+        "source": "cloud_kubernetes.md",
+        "section": "kubernetes health checks"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "cloud_kubernetes.md",
+        "section": "kubernetes secrets",
+        "text": ""
+      },
+      {
+        "source": "cloud_kubernetes.md",
+        "section": "kubernetes health checks",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "multi-10",
+    "type": "multi",
+    "question": "How should sensitive data be classified and accessed?",
+    "expected": [
+      {
+        "source": "data_governance.md",
+        "section": "data classification"
+      },
+      {
+        "source": "data_governance.md",
+        "section": "data access"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "data_governance.md",
+        "section": "data classification",
+        "text": ""
+      },
+      {
+        "source": "data_governance.md",
+        "section": "data access",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "multi-11",
+    "type": "multi",
+    "question": "How are retention and approved deletion requests handled?",
+    "expected": [
+      {
+        "source": "data_retention.md",
+        "section": "retention schedule"
+      },
+      {
+        "source": "data_retention.md",
+        "section": "deletion requests"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "data_retention.md",
+        "section": "retention schedule",
+        "text": ""
+      },
+      {
+        "source": "data_retention.md",
+        "section": "deletion requests",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "multi-12",
+    "type": "multi",
+    "question": "What happens when a vendor is onboarded and later offboarded?",
+    "expected": [
+      {
+        "source": "vendor_management.md",
+        "section": "vendor onboarding"
+      },
+      {
+        "source": "vendor_management.md",
+        "section": "vendor offboarding"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "vendor_management.md",
+        "section": "vendor onboarding",
+        "text": ""
+      },
+      {
+        "source": "vendor_management.md",
+        "section": "vendor offboarding",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "multi-13",
+    "type": "multi",
+    "question": "What evidence and remediation information are needed for an audit?",
+    "expected": [
+      {
+        "source": "compliance_audit.md",
+        "section": "audit evidence"
+      },
+      {
+        "source": "compliance_audit.md",
+        "section": "remediation plans"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "compliance_audit.md",
+        "section": "audit evidence",
+        "text": ""
+      },
+      {
+        "source": "compliance_audit.md",
+        "section": "remediation plans",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "multi-14",
+    "type": "multi",
+    "question": "How should high-priority support cases be escalated and communicated?",
+    "expected": [
+      {
+        "source": "support_escalation.md",
+        "section": "priority escalation"
+      },
+      {
+        "source": "support_escalation.md",
+        "section": "customer updates"
+      }
+    ],
+    "gold_context": [
+      {
+        "source": "support_escalation.md",
+        "section": "priority escalation",
+        "text": ""
+      },
+      {
+        "source": "support_escalation.md",
+        "section": "customer updates",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "id": "unknown-0",
+    "type": "unknown",
+    "question": "What is the company travel reimbursement limit for international flights?",
+    "expected": [],
+    "gold_context": []
+  },
+  {
+    "id": "unknown-1",
+    "type": "unknown",
+    "question": "How many parental leave days are provided?",
+    "expected": [],
+    "gold_context": []
+  },
+  {
+    "id": "unknown-2",
+    "type": "unknown",
+    "question": "What is the employee stock vesting schedule?",
+    "expected": [],
+    "gold_context": []
+  },
+  {
+    "id": "unknown-3",
+    "type": "unknown",
+    "question": "Does the company reimburse home internet costs?",
+    "expected": [],
+    "gold_context": []
+  },
+  {
+    "id": "unknown-4",
+    "type": "unknown",
+    "question": "What is the office parking policy?",
+    "expected": [],
+    "gold_context": []
+  },
+  {
+    "id": "unknown-5",
+    "type": "unknown",
+    "question": "What is the relocation package?",
+    "expected": [],
+    "gold_context": []
+  },
+  {
+    "id": "unknown-6",
+    "type": "unknown",
+    "question": "What dental insurance plan is offered?",
+    "expected": [],
+    "gold_context": []
+  },
+  {
+    "id": "unknown-7",
+    "type": "unknown",
+    "question": "What is the annual bonus target?",
+    "expected": [],
+    "gold_context": []
+  },
+  {
+    "id": "unknown-8",
+    "type": "unknown",
+    "question": "What is the company car policy?",
+    "expected": [],
+    "gold_context": []
+  },
+  {
+    "id": "unknown-9",
+    "type": "unknown",
+    "question": "What is the tuition reimbursement limit?",
+    "expected": [],
+    "gold_context": []
+  },
+  {
+    "id": "unknown-10",
+    "type": "unknown",
+    "question": "What is the conference attendance budget per employee?",
+    "expected": [],
+    "gold_context": []
+  },
+  {
+    "id": "unknown-11",
+    "type": "unknown",
+    "question": "How does the company handle pet insurance?",
+    "expected": [],
+    "gold_context": []
+  },
+  {
+    "id": "unknown-12",
+    "type": "unknown",
+    "question": "What is the employee referral bonus?",
+    "expected": [],
+    "gold_context": []
+  },
+  {
+    "id": "unknown-13",
+    "type": "unknown",
+    "question": "What is the sabbatical policy?",
+    "expected": [],
+    "gold_context": []
+  },
+  {
+    "id": "unknown-14",
+    "type": "unknown",
+    "question": "What is the international assignment policy?",
+    "expected": [],
+    "gold_context": []
+  }
+]

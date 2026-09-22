@@ -7,52 +7,7 @@ def normalize(value: Any) -> str:
     return str(value).strip().lower()
 
 
-def is_unknown_case(case: dict[str, Any]) -> bool:
-    if case.get("known") is False:
-        return True
-
-    for key in (
-        "type",
-        "category",
-        "expected_retrieval",
-        "classification",
-    ):
-        value = normalize(case.get(key, ""))
-
-        if value in {
-            "unknown",
-            "unanswerable",
-            "negative",
-            "out_of_scope",
-        }:
-            return True
-
-    case_id = normalize(
-        case.get("id")
-        or case.get("question_id")
-        or ""
-    )
-
-    return case_id.startswith("unknown-")
-
-
-def get_question(case: dict[str, Any]) -> str:
-    for key in (
-        "question",
-        "query",
-        "prompt",
-    ):
-        value = case.get(key)
-
-        if value:
-            return str(value).strip()
-
-    raise ValueError(
-        f"No question found in case: {case}"
-    )
-
-
-def _as_set(value: Any) -> set[str]:
+def as_set(value: Any) -> set[str]:
     if not value:
         return set()
 
@@ -69,46 +24,162 @@ def _as_set(value: Any) -> set[str]:
     return set()
 
 
-def expected_sources(case: dict[str, Any]) -> set[str]:
-    values: set[str] = set()
+def get_question(
+    case: dict[str, Any],
+) -> str:
+    for key in (
+        "question",
+        "query",
+        "prompt",
+    ):
+        value = case.get(key)
+
+        if value:
+            return str(value).strip()
+
+    raise ValueError(
+        f"No question found in case: {case}"
+    )
+
+
+def is_unknown_case(
+    case: dict[str, Any],
+) -> bool:
+
+    if case.get("known") is False:
+        return True
 
     for key in (
-        "expected_sources",
-        "expected_source",
-        "sources",
-        "source",
+        "type",
+        "category",
+        "expected_retrieval",
+        "classification",
     ):
-        values |= _as_set(case.get(key))
+        value = normalize(
+            case.get(key, "")
+        )
 
-    return values
+        if value in {
+            "unknown",
+            "unanswerable",
+            "negative",
+            "out_of_scope",
+        }:
+            return True
 
+    identifier = normalize(
+        case.get("id")
+        or case.get("question_id")
+        or ""
+    )
 
-def expected_sections(case: dict[str, Any]) -> set[str]:
-    values: set[str] = set()
-
-    for key in (
-        "expected_sections",
-        "expected_section",
-        "sections",
-        "section",
-    ):
-        values |= _as_set(case.get(key))
-
-    # Support common alternate schemas.
-    for key in (
-        "required_sections",
-        "target_sections",
-        "answer_sections",
-    ):
-        values |= _as_set(case.get(key))
-
-    return values
+    return identifier.startswith("unknown-")
 
 
-def is_multi_section_case(case: dict[str, Any]) -> bool:
-    sections = expected_sections(case)
+def expected_targets(
+    case: dict[str, Any],
+) -> list[tuple[str, str]]:
+    """
+    Return expected retrieval targets as:
 
-    if len(sections) > 1:
+        [
+            ("source_a.md", "Section A"),
+            ("source_b.md", "Section B"),
+        ]
+
+    Current multi-section schema:
+
+        "expected": [
+            {
+                "source": "...",
+                "section": "..."
+            },
+            ...
+        ]
+
+    Also supports the older single-target schema.
+    """
+
+    expected = case.get("expected")
+
+    if isinstance(expected, list):
+
+        targets = []
+
+        for item in expected:
+
+            if not isinstance(item, dict):
+                continue
+
+            source = normalize(
+                item.get("source", "")
+            )
+
+            section = normalize(
+                item.get("section", "")
+            )
+
+            if source or section:
+                targets.append(
+                    (source, section)
+                )
+
+        return targets
+
+    source = normalize(
+        case.get("expected_source")
+        or case.get("source")
+        or ""
+    )
+
+    section = normalize(
+        case.get("expected_section")
+        or case.get("section")
+        or ""
+    )
+
+    if source or section:
+        return [
+            (source, section)
+        ]
+
+    return []
+
+
+def expected_sources(
+    case: dict[str, Any],
+) -> set[str]:
+
+    return {
+        source
+        for source, _ in expected_targets(case)
+        if source
+    }
+
+
+def expected_sections(
+    case: dict[str, Any],
+) -> set[str]:
+
+    return {
+        section
+        for _, section in expected_targets(case)
+        if section
+    }
+
+
+def is_multi_section_case(
+    case: dict[str, Any],
+) -> bool:
+
+    targets = expected_targets(case)
+
+    if len(targets) > 1:
+        return True
+
+    if normalize(
+        case.get("type", "")
+    ) == "multi":
         return True
 
     for key in (
@@ -118,37 +189,47 @@ def is_multi_section_case(case: dict[str, Any]) -> bool:
         "multi_document",
         "multi_doc",
     ):
-        value = case.get(key)
-
-        if value is True:
+        if case.get(key) is True:
             return True
 
-    case_id = normalize(
+    identifier = normalize(
         case.get("id")
         or case.get("question_id")
         or ""
     )
 
-    if case_id.startswith("multi-"):
-        return True
+    return identifier.startswith("multi-")
 
-    for key in (
-        "type",
-        "category",
-    ):
-        value = normalize(case.get(key, ""))
 
-        if value in {
-            "multi-section",
-            "multi_section",
-            "multi-document",
-            "multi_document",
-            "multi-hop",
-            "multi_hop",
-        }:
-            return True
+def target_match(
+    result: dict[str, Any],
+    target: tuple[str, str],
+) -> bool:
 
-    return False
+    expected_source, expected_section = target
+
+    actual_source = normalize(
+        result.get("source", "")
+    )
+
+    actual_section = normalize(
+        result.get("section", "")
+    )
+
+    source_match = (
+        not expected_source
+        or actual_source == expected_source
+    )
+
+    section_match = (
+        not expected_section
+        or actual_section == expected_section
+    )
+
+    return (
+        source_match
+        and section_match
+    )
 
 
 def retrieval_matches_case(
@@ -157,95 +238,140 @@ def retrieval_matches_case(
 ) -> tuple[bool, bool]:
     """
     Returns:
-        top1_match,
-        recall_at_k_match
+
+        top1_match
+        recall_at_3_match
+
+    Unknown:
+        Correct only when no result survives.
+
+    Known single-target:
+        Top-1 / Recall@3 use the expected target.
+
+    Known multi-section:
+        Top-1 means the first result is one of the
+        required targets.
+
+        Recall@3 requires ALL expected targets
+        to appear in the top 3.
     """
 
     if is_unknown_case(case):
-        rejected = len(results) == 0
+
+        rejected = (
+            len(results) == 0
+        )
+
         return rejected, rejected
 
-    if not results:
+    targets = expected_targets(case)
+
+    if not results or not targets:
         return False, False
 
-    wanted_sources = expected_sources(case)
-    wanted_sections = expected_sections(case)
+    multi = is_multi_section_case(case)
 
-    top = results[0]
-
-    top_source = normalize(
-        top.get("source", "")
+    top1_match = any(
+        target_match(
+            results[0],
+            target,
+        )
+        for target in targets
     )
 
-    top_section = normalize(
-        top.get("section", "")
+    top3 = results[:3]
+
+    if multi:
+
+        returned_pairs = {
+            (
+                normalize(
+                    result.get(
+                        "source",
+                        "",
+                    )
+                ),
+                normalize(
+                    result.get(
+                        "section",
+                        "",
+                    )
+                ),
+            )
+            for result in top3
+        }
+
+        recall_at_3_match = all(
+            target in returned_pairs
+            for target in targets
+        )
+
+    else:
+
+        recall_at_3_match = any(
+            target_match(
+                result,
+                target,
+            )
+            for result in top3
+            for target in targets
+        )
+
+    return (
+        top1_match,
+        recall_at_3_match,
     )
-
-    top_source_match = (
-        not wanted_sources
-        or top_source in wanted_sources
-    )
-
-    top_section_match = (
-        not wanted_sections
-        or top_section in wanted_sections
-    )
-
-    top1_match = (
-        top_source_match
-        and top_section_match
-    )
-
-    top_k = results[:3]
-
-    returned_sources = {
-        normalize(result.get("source", ""))
-        for result in top_k
-    }
-
-    returned_sections = {
-        normalize(result.get("section", ""))
-        for result in top_k
-    }
-
-    recall_source_match = (
-        not wanted_sources
-        or bool(returned_sources & wanted_sources)
-    )
-
-    recall_section_match = (
-        not wanted_sections
-        or bool(returned_sections & wanted_sections)
-    )
-
-    recall_at_k_match = (
-        recall_source_match
-        and recall_section_match
-    )
-
-    return top1_match, recall_at_k_match
 
 
 def multi_section_recall(
     case: dict[str, Any],
     results: list[dict[str, Any]],
 ) -> float | None:
-    wanted_sections = expected_sections(case)
+    """
+    For multi-section cases, calculate the fraction
+    of expected source/section pairs retrieved in
+    the top 5.
+
+    Example:
+
+        Expected:
+            A + B
+
+        Retrieved:
+            A + C
+
+        Recall = 0.50
+    """
 
     if not is_multi_section_case(case):
         return None
 
-    if not wanted_sections:
+    targets = expected_targets(case)
+
+    if not targets:
         return None
 
-    returned_sections = {
-        normalize(result.get("section", ""))
+    retrieved_pairs = {
+        (
+            normalize(
+                result.get(
+                    "source",
+                    "",
+                )
+            ),
+            normalize(
+                result.get(
+                    "section",
+                    "",
+                )
+            ),
+        )
         for result in results[:5]
     }
 
-    hits = (
-        returned_sections
-        & wanted_sections
+    hits = sum(
+        target in retrieved_pairs
+        for target in targets
     )
 
-    return len(hits) / len(wanted_sections)
+    return hits / len(targets)

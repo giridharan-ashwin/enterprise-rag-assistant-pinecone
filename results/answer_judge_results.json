@@ -1,0 +1,1409 @@
+[
+  {
+    "id": "known-hr_remote_work.md-0",
+    "type": "known",
+    "question": "How many days per week can employees work remotely?",
+    "answer": {
+      "answer": "Employees may work remotely up to three days per week.",
+      "citations": [
+        {
+          "source": "hr_remote_work.md",
+          "section": "Remote Work Schedule",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly states that employees may work remotely up to three days per week, which is fully supported by the retrieved context. The citation accurately references the relevant section that confirms this information. The system did not abstain when it should not have, as the question was known."
+    },
+    "judge_latency_ms": 1851.42
+  },
+  {
+    "id": "known-hr_remote_work.md-1",
+    "type": "known",
+    "question": "Who approves a regular remote work arrangement?",
+    "answer": {
+      "answer": "A regular remote work arrangement requires manager approval.",
+      "citations": [
+        {
+          "source": "hr_remote_work.md",
+          "section": "Remote Work Approval",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly states that a regular remote work arrangement requires manager approval, which is fully supported by the retrieved context. The citation accurately reflects the source of this information. However, the system did not abstain when it should have, as the question was known and the answer was provided correctly."
+    },
+    "judge_latency_ms": 1124.47
+  },
+  {
+    "id": "known-hr_remote_work.md-2",
+    "type": "known",
+    "question": "What equipment does the company provide to remote workers?",
+    "answer": {
+      "answer": "The company provides a standard laptop and security software for approved remote workers.",
+      "citations": [
+        {
+          "source": "hr_remote_work.md",
+          "section": "Remote Equipment",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly identifies the equipment provided to remote workers and is fully supported by the retrieved context. The citation accurately reflects the source of the information. However, the system did not abstain when it should have, as the question was known and the answer was provided."
+    },
+    "judge_latency_ms": 1149.05
+  },
+  {
+    "id": "known-hr_remote_work.md-3",
+    "type": "known",
+    "question": "Which platform should remote teams use for collaboration?",
+    "answer": {
+      "answer": "Remote teams should use the approved collaboration platform for team meetings and project communication.",
+      "citations": [
+        {
+          "source": "hr_remote_work.md",
+          "section": "Remote Collaboration",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly addresses the question and is fully supported by the retrieved context. However, the system did not abstain when it should have, as the question is somewhat vague regarding which specific platform to use."
+    },
+    "judge_latency_ms": 1011.53
+  },
+  {
+    "id": "known-hr_remote_work.md-4",
+    "type": "known",
+    "question": "What security controls are required for remote access?",
+    "answer": {
+      "answer": "Remote workers must use multi-factor authentication and the company virtual private network when accessing protected internal systems.",
+      "citations": [
+        {
+          "source": "hr_remote_work.md",
+          "section": "Remote Work Security",
+          "chunk_index": 4
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly identifies the required security controls for remote access, specifically multi-factor authentication and the use of a VPN, which are supported by the retrieved context. The citation accurately reflects the source of this information. However, the system did not abstain when it should have, as the question could have been interpreted as requiring a broader range of security controls beyond what was provided."
+    },
+    "judge_latency_ms": 1367.08
+  },
+  {
+    "id": "known-hr_leave.md-0",
+    "type": "known",
+    "question": "How much notice should employees give for planned time off?",
+    "answer": {
+      "answer": "Employees should request planned time off at least five business days in advance when practical.",
+      "citations": [
+        {
+          "source": "hr_leave.md",
+          "section": "Planned Leave Notice",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly states that employees should request planned time off at least five business days in advance, which is fully supported by the retrieved context. The citation accurately reflects the source of this information. There is no need for abstention as the question is known."
+    },
+    "judge_latency_ms": 1179.57
+  },
+  {
+    "id": "known-hr_leave.md-1",
+    "type": "known",
+    "question": "Where should employees submit planned leave requests?",
+    "answer": {
+      "answer": "Employees should submit planned leave requests through the company scheduling system.",
+      "citations": [
+        {
+          "source": "hr_leave.md",
+          "section": "Leave Scheduling",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly states that planned leave requests should be submitted through the company scheduling system, which is fully supported by the retrieved context. The citation accurately reflects the source of this information."
+    },
+    "judge_latency_ms": 984.67
+  },
+  {
+    "id": "known-hr_leave.md-2",
+    "type": "known",
+    "question": "What should an employee do before taking planned leave?",
+    "answer": {
+      "answer": "Before taking planned leave, an employee should document active work and identify a backup contact. Additionally, they should request planned time off at least five business days in advance when practical, and submit their leave request through the company scheduling system.",
+      "citations": [
+        {
+          "source": "hr_leave.md",
+          "section": "Leave Coverage",
+          "chunk_index": 0
+        },
+        {
+          "source": "hr_leave.md",
+          "section": "Planned Leave Notice",
+          "chunk_index": 0
+        },
+        {
+          "source": "hr_leave.md",
+          "section": "Leave Scheduling",
+          "chunk_index": 1
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly summarizes the necessary actions an employee should take before planned leave, fully supported by the retrieved context and citations. The system did not abstain when it should have, as the question was known."
+    },
+    "judge_latency_ms": 1102.54
+  },
+  {
+    "id": "known-hr_leave.md-3",
+    "type": "known",
+    "question": "How should unexpected leave be reported?",
+    "answer": {
+      "answer": "Unexpected absences should be reported to the manager as soon as reasonably possible.",
+      "citations": [
+        {
+          "source": "hr_leave.md",
+          "section": "Emergency Leave",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly addresses how unexpected leave should be reported, is fully supported by the retrieved context, and the citation accurately reflects the source of the information. However, the system did not abstain when it should have, as the question was known and the answer was provided."
+    },
+    "judge_latency_ms": 1420.55
+  },
+  {
+    "id": "known-hr_leave.md-4",
+    "type": "known",
+    "question": "What factors are considered when approving planned leave?",
+    "answer": {
+      "answer": "Managers consider business coverage and previously approved absences when approving planned leave.",
+      "citations": [
+        {
+          "source": "hr_leave.md",
+          "section": "Leave Approval",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly identifies the factors considered for approving planned leave, is fully supported by the retrieved context, and the citation accurately reflects the source of the information. However, the system did not abstain when it should have, as the question was known."
+    },
+    "judge_latency_ms": 1150.83
+  },
+  {
+    "id": "known-hr_benefits.md-0",
+    "type": "known",
+    "question": "When can eligible employees enroll in the health plan?",
+    "answer": {
+      "answer": "Eligible employees can enroll in the company health plan during the annual enrollment window. New hires receive a separate initial enrollment period.",
+      "citations": [
+        {
+          "source": "hr_benefits.md",
+          "section": "Health Plan Enrollment",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly states when eligible employees can enroll in the health plan and is fully supported by the retrieved context. The citation accurately reflects the source of the information provided."
+    },
+    "judge_latency_ms": 973.36
+  },
+  {
+    "id": "known-hr_benefits.md-1",
+    "type": "known",
+    "question": "When can health plan elections be changed outside open enrollment?",
+    "answer": {
+      "answer": "Health plan elections can be changed outside the annual enrollment window only after an eligible life event.",
+      "citations": [
+        {
+          "source": "hr_benefits.md",
+          "section": "Health Plan Changes",
+          "chunk_index": 1
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly states that health plan elections can be changed outside the annual enrollment window only after an eligible life event, which is fully supported by the retrieved context. However, the system did not abstain when it should have, as the question was known and the answer was provided correctly."
+    },
+    "judge_latency_ms": 1210.46
+  },
+  {
+    "id": "known-hr_benefits.md-2",
+    "type": "known",
+    "question": "When are flexible spending contribution elections made?",
+    "answer": {
+      "answer": "Flexible spending contribution elections are made during annual enrollment.",
+      "citations": [
+        {
+          "source": "hr_benefits.md",
+          "section": "Flexible Spending",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly states that flexible spending contribution elections are made during annual enrollment, which is fully supported by the retrieved context. The citation accurately references the relevant section that confirms this information."
+    },
+    "judge_latency_ms": 934.42
+  },
+  {
+    "id": "known-hr_benefits.md-3",
+    "type": "known",
+    "question": "What is required for a wellness reimbursement request?",
+    "answer": {
+      "answer": "Receipts must be retained for reimbursement requests.",
+      "citations": [
+        {
+          "source": "hr_benefits.md",
+          "section": "Wellness Benefit",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly states that receipts must be retained for reimbursement requests, which is consistent with the retrieved context. However, it does not provide a complete answer regarding what is required for a wellness reimbursement request, as it only mentions one aspect (receipts) without addressing any other potential requirements that may be included in the expected evidence."
+    },
+    "judge_latency_ms": 1301.03
+  },
+  {
+    "id": "known-hr_benefits.md-4",
+    "type": "known",
+    "question": "Where should employees ask benefits questions?",
+    "answer": {
+      "answer": "Employees should direct benefits questions to the employee services team through the internal benefits portal.",
+      "citations": [
+        {
+          "source": "hr_benefits.md",
+          "section": "Benefits Support",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly addresses the question and is fully supported by the retrieved context, which states that benefits questions should be directed to the employee services team through the internal benefits portal. The system did not abstain when it should have, as the answer was clear and accurate."
+    },
+    "judge_latency_ms": 1163.29
+  },
+  {
+    "id": "known-security_access.md-0",
+    "type": "known",
+    "question": "Is multi-factor authentication required for protected company systems?",
+    "answer": {
+      "answer": "Yes, multi-factor authentication is required for company systems that contain protected information.",
+      "citations": [
+        {
+          "source": "security_access.md",
+          "section": "Multi-Factor Authentication",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly states that multi-factor authentication is required for company systems containing protected information, which is fully supported by the retrieved context. The citation accurately reflects the source of this information."
+    },
+    "judge_latency_ms": 1127.75
+  },
+  {
+    "id": "known-security_access.md-1",
+    "type": "known",
+    "question": "Can employees share passwords during urgent support situations?",
+    "answer": {
+      "answer": "No, employees must not share passwords, tokens, or authentication codes with other people, even during urgent support situations.",
+      "citations": [
+        {
+          "source": "security_access.md",
+          "section": "Credential Sharing",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly states that employees must not share passwords, which is fully supported by the retrieved context. The citation accurately reflects the source of this information. However, the system did not abstain when it should have, as the question could be interpreted as requiring a nuanced understanding of 'urgent support situations'."
+    },
+    "judge_latency_ms": 1128.89
+  },
+  {
+    "id": "known-security_access.md-2",
+    "type": "known",
+    "question": "How often is privileged access reviewed?",
+    "answer": {
+      "answer": "Privileged access is reviewed quarterly.",
+      "citations": [
+        {
+          "source": "security_access.md",
+          "section": "Privileged Access",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly states that privileged access is reviewed quarterly, which is consistent with the retrieved context and supported by the cited source. However, the system did not abstain when it should have, as the question was known and the answer was provided."
+    },
+    "judge_latency_ms": 1123.63
+  },
+  {
+    "id": "known-security_access.md-3",
+    "type": "known",
+    "question": "What information must an access request include?",
+    "answer": {
+      "answer": "An access request must include the requested system and a business justification.",
+      "citations": [
+        {
+          "source": "security_access.md",
+          "section": "Access Requests",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly identifies the required information for an access request and is fully supported by the retrieved context. However, it does not mention the verification of the employee role by approvers, which is also part of the expected evidence, but this does not detract from the correctness of the main claims made."
+    },
+    "judge_latency_ms": 1182.57
+  },
+  {
+    "id": "known-security_access.md-4",
+    "type": "known",
+    "question": "When should protected-system access be removed?",
+    "answer": {
+      "answer": "Access to protected systems should be removed promptly when an employee changes roles or leaves the company.",
+      "citations": [
+        {
+          "source": "security_access.md",
+          "section": "Access Removal",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly addresses the question and is fully supported by the retrieved context, with accurate citation from the expected source."
+    },
+    "judge_latency_ms": 875.92
+  },
+  {
+    "id": "known-security_incident.md-0",
+    "type": "known",
+    "question": "How should employees report a suspected security incident?",
+    "answer": {
+      "answer": "Employees should report suspected security incidents through the security incident portal. Urgent incidents should also be called in to the security response team.",
+      "citations": [
+        {
+          "source": "security_incident.md",
+          "section": "Incident Reporting",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly addresses the question and is fully supported by the retrieved context. It provides accurate information on how to report a suspected security incident, and the citation directly supports the claims made in the answer."
+    },
+    "judge_latency_ms": 1150.16
+  },
+  {
+    "id": "known-security_incident.md-1",
+    "type": "known",
+    "question": "How is security incident severity determined?",
+    "answer": {
+      "answer": "Security incident severity is determined by business impact and data exposure.",
+      "citations": [
+        {
+          "source": "security_incident.md",
+          "section": "Incident Severity",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly identifies how security incident severity is determined, aligns with the expected evidence, and is fully supported by the retrieved context. The citation accurately references the relevant section that supports the claims made in the answer."
+    },
+    "judge_latency_ms": 1022.64
+  },
+  {
+    "id": "known-security_incident.md-2",
+    "type": "known",
+    "question": "What should employees do with potentially relevant investigation evidence?",
+    "answer": {
+      "answer": "Employees should not delete or modify potentially relevant logs or files during an investigation.",
+      "citations": [
+        {
+          "source": "security_incident.md",
+          "section": "Evidence Preservation",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly addresses the question and is fully supported by the retrieved context. However, the system should not have abstained as the question was known."
+    },
+    "judge_latency_ms": 1002.52
+  },
+  {
+    "id": "known-security_incident.md-3",
+    "type": "known",
+    "question": "Which incidents are escalated to security leadership?",
+    "answer": {
+      "answer": "High-severity incidents are escalated to the security leadership team.",
+      "citations": [
+        {
+          "source": "security_incident.md",
+          "section": "Incident Escalation",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly identifies that high-severity incidents are escalated to security leadership, which is fully supported by the retrieved context. The citation provided directly supports this claim."
+    },
+    "judge_latency_ms": 1216.52
+  },
+  {
+    "id": "known-security_incident.md-4",
+    "type": "known",
+    "question": "What does a significant incident review include?",
+    "answer": {
+      "answer": "A significant incident review includes a documented post-incident review covering root cause, corrective actions, and follow-up owners.",
+      "citations": [
+        {
+          "source": "security_incident.md",
+          "section": "Post-Incident Review",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly summarizes the expected evidence regarding what a significant incident review includes, and it is fully supported by the cited source."
+    },
+    "judge_latency_ms": 1024.26
+  },
+  {
+    "id": "known-finance_expenses.md-0",
+    "type": "known",
+    "question": "When should business expenses be submitted?",
+    "answer": {
+      "answer": "Business expenses should be submitted through the expense management system within thirty days of the transaction.",
+      "citations": [
+        {
+          "source": "finance_expenses.md",
+          "section": "Expense Submission",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly states when business expenses should be submitted, is fully supported by the retrieved context, and accurately cites the relevant section. There is no need for abstention as the question is known."
+    },
+    "judge_latency_ms": 993.06
+  },
+  {
+    "id": "known-finance_expenses.md-1",
+    "type": "known",
+    "question": "When are receipts required for expenses?",
+    "answer": {
+      "answer": "Receipts are required for reimbursable expenses above the company threshold.",
+      "citations": [
+        {
+          "source": "finance_expenses.md",
+          "section": "Expense Receipts",
+          "chunk_index": 1
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly states that receipts are required for reimbursable expenses above the company threshold, which is fully supported by the retrieved context. The citation accurately reflects the source of this information. However, the system did not abstain when it could have, as the question could have been interpreted as seeking more detailed information about the threshold or specific circumstances under which receipts are required."
+    },
+    "judge_latency_ms": 1362.58
+  },
+  {
+    "id": "known-finance_expenses.md-2",
+    "type": "known",
+    "question": "Who approves an employee expense report?",
+    "answer": {
+      "answer": "An employee expense report is approved by the employee's manager. Higher-value expenses may require an additional finance review.",
+      "citations": [
+        {
+          "source": "finance_expenses.md",
+          "section": "Expense Approval",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly identifies that the employee's manager approves the expense report and mentions the additional finance review for higher-value expenses, which is fully supported by the retrieved context. The citation accurately reflects the source of this information. There is no need for abstention as the question is known."
+    },
+    "judge_latency_ms": 1218.85
+  },
+  {
+    "id": "known-finance_expenses.md-3",
+    "type": "known",
+    "question": "How should business travel expenses be associated?",
+    "answer": {
+      "answer": "Approved business travel expenses must be associated with the applicable project or cost center.",
+      "citations": [
+        {
+          "source": "finance_expenses.md",
+          "section": "Travel Expenses",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly addresses the question and is fully supported by the retrieved context. However, the system did not abstain when it should have, as the question could have been interpreted as requiring more detail on the association process."
+    },
+    "judge_latency_ms": 1443.79
+  },
+  {
+    "id": "known-finance_expenses.md-4",
+    "type": "known",
+    "question": "How should a rejected expense report be corrected?",
+    "answer": {
+      "answer": "A rejected expense report should be corrected and resubmitted through the expense system rather than created as a separate claim.",
+      "citations": [
+        {
+          "source": "finance_expenses.md",
+          "section": "Expense Corrections",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly addresses the question and is fully supported by the retrieved context, with accurate citation. However, the system did not abstain when it should have, as the question was known and the answer was provided correctly."
+    },
+    "judge_latency_ms": 1018.47
+  },
+  {
+    "id": "multi-0",
+    "type": "multi",
+    "question": "What approval and security controls apply to remote work?",
+    "answer": {
+      "answer": "Remote work arrangements require manager approval, and long-term changes to a regular work pattern should be reviewed by the department lead. Additionally, remote workers must use multi-factor authentication and the company virtual private network when accessing protected internal systems.",
+      "citations": [
+        {
+          "source": "hr_remote_work.md",
+          "section": "Remote Work Approval",
+          "chunk_index": 1
+        },
+        {
+          "source": "hr_remote_work.md",
+          "section": "Remote Work Security",
+          "chunk_index": 4
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly addresses the question by summarizing the approval and security controls for remote work, and it is fully supported by the retrieved context. The citations accurately reflect the sources of the information provided."
+    },
+    "judge_latency_ms": 964.65
+  },
+  {
+    "id": "multi-1",
+    "type": "multi",
+    "question": "What notice and approval rules apply to planned leave?",
+    "answer": {
+      "answer": "Employees should request planned time off at least five business days in advance when practical. Managers approve planned leave after considering business coverage and previously approved absences. Planned leave requests must be submitted through the company scheduling system, and managers review these requests based on team coverage.",
+      "citations": [
+        {
+          "source": "hr_leave.md",
+          "section": "Planned Leave Notice",
+          "chunk_index": 0
+        },
+        {
+          "source": "hr_leave.md",
+          "section": "Leave Approval",
+          "chunk_index": 4.0
+        },
+        {
+          "source": "hr_leave.md",
+          "section": "Leave Scheduling",
+          "chunk_index": 1.0
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly summarizes the notice and approval rules for planned leave, is fully supported by the retrieved context, and accurately cites the relevant sections. However, it could have included more detail about the documentation of active work and backup contacts, which is also part of the expected evidence."
+    },
+    "judge_latency_ms": 1039.74
+  },
+  {
+    "id": "multi-2",
+    "type": "multi",
+    "question": "What authentication and credential-sharing rules apply?",
+    "answer": {
+      "answer": "Multi-factor authentication is required for company systems that contain protected information. Employees must not share passwords, tokens, or authentication codes with others, and shared credentials are prohibited even during urgent support situations.",
+      "citations": [
+        {
+          "source": "security_access.md",
+          "section": "Multi-Factor Authentication",
+          "chunk_index": 0
+        },
+        {
+          "source": "security_access.md",
+          "section": "Credential Sharing",
+          "chunk_index": 1
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly addresses the question by summarizing the rules for multi-factor authentication and credential sharing, and it is fully supported by the retrieved context. However, the system did not abstain when it should have, as the question was known and the answer was provided."
+    },
+    "judge_latency_ms": 1175.38
+  },
+  {
+    "id": "multi-3",
+    "type": "multi",
+    "question": "How are security incidents reported and escalated?",
+    "answer": {
+      "answer": "Security incidents are reported by employees through the security incident portal. For urgent incidents, employees should also call in to the security response team. High-severity incidents are escalated to the security leadership team, and customer-impacting incidents require a communications review.",
+      "citations": [
+        {
+          "source": "security_incident.md",
+          "section": "Incident Reporting",
+          "chunk_index": 0
+        },
+        {
+          "source": "security_incident.md",
+          "section": "Incident Escalation",
+          "chunk_index": 3.0
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly summarizes how security incidents are reported and escalated, fully supported by the retrieved context. It includes accurate citations from the expected sources, and there is no need for abstention as the question is known."
+    },
+    "judge_latency_ms": 1012.71
+  },
+  {
+    "id": "multi-4",
+    "type": "multi",
+    "question": "How are business expenses submitted and approved?",
+    "answer": {
+      "answer": "Business expenses should be submitted through the expense management system within thirty days of the transaction. Expense reports are routed to the employee manager for approval, and higher-value expenses may require an additional finance review.",
+      "citations": [
+        {
+          "source": "finance_expenses.md",
+          "section": "Expense Submission",
+          "chunk_index": 0
+        },
+        {
+          "source": "finance_expenses.md",
+          "section": "Expense Approval",
+          "chunk_index": 2
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly summarizes the process of submitting and approving business expenses, fully supported by the retrieved context and accurately cites the relevant sections."
+    },
+    "judge_latency_ms": 943.15
+  },
+  {
+    "id": "multi-5",
+    "type": "multi",
+    "question": "What information is needed for a purchase and when is review required?",
+    "answer": {
+      "answer": "A purchase request should identify the business purpose, estimated amount, and required delivery date before approval. Additionally, purchases above the department approval limit require procurement review before an order is placed.",
+      "citations": [
+        {
+          "source": "finance_procurement.md",
+          "section": "Purchase Requests",
+          "chunk_index": 0
+        },
+        {
+          "source": "finance_procurement.md",
+          "section": "Purchase Approval",
+          "chunk_index": 1
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly identifies the information needed for a purchase and when review is required, fully supported by the retrieved context and citations. However, the system did not abstain when it should have, as the question could have been interpreted as requiring more specific details about the review process."
+    },
+    "judge_latency_ms": 1111.23
+  },
+  {
+    "id": "multi-6",
+    "type": "multi",
+    "question": "What approval and rollback requirements apply to production releases?",
+    "answer": {
+      "answer": "Production releases require an approved change record unless an emergency procedure is invoked. Additionally, every production release should have a documented rollback path, and rollback steps should be validated during release preparation.",
+      "citations": [
+        {
+          "source": "engineering_deployment.md",
+          "section": "Deployment Approval",
+          "chunk_index": 0
+        },
+        {
+          "source": "engineering_deployment.md",
+          "section": "Rollback",
+          "chunk_index": 2.0
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly addresses the approval and rollback requirements for production releases, fully supported by the retrieved context. It includes accurate citations for both claims made in the answer."
+    },
+    "judge_latency_ms": 1014.18
+  },
+  {
+    "id": "multi-7",
+    "type": "multi",
+    "question": "Who leads a major incident and what should happen afterward?",
+    "answer": {
+      "answer": "The incident commander leads a major incident, coordinating response activities. Afterward, a blameless postmortem should be conducted covering root cause, contributing factors, and corrective actions.",
+      "citations": [
+        {
+          "source": "engineering_incident.md",
+          "section": "Incident Ownership",
+          "chunk_index": 0
+        },
+        {
+          "source": "engineering_incident.md",
+          "section": "Postmortem",
+          "chunk_index": 4
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly identifies the incident commander as the leader of a major incident and accurately describes the need for a blameless postmortem afterward. All claims are supported by the retrieved context and the citations are accurate."
+    },
+    "judge_latency_ms": 1046.64
+  },
+  {
+    "id": "multi-8",
+    "type": "multi",
+    "question": "What identity and logging controls apply to AWS workloads?",
+    "answer": {
+      "answer": "For AWS workloads, the following identity and logging controls apply: CloudTrail and approved service logs should be enabled for production AWS accounts and retained according to data policy. Additionally, workloads should use IAM roles instead of long-lived access keys whenever possible.",
+      "citations": [
+        {
+          "source": "cloud_aws.md",
+          "section": "AWS Logging",
+          "chunk_index": 0
+        },
+        {
+          "source": "cloud_aws.md",
+          "section": "AWS IAM Roles",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly addresses the question by mentioning both identity and logging controls relevant to AWS workloads, and it is fully supported by the retrieved context. The system did not abstain, which is correct behavior since the question is known."
+    },
+    "judge_latency_ms": 1018.99
+  },
+  {
+    "id": "multi-9",
+    "type": "multi",
+    "question": "How should Kubernetes secrets and workload health be managed?",
+    "answer": {
+      "answer": "I don't have enough information in the knowledge base to answer that question.",
+      "citations": [],
+      "abstained": true
+    },
+    "judge": {
+      "correctness": 0,
+      "faithfulness": 0,
+      "citation_accuracy": 0,
+      "abstention": 1,
+      "reason": "The system correctly abstained from answering due to insufficient information, but it did not provide any citations to support this claim."
+    },
+    "judge_latency_ms": 963.52
+  },
+  {
+    "id": "multi-10",
+    "type": "multi",
+    "question": "How should sensitive data be classified and accessed?",
+    "answer": {
+      "answer": "Sensitive data should be classified according to its sensitivity and business impact, which determines the handling requirements. Access to sensitive data should follow the principle of least privilege and be reviewed periodically.",
+      "citations": [
+        {
+          "source": "data_governance.md",
+          "section": "Data Classification",
+          "chunk_index": 0
+        },
+        {
+          "source": "data_governance.md",
+          "section": "Data Access",
+          "chunk_index": 3.0
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly addresses the classification and access of sensitive data, fully supported by the retrieved context and citations. There is no need for abstention as the question is known."
+    },
+    "judge_latency_ms": 978.35
+  },
+  {
+    "id": "multi-11",
+    "type": "multi",
+    "question": "How are retention and approved deletion requests handled?",
+    "answer": {
+      "answer": "I don't have enough information in the knowledge base to answer that question.",
+      "citations": [],
+      "abstained": true
+    },
+    "judge": {
+      "correctness": 0,
+      "faithfulness": 0,
+      "citation_accuracy": 0,
+      "abstention": 1,
+      "reason": "The system correctly abstained from answering due to insufficient information, but it could have provided some context from the retrieved evidence."
+    },
+    "judge_latency_ms": 819.41
+  },
+  {
+    "id": "multi-12",
+    "type": "multi",
+    "question": "What happens when a vendor is onboarded and later offboarded?",
+    "answer": {
+      "answer": "I don't have enough information in the knowledge base to answer that question.",
+      "citations": [],
+      "abstained": true
+    },
+    "judge": {
+      "correctness": 1,
+      "faithfulness": 0,
+      "citation_accuracy": 0,
+      "abstention": 1,
+      "reason": "The system correctly abstained from answering due to lack of information, but it could have provided a more informative response regarding the absence of data. No citations were provided to support the claim of insufficient information."
+    },
+    "judge_latency_ms": 921.95
+  },
+  {
+    "id": "multi-13",
+    "type": "multi",
+    "question": "What evidence and remediation information are needed for an audit?",
+    "answer": {
+      "answer": "For an audit, the evidence provided should be complete, traceable, and attributable to the relevant control. Additionally, control findings must have documented remediation plans that include owners and target dates.",
+      "citations": [
+        {
+          "source": "compliance_audit.md",
+          "section": "Audit Evidence",
+          "chunk_index": 0
+        },
+        {
+          "source": "compliance_audit.md",
+          "section": "Remediation Plans",
+          "chunk_index": 0
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly addresses the question by summarizing the required evidence and remediation information for an audit, fully supported by the retrieved context. However, the system did not abstain when it should have, as the question was known and the answer was provided."
+    },
+    "judge_latency_ms": 1114.23
+  },
+  {
+    "id": "multi-14",
+    "type": "multi",
+    "question": "How should high-priority support cases be escalated and communicated?",
+    "answer": {
+      "answer": "High-priority support cases should be escalated to the appropriate technical queue when the initial support team cannot resolve them. The receiving technical team becomes responsible for the next troubleshooting step, while the support owner coordinates customer communication.",
+      "citations": [
+        {
+          "source": "support_escalation.md",
+          "section": "Priority Escalation",
+          "chunk_index": 0
+        },
+        {
+          "source": "support_escalation.md",
+          "section": "Escalation Ownership",
+          "chunk_index": 3
+        }
+      ],
+      "abstained": false
+    },
+    "judge": {
+      "correctness": 2,
+      "faithfulness": 2,
+      "citation_accuracy": 2,
+      "abstention": 1,
+      "reason": "The answer correctly addresses the escalation process for high-priority support cases and the communication responsibilities, fully supported by the retrieved context and citations. However, it does not mention the need for customer updates, which is part of the expected evidence."
+    },
+    "judge_latency_ms": 1203.01
+  },
+  {
+    "id": "unknown-0",
+    "type": "unknown",
+    "question": "What is the company travel reimbursement limit for international flights?",
+    "answer": {
+      "answer": "I don't have enough information in the knowledge base to answer that question.",
+      "citations": [],
+      "abstained": true
+    },
+    "judge": {
+      "correctness": 1,
+      "faithfulness": 1,
+      "citation_accuracy": 0,
+      "abstention": 1,
+      "reason": "The system correctly abstained from answering due to lack of information, but it could have provided a more informative response regarding the absence of data. No citations were provided, which affects citation accuracy."
+    },
+    "judge_latency_ms": 1200.65
+  },
+  {
+    "id": "unknown-1",
+    "type": "unknown",
+    "question": "How many parental leave days are provided?",
+    "answer": {
+      "answer": "I don't have enough information in the knowledge base to answer that question.",
+      "citations": [],
+      "abstained": true
+    },
+    "judge": {
+      "correctness": 1,
+      "faithfulness": 0,
+      "citation_accuracy": 0,
+      "abstention": 1,
+      "reason": "The system correctly abstained from answering due to lack of information, but it could have provided a more informative response regarding the absence of data."
+    },
+    "judge_latency_ms": 1191.68
+  },
+  {
+    "id": "unknown-2",
+    "type": "unknown",
+    "question": "What is the employee stock vesting schedule?",
+    "answer": {
+      "answer": "I don't have enough information in the knowledge base to answer that question.",
+      "citations": [],
+      "abstained": true
+    },
+    "judge": {
+      "correctness": 1,
+      "faithfulness": 1,
+      "citation_accuracy": 0,
+      "abstention": 1,
+      "reason": "The system correctly abstained from answering due to lack of information, but it could have provided a more informative response regarding the absence of data. No citations were provided, which affects citation accuracy."
+    },
+    "judge_latency_ms": 1023.87
+  },
+  {
+    "id": "unknown-3",
+    "type": "unknown",
+    "question": "Does the company reimburse home internet costs?",
+    "answer": {
+      "answer": "I don't have enough information in the knowledge base to answer that question.",
+      "citations": [],
+      "abstained": true
+    },
+    "judge": {
+      "correctness": 0,
+      "faithfulness": 0,
+      "citation_accuracy": 0,
+      "abstention": 1,
+      "reason": "The system correctly abstained from answering due to insufficient information in the retrieved context regarding reimbursement for home internet costs."
+    },
+    "judge_latency_ms": 922.71
+  },
+  {
+    "id": "unknown-4",
+    "type": "unknown",
+    "question": "What is the office parking policy?",
+    "answer": {
+      "answer": "I don't have enough information in the knowledge base to answer that question.",
+      "citations": [],
+      "abstained": true
+    },
+    "judge": {
+      "correctness": 1,
+      "faithfulness": 1,
+      "citation_accuracy": 0,
+      "abstention": 1,
+      "reason": "The system correctly abstained from answering due to lack of information, but it could have provided a more informative response regarding the absence of data. No citations were provided to support the claim of insufficient information."
+    },
+    "judge_latency_ms": 1428.86
+  },
+  {
+    "id": "unknown-5",
+    "type": "unknown",
+    "question": "What is the relocation package?",
+    "answer": {
+      "answer": "I don't have enough information in the knowledge base to answer that question.",
+      "citations": [],
+      "abstained": true
+    },
+    "judge": {
+      "correctness": 1,
+      "faithfulness": 1,
+      "citation_accuracy": 0,
+      "abstention": 1,
+      "reason": "The system correctly abstained from answering due to lack of information, but it could have provided a more informative response about the absence of data. No citations were provided to support any claims."
+    },
+    "judge_latency_ms": 942.12
+  },
+  {
+    "id": "unknown-6",
+    "type": "unknown",
+    "question": "What dental insurance plan is offered?",
+    "answer": {
+      "answer": "I don't have enough information in the knowledge base to answer that question.",
+      "citations": [],
+      "abstained": true
+    },
+    "judge": {
+      "correctness": 1,
+      "faithfulness": 1,
+      "citation_accuracy": 0,
+      "abstention": 1,
+      "reason": "The system correctly abstained due to lack of information, but it could have provided a more informative response or clarification about the absence of data."
+    },
+    "judge_latency_ms": 1007.53
+  },
+  {
+    "id": "unknown-7",
+    "type": "unknown",
+    "question": "What is the annual bonus target?",
+    "answer": {
+      "answer": "I don't have enough information in the knowledge base to answer that question.",
+      "citations": [],
+      "abstained": true
+    },
+    "judge": {
+      "correctness": 1,
+      "faithfulness": 1,
+      "citation_accuracy": 0,
+      "abstention": 1,
+      "reason": "The system correctly abstained from answering due to lack of information, but it could have provided a more informative response regarding the absence of data. No citations were provided, which affects citation accuracy."
+    },
+    "judge_latency_ms": 917.05
+  },
+  {
+    "id": "unknown-8",
+    "type": "unknown",
+    "question": "What is the company car policy?",
+    "answer": {
+      "answer": "I don't have enough information in the knowledge base to answer that question.",
+      "citations": [],
+      "abstained": true
+    },
+    "judge": {
+      "correctness": 1,
+      "faithfulness": 1,
+      "citation_accuracy": 0,
+      "abstention": 1,
+      "reason": "The answer correctly indicates a lack of information to provide a response, but it could have been more informative about the absence of evidence. No citations were provided to support the claim of insufficient information."
+    },
+    "judge_latency_ms": 976.06
+  },
+  {
+    "id": "unknown-9",
+    "type": "unknown",
+    "question": "What is the tuition reimbursement limit?",
+    "answer": {
+      "answer": "I don't have enough information in the knowledge base to answer that question.",
+      "citations": [],
+      "abstained": true
+    },
+    "judge": {
+      "correctness": 1,
+      "faithfulness": 1,
+      "citation_accuracy": 0,
+      "abstention": 1,
+      "reason": "The system correctly abstained from answering due to lack of information, but it could have provided a more informative response regarding the absence of data. No citations were provided to support any claims."
+    },
+    "judge_latency_ms": 1384.53
+  },
+  {
+    "id": "unknown-10",
+    "type": "unknown",
+    "question": "What is the conference attendance budget per employee?",
+    "answer": {
+      "answer": "I don't have enough information in the knowledge base to answer that question.",
+      "citations": [],
+      "abstained": true
+    },
+    "judge": {
+      "correctness": 1,
+      "faithfulness": 1,
+      "citation_accuracy": 0,
+      "abstention": 1,
+      "reason": "The system correctly abstained from providing an answer due to lack of information, but it could have provided a more informative response regarding the absence of data. No citations were provided, which affects citation accuracy."
+    },
+    "judge_latency_ms": 986.74
+  },
+  {
+    "id": "unknown-11",
+    "type": "unknown",
+    "question": "How does the company handle pet insurance?",
+    "answer": {
+      "answer": "I don't have enough information in the knowledge base to answer that question.",
+      "citations": [],
+      "abstained": true
+    },
+    "judge": {
+      "correctness": 1,
+      "faithfulness": 1,
+      "citation_accuracy": 0,
+      "abstention": 1,
+      "reason": "The system correctly abstained from answering due to lack of information, but it could have provided a more informative response about the absence of data. No citations were provided to support the abstention."
+    },
+    "judge_latency_ms": 1057.97
+  },
+  {
+    "id": "unknown-12",
+    "type": "unknown",
+    "question": "What is the employee referral bonus?",
+    "answer": {
+      "answer": "I don't have enough information in the knowledge base to answer that question.",
+      "citations": [],
+      "abstained": true
+    },
+    "judge": {
+      "correctness": 1,
+      "faithfulness": 1,
+      "citation_accuracy": 0,
+      "abstention": 1,
+      "reason": "The system correctly abstained from answering due to lack of information, but it could have provided a more informative response about the absence of data. No citations were provided to support the claim of insufficient information."
+    },
+    "judge_latency_ms": 1127.98
+  },
+  {
+    "id": "unknown-13",
+    "type": "unknown",
+    "question": "What is the sabbatical policy?",
+    "answer": {
+      "answer": "I don't have enough information in the knowledge base to answer that question.",
+      "citations": [],
+      "abstained": true
+    },
+    "judge": {
+      "correctness": 1,
+      "faithfulness": 1,
+      "citation_accuracy": 0,
+      "abstention": 1,
+      "reason": "The system correctly abstained from answering due to lack of information, but it could have provided a more informative response about the absence of data. No citations were provided, which affects citation accuracy."
+    },
+    "judge_latency_ms": 992.65
+  },
+  {
+    "id": "unknown-14",
+    "type": "unknown",
+    "question": "What is the international assignment policy?",
+    "answer": {
+      "answer": "I don't have enough information in the knowledge base to answer that question.",
+      "citations": [],
+      "abstained": true
+    },
+    "judge": {
+      "correctness": 1,
+      "faithfulness": 1,
+      "citation_accuracy": 0,
+      "abstention": 1,
+      "reason": "The system correctly abstained from answering due to lack of information, but it could have provided a more informative response regarding the absence of data. No citations were provided to support the abstention."
+    },
+    "judge_latency_ms": 1053.03
+  }
+]

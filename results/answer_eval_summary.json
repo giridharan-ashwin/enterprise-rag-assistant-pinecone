@@ -1,0 +1,53 @@
+{
+  "benchmark": {
+    "total_cases": 60,
+    "known_cases": 30,
+    "multi_section_cases": 15,
+    "unknown_cases": 15
+  },
+  "answer_quality": {
+    "correctness_percent": 94.44,
+    "faithfulness_percent": 93.33,
+    "citation_accuracy_percent": 93.33
+  },
+  "multi_section": {
+    "fully_correct_percent": 80.0,
+    "fully_faithful_percent": 80.0,
+    "fully_cited_percent": 80.0
+  },
+  "unknown_handling": {
+    "abstention_percent": 100.0,
+    "unknown_citation_percent": 0.0
+  },
+  "latency": {
+    "average_judge_latency_ms": 1105.94,
+    "average_generation_latency_ms": 0
+  },
+  "failed_multi_section_cases": [
+    {
+      "id": "multi-9",
+      "question": "How should Kubernetes secrets and workload health be managed?",
+      "correctness": 0,
+      "faithfulness": 0,
+      "citation_accuracy": 0,
+      "reason": "The system correctly abstained from answering due to insufficient information, but it did not provide any citations to support this claim."
+    },
+    {
+      "id": "multi-11",
+      "question": "How are retention and approved deletion requests handled?",
+      "correctness": 0,
+      "faithfulness": 0,
+      "citation_accuracy": 0,
+      "reason": "The system correctly abstained from answering due to insufficient information, but it could have provided some context from the retrieved evidence."
+    },
+    {
+      "id": "multi-12",
+      "question": "What happens when a vendor is onboarded and later offboarded?",
+      "correctness": 1,
+      "faithfulness": 0,
+      "citation_accuracy": 0,
+      "reason": "The system correctly abstained from answering due to lack of information, but it could have provided a more informative response regarding the absence of data. No citations were provided to support the claim of insufficient information."
+    }
+  ],
+  "unknown_cases_with_possible_hallucination": []
+}
