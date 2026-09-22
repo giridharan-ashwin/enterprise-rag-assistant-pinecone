@@ -619,4 +619,59 @@ button:disabled {
         gap: 5px;
     }
 
+    /* ---------------------------------------------------------
+   Performance Metrics
+   --------------------------------------------------------- */
+
+    .metrics-section {
+        margin-top: 38px;
+        padding-top: 30px;
+        border-top: 1px solid var(--border);
+    }
+
+    .metrics-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin-top: 14px;
+    }
+
+    .metric-card {
+        padding: 16px;
+        border: 1px solid var(--border);
+        border-radius: 9px;
+        background: var(--surface-muted);
+    }
+
+    .metric-label {
+        font-size: 10px;
+        line-height: 1.4;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+    }
+
+    .metric-value {
+        margin-top: 7px;
+        font-size: 18px;
+        line-height: 1.2;
+        font-weight: 650;
+        color: var(--text);
+    }
+
+    @media (max-width: 700px) {
+
+        .metrics-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+    }
+
+    @media (max-width: 440px) {
+
+        .metrics-grid {
+            grid-template-columns: 1fr;
+        }
+
+    }
 }

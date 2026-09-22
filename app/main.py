@@ -17,7 +17,8 @@ app = FastAPI(
     version="1.0.0",
     description=(
         "Enterprise RAG assistant with hybrid retrieval, "
-        "threshold filtering, grounded answers, and citations."
+        "evidence selection, grounded answers, citations, "
+        "and production observability."
     ),
 )
 
@@ -51,7 +52,6 @@ def health() -> dict:
 def ask(request: AskRequest) -> AskResponse:
 
     try:
-
         result = answer_question(
             request.question,
             request.top_k,
@@ -62,10 +62,10 @@ def ask(request: AskRequest) -> AskResponse:
             citations=result.get("citations", []),
             abstained=result.get("abstained", False),
             contexts=result.get("contexts", []),
+            metrics=result.get("metrics"),
         )
 
     except Exception as exc:
-
         raise HTTPException(
             status_code=500,
             detail=str(exc),
@@ -78,5 +78,4 @@ def ask(request: AskRequest) -> AskResponse:
     response_model=AskResponse,
 )
 def query(request: AskRequest) -> AskResponse:
-
     return ask(request)

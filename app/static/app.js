@@ -1,17 +1,36 @@
 const questionInput = document.getElementById("question");
+
 const askButton = document.getElementById("askButton");
+
 const buttonText = document.getElementById("buttonText");
 
 const answerSection = document.getElementById("answerSection");
+
 const answerElement = document.getElementById("answer");
 
 const sourcesSection = document.getElementById("sourcesSection");
+
 const sourcesElement = document.getElementById("sources");
 
 const abstentionNotice = document.getElementById("abstentionNotice");
 
 const errorCard = document.getElementById("errorCard");
+
 const errorMessage = document.getElementById("errorMessage");
+
+const metricsSection = document.getElementById("metricsSection");
+
+const totalLatency = document.getElementById("totalLatency");
+
+const retrievalLatency = document.getElementById("retrievalLatency");
+
+const generationLatency = document.getElementById("generationLatency");
+
+const contextCount = document.getElementById("contextCount");
+
+const totalTokens = document.getElementById("totalTokens");
+
+const estimatedCost = document.getElementById("estimatedCost");
 
 
 function setLoading(isLoading) {
@@ -19,24 +38,37 @@ function setLoading(isLoading) {
     askButton.disabled = isLoading;
 
     if (isLoading) {
+
         askButton.classList.add("loading");
+
         buttonText.textContent = "Thinking...";
+
     } else {
+
         askButton.classList.remove("loading");
+
         buttonText.textContent = "Ask question";
+
     }
+
 }
 
 
 function hideError() {
+
     errorCard.classList.add("hidden");
+
     errorMessage.textContent = "";
+
 }
 
 
 function showError(message) {
+
     errorMessage.textContent = message;
+
     errorCard.classList.remove("hidden");
+
 }
 
 
@@ -51,6 +83,9 @@ function clearAnswer() {
     sourcesSection.classList.add("hidden");
 
     abstentionNotice.classList.add("hidden");
+
+    metricsSection.classList.add("hidden");
+
 }
 
 
@@ -59,8 +94,11 @@ function renderSources(citations) {
     sourcesElement.innerHTML = "";
 
     if (!citations || citations.length === 0) {
+
         sourcesSection.classList.add("hidden");
+
         return;
+
     }
 
     const uniqueSources = [];
@@ -73,9 +111,13 @@ function renderSources(citations) {
             `${citation.source}|${citation.section}|${citation.chunk_index}`;
 
         if (!seen.has(key)) {
+
             seen.add(key);
+
             uniqueSources.push(citation);
+
         }
+
     }
 
 
@@ -120,14 +162,109 @@ function renderSources(citations) {
                 `Chunk ${citation.chunk_index}`;
 
             card.appendChild(chunk);
+
         }
 
 
         sourcesElement.appendChild(card);
+
     }
 
 
     sourcesSection.classList.remove("hidden");
+
+}
+
+
+function formatMilliseconds(value) {
+
+    if (
+        value === null ||
+        value === undefined ||
+        Number.isNaN(Number(value))
+    ) {
+
+        return "—";
+
+    }
+
+    return `${Math.round(Number(value))} ms`;
+
+}
+
+
+function formatTokens(value) {
+
+    if (
+        value === null ||
+        value === undefined
+    ) {
+
+        return "—";
+
+    }
+
+    return Number(value).toLocaleString();
+
+}
+
+
+function formatCost(value) {
+
+    if (
+        value === null ||
+        value === undefined
+    ) {
+
+        return "—";
+
+    }
+
+    const amount = Number(value);
+
+    if (amount === 0) {
+
+        return "$0.00";
+
+    }
+
+    return `$${amount.toFixed(5)}`;
+
+}
+
+
+function renderMetrics(metrics) {
+
+    if (!metrics) {
+
+        metricsSection.classList.add("hidden");
+
+        return;
+
+    }
+
+
+    totalLatency.textContent =
+        formatMilliseconds(metrics.total_latency_ms);
+
+    retrievalLatency.textContent =
+        formatMilliseconds(metrics.retrieval_latency_ms);
+
+    generationLatency.textContent =
+        formatMilliseconds(metrics.generation_latency_ms);
+
+    contextCount.textContent =
+        metrics.context_count ?? "—";
+
+    totalTokens.textContent =
+        formatTokens(metrics.total_tokens);
+
+    estimatedCost.textContent =
+        formatCost(metrics.estimated_cost_usd);
+
+
+    metricsSection.classList.remove("hidden");
+
 }
 
 
@@ -140,13 +277,20 @@ function renderResponse(data) {
 
 
     if (data.abstained) {
+
         abstentionNotice.classList.remove("hidden");
+
     } else {
+
         abstentionNotice.classList.add("hidden");
+
     }
 
 
     renderSources(data.citations);
+
+    renderMetrics(data.metrics);
+
 }
 
 
@@ -163,6 +307,7 @@ async function askQuestion() {
         questionInput.focus();
 
         return;
+
     }
 
 
@@ -181,24 +326,34 @@ async function askQuestion() {
                 method: "POST",
 
                 headers: {
+
                     "Content-Type": "application/json"
+
                 },
 
                 body: JSON.stringify({
+
                     question: question,
+
                     top_k: 5
+
                 })
+
             });
 
 
         let data;
 
         try {
+
             data = await response.json();
+
         } catch {
+
             throw new Error(
                 `Server returned HTTP ${response.status}.`
             );
+
         }
 
 
@@ -208,10 +363,12 @@ async function askQuestion() {
                 data.detail ||
                 `Request failed with HTTP ${response.status}.`
             );
+
         }
 
 
         renderResponse(data);
+
 
     } catch (error) {
 
@@ -223,7 +380,9 @@ async function askQuestion() {
     } finally {
 
         setLoading(false);
+
     }
+
 }
 
 
@@ -241,9 +400,12 @@ questionInput.addEventListener(
             event.key === "Enter" &&
             (event.metaKey || event.ctrlKey)
         ) {
+
             event.preventDefault();
 
             askQuestion();
+
         }
+
     }
 );
