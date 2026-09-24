@@ -57,7 +57,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 2315.56
+    "generation_latency_ms": 1846.91
   },
   {
     "id": "known-hr_remote_work.md-1",
@@ -110,7 +110,7 @@
       }
     ],
     "answer": {
-      "answer": "A regular remote work arrangement requires manager approval.",
+      "answer": "Regular remote work arrangements require manager approval.",
       "citations": [
         {
           "source": "hr_remote_work.md",
@@ -135,7 +135,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 1138.98
+    "generation_latency_ms": 1011.62
   },
   {
     "id": "known-hr_remote_work.md-2",
@@ -195,7 +195,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 1383.92
+    "generation_latency_ms": 1406.61
   },
   {
     "id": "known-hr_remote_work.md-3",
@@ -255,7 +255,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 1585.68
+    "generation_latency_ms": 1460.22
   },
   {
     "id": "known-hr_remote_work.md-4",
@@ -342,7 +342,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 2042.71
+    "generation_latency_ms": 1114.77
   },
   {
     "id": "known-hr_leave.md-0",
@@ -429,7 +429,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 1334.47
+    "generation_latency_ms": 1450.61
   },
   {
     "id": "known-hr_leave.md-1",
@@ -525,7 +525,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 1125.04
+    "generation_latency_ms": 990.9
   },
   {
     "id": "known-hr_leave.md-2",
@@ -596,7 +596,7 @@
       }
     ],
     "answer": {
-      "answer": "Before taking planned leave, an employee should document active work and identify a backup contact. Additionally, they should request planned time off at least five business days in advance when practical, and submit their leave request through the company scheduling system.",
+      "answer": "Before taking planned leave, an employee should document active work and identify a backup contact. Additionally, they should request planned time off at least five business days in advance when practical.",
       "citations": [
         {
           "source": "hr_leave.md",
@@ -607,11 +607,6 @@
           "source": "hr_leave.md",
           "section": "Planned Leave Notice",
           "chunk_index": 0
-        },
-        {
-          "source": "hr_leave.md",
-          "section": "Leave Scheduling",
-          "chunk_index": 1
         }
       ],
       "abstained": false
@@ -631,7 +626,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 1739.84
+    "generation_latency_ms": 1462.54
   },
   {
     "id": "known-hr_leave.md-3",
@@ -709,7 +704,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 1126.42
+    "generation_latency_ms": 1124.56
   },
   {
     "id": "known-hr_leave.md-4",
@@ -796,7 +791,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 933.03
+    "generation_latency_ms": 1331.49
   },
   {
     "id": "known-hr_benefits.md-0",
@@ -865,7 +860,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 1180.81
+    "generation_latency_ms": 1080.89
   },
   {
     "id": "known-hr_benefits.md-1",
@@ -925,7 +920,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 1469.26
+    "generation_latency_ms": 1170.34
   },
   {
     "id": "known-hr_benefits.md-2",
@@ -985,7 +980,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 922.25
+    "generation_latency_ms": 1264.49
   },
   {
     "id": "known-hr_benefits.md-3",
@@ -1036,7 +1031,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 1424.0
+    "generation_latency_ms": 883.33
   },
   {
     "id": "known-hr_benefits.md-4",
@@ -1062,7 +1057,7 @@
       }
     ],
     "answer": {
-      "answer": "Employees should direct benefits questions to the employee services team through the internal benefits portal.",
+      "answer": "Employees should ask benefits questions through the internal benefits portal to the employee services team.",
       "citations": [
         {
           "source": "hr_benefits.md",
@@ -1087,7 +1082,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 932.82
+    "generation_latency_ms": 1435.05
   },
   {
     "id": "known-security_access.md-0",
@@ -1174,7 +1169,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 902.9
+    "generation_latency_ms": 1024.71
   },
   {
     "id": "known-security_access.md-1",
@@ -1252,7 +1247,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 1452.57
+    "generation_latency_ms": 1126.22
   },
   {
     "id": "known-security_access.md-2",
@@ -1321,7 +1316,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 918.04
+    "generation_latency_ms": 1029.08
   },
   {
     "id": "known-security_access.md-3",
@@ -1372,7 +1367,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 1063.5
+    "generation_latency_ms": 1223.63
   },
   {
     "id": "known-security_access.md-4",
@@ -1416,7 +1411,7 @@
       }
     ],
     "answer": {
-      "answer": "Access to protected systems should be removed promptly when an employee changes roles or leaves the company.",
+      "answer": "Protected-system access should be removed promptly when an employee changes roles or leaves the company.",
       "citations": [
         {
           "source": "security_access.md",
@@ -1441,7 +1436,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 1272.4
+    "generation_latency_ms": 1261.01
   },
   {
     "id": "known-security_incident.md-0",
@@ -1519,7 +1514,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 1353.25
+    "generation_latency_ms": 1159.12
   },
   {
     "id": "known-security_incident.md-1",
@@ -1581,7 +1576,7 @@
       }
     ],
     "answer": {
-      "answer": "Security incident severity is determined by business impact and data exposure.",
+      "answer": "Security incident severity is determined by business impact and data exposure. High-severity incidents receive immediate response coordination.",
       "citations": [
         {
           "source": "security_incident.md",
@@ -1606,7 +1601,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 1024.43
+    "generation_latency_ms": 1116.76
   },
   {
     "id": "known-security_incident.md-2",
@@ -1657,7 +1652,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 918.49
+    "generation_latency_ms": 1172.42
   },
   {
     "id": "known-security_incident.md-3",
@@ -1744,7 +1739,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 1164.67
+    "generation_latency_ms": 1228.4
   },
   {
     "id": "known-security_incident.md-4",
@@ -1840,7 +1835,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 916.24
+    "generation_latency_ms": 1268.62
   },
   {
     "id": "known-finance_expenses.md-0",
@@ -1936,7 +1931,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 848.13
+    "generation_latency_ms": 1187.9
   },
   {
     "id": "known-finance_expenses.md-1",
@@ -2032,7 +2027,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 878.82
+    "generation_latency_ms": 931.02
   },
   {
     "id": "known-finance_expenses.md-2",
@@ -2137,7 +2132,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 1323.49
+    "generation_latency_ms": 1322.11
   },
   {
     "id": "known-finance_expenses.md-3",
@@ -2197,7 +2192,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 924.52
+    "generation_latency_ms": 1201.78
   },
   {
     "id": "known-finance_expenses.md-4",
@@ -2257,7 +2252,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 982.48
+    "generation_latency_ms": 1153.55
   },
   {
     "id": "multi-0",
@@ -2337,7 +2332,7 @@
       }
     ],
     "answer": {
-      "answer": "Remote work arrangements require manager approval, and long-term changes to a regular work pattern should be reviewed by the department lead. Additionally, remote workers must use multi-factor authentication and the company virtual private network when accessing protected internal systems.",
+      "answer": "Remote work arrangements require manager approval, and long-term changes should be reviewed by the department lead. Additionally, remote workers must use multi-factor authentication and the company virtual private network when accessing protected internal systems.",
       "citations": [
         {
           "source": "hr_remote_work.md",
@@ -2367,7 +2362,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 1245.5
+    "generation_latency_ms": 1518.35
   },
   {
     "id": "multi-1",
@@ -2468,7 +2463,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 1646.22
+    "generation_latency_ms": 1656.16
   },
   {
     "id": "multi-2",
@@ -2503,7 +2498,7 @@
       }
     ],
     "answer": {
-      "answer": "Multi-factor authentication is required for company systems that contain protected information. Employees must not share passwords, tokens, or authentication codes with others, and shared credentials are prohibited even during urgent support situations.",
+      "answer": "Multi-factor authentication is required for company systems that contain protected information, and approved authentication methods are documented in the security portal. Additionally, employees must not share passwords, tokens, or authentication codes with others, as shared credentials are prohibited even during urgent support situations.",
       "citations": [
         {
           "source": "security_access.md",
@@ -2537,7 +2532,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 1243.04
+    "generation_latency_ms": 2252.83
   },
   {
     "id": "multi-3",
@@ -2599,7 +2594,7 @@
       }
     ],
     "answer": {
-      "answer": "Security incidents are reported by employees through the security incident portal. For urgent incidents, employees should also call in to the security response team. High-severity incidents are escalated to the security leadership team, and customer-impacting incidents require a communications review.",
+      "answer": "Security incidents are reported by employees through the security incident portal. For urgent incidents, they should also be called in to the security response team. High-severity incidents are escalated to the security leadership team, and customer-impacting incidents require a communications review.",
       "citations": [
         {
           "source": "security_incident.md",
@@ -2633,7 +2628,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 1418.55
+    "generation_latency_ms": 1739.59
   },
   {
     "id": "multi-4",
@@ -2747,7 +2742,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 1229.01
+    "generation_latency_ms": 1740.86
   },
   {
     "id": "multi-5",
@@ -2825,7 +2820,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 1331.52
+    "generation_latency_ms": 1433.2
   },
   {
     "id": "multi-6",
@@ -2896,7 +2891,7 @@
       }
     ],
     "answer": {
-      "answer": "Production releases require an approved change record unless an emergency procedure is invoked. Additionally, every production release should have a documented rollback path, and rollback steps should be validated during release preparation.",
+      "answer": "Production deployments require an approved change record unless an emergency procedure is invoked. Additionally, every production release should have a documented rollback path, and rollback steps should be validated during release preparation.",
       "citations": [
         {
           "source": "engineering_deployment.md",
@@ -2930,7 +2925,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 1229.34
+    "generation_latency_ms": 1538.01
   },
   {
     "id": "multi-7",
@@ -3001,7 +2996,7 @@
       }
     ],
     "answer": {
-      "answer": "The incident commander leads a major incident, coordinating response activities. Afterward, a blameless postmortem should be conducted covering root cause, contributing factors, and corrective actions.",
+      "answer": "The incident commander leads a major incident, coordinating response activities. After the incident, a blameless postmortem should be conducted covering root cause, contributing factors, and corrective actions.",
       "citations": [
         {
           "source": "engineering_incident.md",
@@ -3035,7 +3030,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 1271.81
+    "generation_latency_ms": 2046.45
   },
   {
     "id": "multi-8",
@@ -3113,7 +3108,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 1987.23
+    "generation_latency_ms": 1490.95
   },
   {
     "id": "multi-9",
@@ -3158,7 +3153,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 656.93
+    "generation_latency_ms": 865.23
   },
   {
     "id": "multi-10",
@@ -3221,7 +3216,7 @@
         {
           "source": "data_governance.md",
           "section": "Data Access",
-          "chunk_index": 3.0
+          "chunk_index": 3
         }
       ],
       "abstained": false
@@ -3245,7 +3240,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 1509.39
+    "generation_latency_ms": 1433.67
   },
   {
     "id": "multi-11",
@@ -3290,7 +3285,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 875.62
+    "generation_latency_ms": 758.92
   },
   {
     "id": "multi-12",
@@ -3320,7 +3315,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 692.45
+    "generation_latency_ms": 775.26
   },
   {
     "id": "multi-13",
@@ -3407,7 +3402,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 1495.27
+    "generation_latency_ms": 1532.07
   },
   {
     "id": "multi-14",
@@ -3478,12 +3473,12 @@
       }
     ],
     "answer": {
-      "answer": "High-priority support cases should be escalated to the appropriate technical queue when the initial support team cannot resolve them. The receiving technical team becomes responsible for the next troubleshooting step, while the support owner coordinates customer communication.",
+      "answer": "High-priority support cases should be escalated to the appropriate technical queue when the initial support team cannot resolve them. The receiving technical team becomes responsible for the next troubleshooting step while the support owner coordinates customer communication.",
       "citations": [
         {
           "source": "support_escalation.md",
           "section": "Priority Escalation",
-          "chunk_index": 0
+          "chunk_index": 1
         },
         {
           "source": "support_escalation.md",
@@ -3512,7 +3507,7 @@
     "abstention_metrics": {
       "abstention_correct": null
     },
-    "generation_latency_ms": 1234.38
+    "generation_latency_ms": 1940.23
   },
   {
     "id": "unknown-0",
@@ -3542,7 +3537,7 @@
     "abstention_metrics": {
       "abstention_correct": true
     },
-    "generation_latency_ms": 821.0
+    "generation_latency_ms": 726.17
   },
   {
     "id": "unknown-1",
@@ -3572,7 +3567,7 @@
     "abstention_metrics": {
       "abstention_correct": true
     },
-    "generation_latency_ms": 721.38
+    "generation_latency_ms": 802.35
   },
   {
     "id": "unknown-2",
@@ -3602,7 +3597,7 @@
     "abstention_metrics": {
       "abstention_correct": true
     },
-    "generation_latency_ms": 697.47
+    "generation_latency_ms": 1031.55
   },
   {
     "id": "unknown-3",
@@ -3642,7 +3637,7 @@
     "abstention_metrics": {
       "abstention_correct": true
     },
-    "generation_latency_ms": 644.65
+    "generation_latency_ms": 1238.83
   },
   {
     "id": "unknown-4",
@@ -3672,7 +3667,7 @@
     "abstention_metrics": {
       "abstention_correct": true
     },
-    "generation_latency_ms": 908.95
+    "generation_latency_ms": 919.49
   },
   {
     "id": "unknown-5",
@@ -3702,7 +3697,7 @@
     "abstention_metrics": {
       "abstention_correct": true
     },
-    "generation_latency_ms": 706.51
+    "generation_latency_ms": 812.24
   },
   {
     "id": "unknown-6",
@@ -3732,7 +3727,7 @@
     "abstention_metrics": {
       "abstention_correct": true
     },
-    "generation_latency_ms": 833.32
+    "generation_latency_ms": 1030.48
   },
   {
     "id": "unknown-7",
@@ -3762,7 +3757,7 @@
     "abstention_metrics": {
       "abstention_correct": true
     },
-    "generation_latency_ms": 708.58
+    "generation_latency_ms": 729.18
   },
   {
     "id": "unknown-8",
@@ -3792,7 +3787,7 @@
     "abstention_metrics": {
       "abstention_correct": true
     },
-    "generation_latency_ms": 669.89
+    "generation_latency_ms": 728.41
   },
   {
     "id": "unknown-9",
@@ -3822,7 +3817,7 @@
     "abstention_metrics": {
       "abstention_correct": true
     },
-    "generation_latency_ms": 900.51
+    "generation_latency_ms": 793.64
   },
   {
     "id": "unknown-10",
@@ -3852,7 +3847,7 @@
     "abstention_metrics": {
       "abstention_correct": true
     },
-    "generation_latency_ms": 784.98
+    "generation_latency_ms": 746.98
   },
   {
     "id": "unknown-11",
@@ -3882,7 +3877,7 @@
     "abstention_metrics": {
       "abstention_correct": true
     },
-    "generation_latency_ms": 819.15
+    "generation_latency_ms": 790.43
   },
   {
     "id": "unknown-12",
@@ -3912,7 +3907,7 @@
     "abstention_metrics": {
       "abstention_correct": true
     },
-    "generation_latency_ms": 717.01
+    "generation_latency_ms": 916.83
   },
   {
     "id": "unknown-13",
@@ -3942,7 +3937,7 @@
     "abstention_metrics": {
       "abstention_correct": true
     },
-    "generation_latency_ms": 730.81
+    "generation_latency_ms": 782.11
   },
   {
     "id": "unknown-14",
@@ -3972,6 +3967,6 @@
     "abstention_metrics": {
       "abstention_correct": true
     },
-    "generation_latency_ms": 683.98
+    "generation_latency_ms": 756.8
   }
 ]

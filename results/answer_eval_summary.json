@@ -20,7 +20,7 @@
     "unknown_citation_percent": 0.0
   },
   "latency": {
-    "average_judge_latency_ms": 1105.94,
+    "average_judge_latency_ms": 1340.84,
     "average_generation_latency_ms": 0
   },
   "failed_multi_section_cases": [
@@ -46,7 +46,7 @@
       "correctness": 1,
       "faithfulness": 0,
       "citation_accuracy": 0,
-      "reason": "The system correctly abstained from answering due to lack of information, but it could have provided a more informative response regarding the absence of data. No citations were provided to support the claim of insufficient information."
+      "reason": "The system correctly abstained from answering due to lack of information, but it could have provided a more informative response regarding the absence of data. No citations were provided to support the claims made."
     }
   ],
   "unknown_cases_with_possible_hallucination": []
